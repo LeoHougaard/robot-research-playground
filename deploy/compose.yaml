@@ -1,0 +1,56 @@
+# Optional model service only. The trusted supervisor runs on Spark directly.
+# It owns Docker access; no container receives the Docker socket.
+name: robot-playground
+services:
+  model:
+    profiles: [models]
+    image: ${PLAYGROUND_MODEL_IMAGE:?Set a reviewed ARM64 CUDA-compatible image pinned by digest}
+    pull_policy: never
+    user: "1001:1001"
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,size=268435456,mode=1777
+    ports:
+      - "127.0.0.1:18081:8000"
+    networks: [model]
+    environment:
+      HF_HUB_OFFLINE: "1"
+      HF_HOME: /models
+    volumes:
+      - type: volume
+        source: model_cache
+        target: /models
+        read_only: true
+    deploy:
+      resources:
+        limits:
+          cpus: "8"
+          memory: 48G
+          pids: 512
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # These arguments assume a vLLM OpenAI-compatible entrypoint. Verify that
+    # entrypoint and model compatibility for the exact image before enabling.
+    command:
+      - --model
+      - ${PLAYGROUND_MODEL_ID:?Set an already cached model identifier}
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --max-model-len
+      - "4096"
+      - --gpu-memory-utilization
+      - "0.2"
+    restart: "no"
+networks:
+  model:
+    driver: bridge
+volumes:
+  model_cache:
+    name: robot-playground-model-cache

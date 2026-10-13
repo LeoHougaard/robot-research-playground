@@ -1,0 +1,20 @@
+{
+  "archive": "robot-playground-v1.zip",
+  "sha256": "d25fda809837f2a4e7acb5e5d4afb8a2881aca0a1ac3826872c14bc293ac8858",
+  "bytes": 3313062,
+  "files": 136,
+  "excluded": [
+    ".build-venv",
+    ".git",
+    ".mechanical-venv",
+    ".pio",
+    ".pio-core",
+    ".tools",
+    ".venv",
+    "__pycache__",
+    "_deps",
+    "artifacts",
+    "state"
+  ],
+  "physical_hardware": "unverified and disarmed"
+}

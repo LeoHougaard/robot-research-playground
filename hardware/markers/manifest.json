@@ -1,0 +1,31 @@
+{
+  "dictionary": "DICT_4X4_50",
+  "dpi": 300,
+  "paper_mm": [
+    210,
+    297
+  ],
+  "marker_outer_side_nominal_mm": 20,
+  "marker_outer_side_px": 236,
+  "marker_outer_side_actual_mm": 19.981333333333332,
+  "quiet_border_nominal_mm": 4,
+  "ruler_mm": 100,
+  "robot_id": 0,
+  "object_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "files": [
+    "marker-0-20mm-300dpi.png",
+    "marker-1-20mm-300dpi.png",
+    "marker-2-20mm-300dpi.png",
+    "marker-3-20mm-300dpi.png",
+    "marker-4-20mm-300dpi.png",
+    "marker-5-20mm-300dpi.png",
+    "aruco-markers-a4-300dpi.png"
+  ],
+  "printing": "Print at 100% actual size; measure ruler before use. Do not fit to page."
+}

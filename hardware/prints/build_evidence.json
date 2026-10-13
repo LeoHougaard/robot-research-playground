@@ -1,0 +1,58 @@
+{
+  "stl_count": 27,
+  "all_meshes_watertight_single_solid": true,
+  "nominal_intersection_checks": 1633,
+  "grasp_positions_mm": [
+    -50.0,
+    0,
+    50.0
+  ],
+  "physically_verified": false,
+  "vendor_hardware_fit_verified": false,
+  "visual_inspection": [
+    "robot_assembly.png",
+    "robot_top.png",
+    "robot_open_jaw.png",
+    "gate_assembly.png",
+    "robot_gate_grasp.png",
+    "arena_layout.png",
+    "parts_inventory.png",
+    "calibration-crosshairs-a4-300dpi.png"
+  ],
+  "source_sha256": {
+    "generate.py": "c98f66a12b887c78602aac5dfdecc535f5e091ced44c28c4fce5f76944237f1a",
+    "inspect_vendor.py": "b763977a1942e11f3a200a046433e024d427c9c1913a07145e34fe1142d9071f",
+    "parameters.json": "62816edd5e96c7778abd5de594dabd63e5ae385e443f9c887b2296d2fa6ee236",
+    "requirements.txt": "da71c8edec02ef6db2c458d03d22693b27d500a77a1e8c43aec491a5c6f6afa9",
+    "verify_geometry.py": "0cfc73487cbf6fade0759df66786357e51e66747bfae76bd9e95bf12f3e7261b"
+  },
+  "stl_sha256": {
+    "01_horn_fit_coupon.stl": "11a1fdc5942f0ba2e75338dc941cf9e21f4fa7b1bf9a6e87f6c256d0ea214331",
+    "02_hole_clearance_coupon.stl": "c465d042dc25c11507e4464fe25ec15a025d798d903d06d0929d907c6d7f2e25",
+    "03_servo_body_coupon.stl": "3e3b2a8d6fd41c65b582d94d0df6e49e916e278f0237b6a3b7031de57b1f371c",
+    "04_gate_rail_coupon.stl": "f8660c7a82c7a922cd54e74065c138f59ddc98eca700087d3f2b8ca7a7f76b6c",
+    "05_gate_runner_coupon.stl": "bdffd88778db62d2bd75bf4dd4f8533622280d96ae78521851af76374fd0935c",
+    "10_chassis.stl": "45641fea1f6fbffacfdb4cf75ea2f610fae5d2bdef63be8d00cb53493b2a5144",
+    "11_drive_servo_cradle.stl": "353e14d8538889438e18b5c5f736ec2e79e7c1b0c24801511dbd6269243521fc",
+    "12_drive_wheel.stl": "e43121e3d7300ec75cbaf4f4a3c16200cc0f83462c6be9d51334a5e36bca3dc9",
+    "13_tpu_tire.stl": "e044e0677483137c9d19826619e91f26115a523c4710b7adc6526ca3046ec3f9",
+    "14_caster_spacer.stl": "5f04831f65f16170e88a51de5d3821123bbb66bb14a538db8e25198212804a9e",
+    "15_caster_shim_05.stl": "a3e566a93c404632f0d783a1061c56bb22f2f2621ad470d82995a54f76493e81",
+    "16_caster_shim_10.stl": "66d853a2c7cdb7a3900efbe28393ae60a924053347f6055885389649bd102339",
+    "20_moving_jaw.stl": "455f9a8b8e90c1e320731c0b1298844315b999d83a0b33e6aeeba65533cb4e62",
+    "21_fixed_jaw.stl": "4614d75aed855de467fb0198f79faa5d624ddf6524beeab7c08bafd3a67f16ba",
+    "22_gripper_servo_tower.stl": "3a0c7beeaa2bc91af0a3325722dd60ff359a315dcb6de115ab5bbb3412189c98",
+    "30_marker_tower.stl": "3036188080b2db9a40483505c0166fef3f4872097249649447bd90596404e76d",
+    "31_tether_mast.stl": "2bad27519e936df3aceac12a584eccfb7fceb489e391db527529724b95277d61",
+    "32_overhead_tie_plate.stl": "2a48729000d797f932bf5ad89384893b40b11e593dfb2cfc5a7754b453899136",
+    "40_puck.stl": "3ebc8e7da39b109225feebc3a2c28cbb8cad559ebef57cf633f8c724938a3781",
+    "41_object_marker_cap.stl": "550c02f20031335ab57b9dd9aa428fc01a8a959e452d7e27373672bd960353e4",
+    "42_calibration_marker_base.stl": "90aa5fae1b382a2372b40dc2c6e7559405e04ef50bde6e41ab1e396224d6eed2",
+    "50_gate_base.stl": "bf06c1e11feaa1c62f4bae9beb8cee5159adc87290984243c77269a25395eb69",
+    "51_gate_slider.stl": "b98061c719c6d5e80c308ebdaa5ef6c9ea9325a01fa68484bd589db4491b1f13",
+    "52_gate_end_stop.stl": "c483bb6f9d116c18279d1f8313ea9e10691b8c61ad44f97bed9ae561ede41495",
+    "60_arena_wall_200.stl": "4b925f05c5e263bad97945cf7b5b5a8d5ede820c3c9c3561eef19d80db4c4f77",
+    "61_wall_joiner.stl": "a84c68703b1daff0cb36b24fb9580a92ec47af09a6ee838758588dc3187ed857",
+    "62_arena_corner.stl": "ee327df98a9712df3d055d7236374e73b0cb0636b8ee084268be01b6fb939ac2"
+  }
+}

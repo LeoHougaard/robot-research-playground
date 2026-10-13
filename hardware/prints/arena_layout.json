@@ -1,0 +1,135 @@
+{
+  "inside_mm": [
+    1000,
+    1000
+  ],
+  "wall_height_mm": 30,
+  "minimum_floor_footprint_mm": [
+    1040,
+    1040
+  ],
+  "segments": [
+    {
+      "part": "60_arena_wall_200",
+      "x": 100.0,
+      "y": 0,
+      "rotation_deg": 180
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 100.0,
+      "y": 1000,
+      "rotation_deg": 0
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 300.0,
+      "y": 0,
+      "rotation_deg": 180
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 300.0,
+      "y": 1000,
+      "rotation_deg": 0
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 500.0,
+      "y": 0,
+      "rotation_deg": 180
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 500.0,
+      "y": 1000,
+      "rotation_deg": 0
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 700.0,
+      "y": 0,
+      "rotation_deg": 180
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 700.0,
+      "y": 1000,
+      "rotation_deg": 0
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 900.0,
+      "y": 0,
+      "rotation_deg": 180
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 900.0,
+      "y": 1000,
+      "rotation_deg": 0
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 0,
+      "y": 100.0,
+      "rotation_deg": 90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 1000,
+      "y": 100.0,
+      "rotation_deg": -90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 0,
+      "y": 300.0,
+      "rotation_deg": 90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 1000,
+      "y": 300.0,
+      "rotation_deg": -90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 0,
+      "y": 500.0,
+      "rotation_deg": 90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 1000,
+      "y": 500.0,
+      "rotation_deg": -90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 0,
+      "y": 700.0,
+      "rotation_deg": 90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 1000,
+      "y": 700.0,
+      "rotation_deg": -90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 0,
+      "y": 900.0,
+      "rotation_deg": 90
+    },
+    {
+      "part": "60_arena_wall_200",
+      "x": 1000,
+      "y": 900.0,
+      "rotation_deg": -90
+    }
+  ],
+  "straight_joiners": 16,
+  "corner_joiners": 4
+}

@@ -1,0 +1,24 @@
+{
+  "mode": "simulation",
+  "state_dir": "state",
+  "max_generations": 8,
+  "steps_per_generation": 12,
+  "max_run_seconds": 3600,
+  "max_action_seconds": 0.5,
+  "workspace_limit_bytes": 67108864,
+  "disk_reserve_bytes": 21474836480,
+  "llm": {
+    "base_url": "http://127.0.0.1:18080/v1",
+    "model": "",
+    "timeout_seconds": 120,
+    "max_tokens": 1024
+  },
+  "mission": "Learn to predict unfamiliar robot actions, quantify uncertainty, and preserve repeatable evidence and useful tools for successors.",
+  "robot": {
+    "wheel_radius_m": 0.0325,
+    "track_width_m": 0.154,
+    "bounding_radius_m": 0.16,
+    "arena_width_m": 1.0,
+    "arena_height_m": 1.0
+  }
+}

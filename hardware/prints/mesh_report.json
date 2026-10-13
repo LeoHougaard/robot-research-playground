@@ -1,0 +1,434 @@
+[
+  {
+    "part": "01_horn_fit_coupon",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; compare all four holes to the stock horn",
+    "triangles": 2320,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      24.0,
+      24.0,
+      3.0
+    ],
+    "volume_mm3": 1144.764,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "02_hole_clearance_coupon",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; hole sequence left to right 2.5,2.8,3.0,3.2,3.4 mm",
+    "triangles": 1952,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      70.0,
+      25.0,
+      4.0
+    ],
+    "volume_mm3": 6859.075,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "03_servo_body_coupon",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; open gap is40.2 mm",
+    "triangles": 36,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      46.2,
+      14.0,
+      13.0
+    ],
+    "volume_mm3": 2780.4,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "04_gate_rail_coupon",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; same retaining lip as full gate, supports under lip",
+    "triangles": 54,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      40.0,
+      20.0,
+      13.0
+    ],
+    "volume_mm3": 6852.0,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "05_gate_runner_coupon",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; slide through coupon channel before printing full gate",
+    "triangles": 12,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      40.0,
+      8.0,
+      4.0
+    ],
+    "volume_mm3": 1280.0,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "10_chassis",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat bottom; no supports",
+    "triangles": 14188,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      160.0,
+      120.0,
+      4.0
+    ],
+    "volume_mm3": 72447.375,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "11_drive_servo_cradle",
+    "quantity": 2,
+    "material": "PETG",
+    "orientation": "flat bottom; no supports",
+    "triangles": 3212,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      60.0,
+      56.0,
+      12.4
+    ],
+    "volume_mm3": 16385.913,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "12_drive_wheel",
+    "quantity": 2,
+    "material": "PETG",
+    "orientation": "flat side; no supports",
+    "triangles": 3448,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      63.0,
+      63.0,
+      10.0
+    ],
+    "volume_mm3": 28089.925,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "13_tpu_tire",
+    "quantity": 2,
+    "material": "TPU95A",
+    "orientation": "flat ring; no supports",
+    "triangles": 768,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      65.0,
+      65.0,
+      7.0
+    ],
+    "volume_mm3": 4022.552,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "14_caster_spacer",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; nominal3.9 mm",
+    "triangles": 788,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      24.0,
+      18.0,
+      3.9
+    ],
+    "volume_mm3": 1646.539,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "15_caster_shim_05",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; optional leveling",
+    "triangles": 788,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      24.0,
+      18.0,
+      0.5
+    ],
+    "volume_mm3": 211.095,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "16_caster_shim_10",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; optional leveling",
+    "triangles": 788,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      24.0,
+      18.0,
+      1.0
+    ],
+    "volume_mm3": 422.19,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "20_moving_jaw",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat; no supports",
+    "triangles": 3838,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      82.0,
+      24.0,
+      10.0
+    ],
+    "volume_mm3": 8280.028,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "21_fixed_jaw",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat jaw bottom; no supports",
+    "triangles": 1586,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      94.0,
+      8.0,
+      12.0
+    ],
+    "volume_mm3": 7493.114,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "22_gripper_servo_tower",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat bottom; cable-window bridge and strap slots may need supports",
+    "triangles": 1736,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      70.0,
+      40.0,
+      34.0
+    ],
+    "volume_mm3": 18266.836,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "30_marker_tower",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "marker plate on bed; turn over for assembly",
+    "triangles": 1628,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      64.0,
+      64.0,
+      56.0
+    ],
+    "volume_mm3": 21690.512,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "31_tether_mast",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "upright with brim; support inside eye or print on side with supports",
+    "triangles": 2104,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      24.0,
+      24.0,
+      120.0
+    ],
+    "volume_mm3": 13654.183,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "32_overhead_tie_plate",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat plate; eye needs support",
+    "triangles": 2120,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      70.0,
+      30.0,
+      22.0
+    ],
+    "volume_mm3": 9575.988,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "40_puck",
+    "quantity": 3,
+    "material": "PETG",
+    "orientation": "flat; vary color by object, keep shape unchanged",
+    "triangles": 764,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      38.0,
+      38.0,
+      20.0
+    ],
+    "volume_mm3": 22223.084,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "41_object_marker_cap",
+    "quantity": 8,
+    "material": "PETG",
+    "orientation": "plate on bed, stem upward; invert and glue into puck, gate, or calibration socket",
+    "triangles": 396,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      28.0,
+      28.0,
+      62.0
+    ],
+    "volume_mm3": 4581.776,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "42_calibration_marker_base",
+    "quantity": 4,
+    "material": "PETG",
+    "orientation": "flat; same74 mm tagplane as robot and objects",
+    "triangles": 780,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      44.0,
+      44.0,
+      20.0
+    ],
+    "volume_mm3": 11369.573,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "50_gate_base",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "flat bottom; rail lips need support, remove support from channels",
+    "triangles": 3208,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      180.0,
+      116.0,
+      13.0
+    ],
+    "volume_mm3": 59052.555,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "51_gate_slider",
+    "quantity": 1,
+    "material": "PETG",
+    "orientation": "supports under runners and rear bridge; ensure all support is removable",
+    "triangles": 916,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      60.0,
+      90.0,
+      20.0
+    ],
+    "volume_mm3": 29529.656,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "52_gate_end_stop",
+    "quantity": 4,
+    "material": "PETG",
+    "orientation": "flat; one block per rail at each end, no supports",
+    "triangles": 400,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      10.0,
+      20.0,
+      5.0
+    ],
+    "volume_mm3": 954.636,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "60_arena_wall_200",
+    "quantity": 20,
+    "material": "PETG",
+    "orientation": "flat foot; inside face at localY=0, foot points outside",
+    "triangles": 1568,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      200.0,
+      20.0,
+      30.0
+    ],
+    "volume_mm3": 41830.277,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "61_wall_joiner",
+    "quantity": 16,
+    "material": "PETG",
+    "orientation": "flat; use on top of adjacent feet",
+    "triangles": 788,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      40.0,
+      12.0,
+      3.0
+    ],
+    "volume_mm3": 1385.564,
+    "minimum_z_mm": 0.0
+  },
+  {
+    "part": "62_arena_corner",
+    "quantity": 4,
+    "material": "PETG",
+    "orientation": "flat; use on top of feet at frame corners",
+    "triangles": 828,
+    "watertight": true,
+    "connected_solids": 1,
+    "dimensions_mm": [
+      50.0,
+      50.0,
+      3.0
+    ],
+    "volume_mm3": 3113.564,
+    "minimum_z_mm": 0.0
+  }
+]

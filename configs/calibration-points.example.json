@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "placeholder": true,
+  "measurement_confirmed": false,
+  "measured_at": null,
+  "image_file": "replace-with-captured-still.png",
+  "image_sha256": null,
+  "marker_plane_height_m": null,
+  "arena_width_m": 1.0,
+  "arena_height_m": 1.0,
+  "robot_radius_m": 0.16,
+  "robot_marker_id": 0,
+  "robot_mount_heading_offset_rad": null,
+  "robot_tag_offset_x_m": -0.045,
+  "robot_tag_offset_y_m": 0.0,
+  "fit_points": [
+    {"pixel": [100, 100], "world_m": [0, 0]},
+    {"pixel": [1100, 100], "world_m": [1, 0]},
+    {"pixel": [1100, 1100], "world_m": [1, 1]},
+    {"pixel": [100, 1100], "world_m": [0, 1]}
+  ],
+  "validation_points": [
+    {"pixel": [350, 350], "world_m": [0.25, 0.25]},
+    {"pixel": [850, 350], "world_m": [0.75, 0.25]},
+    {"pixel": [600, 850], "world_m": [0.5, 0.75]}
+  ],
+  "notes": "UNUSABLE PLACEHOLDER. Every coordinate must come from the actual fixed camera and measured marker-height plane. Reference mount is 74 mm above floor with tag centre -45 mm behind axle; measure the completed build before confirming these offsets and height. Do not clear placeholder or confirm measurements until all values, image hash, timestamp, height, axle offsets and heading are real. Capture and calibration never connect to servos."
+}

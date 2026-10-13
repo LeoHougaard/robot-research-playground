@@ -1,0 +1,1232 @@
+Title: 25kg.cm Wide Range Voltage Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder, Two-Way Feedback, Servo/Motor Mode Switchable | ST3020 Servo
+
+URL Source: https://www.waveshare.com/ST3020-Servo.htm
+
+Markdown Content:
+$ US Dollar
+*   [AU$ Australian Dollar](https://www.waveshare.com/directory/currency/switch/currency/AUD/uenc/aHR0cHM6Ly93d3cud2F2ZXNoYXJlLmNvbS9zdDMwMjAtc2Vydm8uaHRt/)
+*   [£ British Pound Sterling](https://www.waveshare.com/directory/currency/switch/currency/GBP/uenc/aHR0cHM6Ly93d3cud2F2ZXNoYXJlLmNvbS9zdDMwMjAtc2Vydm8uaHRt/)
+*   [CA$ Canadian Dollar](https://www.waveshare.com/directory/currency/switch/currency/CAD/uenc/aHR0cHM6Ly93d3cud2F2ZXNoYXJlLmNvbS9zdDMwMjAtc2Vydm8uaHRt/)
+*   [€ Euro](https://www.waveshare.com/directory/currency/switch/currency/EUR/uenc/aHR0cHM6Ly93d3cud2F2ZXNoYXJlLmNvbS9zdDMwMjAtc2Vydm8uaHRt/)
+*   [¥ Japanese Yen](https://www.waveshare.com/directory/currency/switch/currency/JPY/uenc/aHR0cHM6Ly93d3cud2F2ZXNoYXJlLmNvbS9zdDMwMjAtc2Vydm8uaHRt/)
+
+[SUPPORT](https://service.waveshare.com/)
+
+*   [Checkout](https://www.waveshare.com/onepagecheckout/ "Checkout")
+*   |
+*   [My Cart](https://www.waveshare.com/checkout/cart/ "My Cart")
+*   |
+*   [Login/Register](https://www.waveshare.com/customer/account/ "My Account")
+
+# **Waveshare**[![Image 1: Waveshare](https://www.waveshare.com/media/eternal/venedor/default/logo.png)](https://www.waveshare.com/ "Waveshare")
+
+Search
+
+0 item(s) - $0.00
+
+You have no items in your shopping cart.
+
+Toggle navigation
+
+Search
+
+[](https://www.waveshare.com/checkout/cart/)
+
+*   [PRODUCTS](https://www.waveshare.com/product.htm)
+
+    *   [Products](https://www.waveshare.com/product.htm)
+        *   [Raspberry Pi](https://www.waveshare.com/product/raspberry-pi.htm)
+            *   [Boards / Kits](https://www.waveshare.com/product/raspberry-pi/boards-kits.htm)
+                *   [Raspberry Pi 5](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-5.htm)
+                *   [Raspberry Pi 4](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-4.htm)
+                *   [Raspberry Pi 3](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-3.htm)
+                *   [Raspberry Pi 400](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-400.htm)
+                *   [Raspberry Pi Zero 2 W](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-zero-2-w-cat.htm)
+                *   [Raspberry Pi Zero](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-zero.htm)
+                *   [Raspberry Pi Pico](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-pico-cat.htm)
+                *   [Compute Module 4/4S](https://www.waveshare.com/product/raspberry-pi/boards-kits/compute-module-4-4s-cat.htm)
+                *   [Compute Module 3](https://www.waveshare.com/product/raspberry-pi/boards-kits/compute-module.htm)
+                *   [Raspberry Pi Pico 2](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-pico-13.htm)
+                *   [Compute Module 5](https://www.waveshare.com/product/raspberry-pi/boards-kits/cm5.htm)
+                *   [Raspberry Pi 500](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-500-and-kits.htm)
+
+            *   [Displays](https://www.waveshare.com/product/raspberry-pi/displays.htm)
+                *   [LCD](https://www.waveshare.com/product/raspberry-pi/displays/lcd-oled.htm)
+                *   [OLED](https://www.waveshare.com/product/raspberry-pi/displays/oled.htm)
+                *   [e-Paper](https://www.waveshare.com/product/raspberry-pi/displays/e-paper.htm)
+
+            *   [Cameras](https://www.waveshare.com/product/raspberry-pi/cameras.htm)
+                *   [≥10MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/10mp-pixels.htm)
+                *   [8MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/8m-pixels.htm)
+                *   [5MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/5m-pixels.htm)
+                *   [2MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/2m-pixels.htm)
+                *   [Global Shutter Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/global-shutter-cameras.htm)
+                *   [USB Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/usb-cameras.htm)
+                *   [AI Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/ai-cameras.htm)
+                *   [GMSL Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/gmsl-cameras.htm)
+
+            *   [HATs](https://www.waveshare.com/product/raspberry-pi/hats.htm)
+                *   [IoT](https://www.waveshare.com/product/raspberry-pi/hats/iot.htm)
+                *   [Interface / Expansion / Power](https://www.waveshare.com/product/raspberry-pi/hats/interface-power.htm)
+                *   [Motors / Relays / SCR](https://www.waveshare.com/product/raspberry-pi/hats/motors-relays.htm)
+                *   [AD / DA / Audio / Sensors](https://www.waveshare.com/product/raspberry-pi/hats/ad-da-audio-sensors.htm)
+                *   [LED / Buttons](https://www.waveshare.com/product/raspberry-pi/hats/led-buttons.htm)
+                *   [Versatile](https://www.waveshare.com/product/raspberry-pi/hats/versatile.htm)
+
+            *   [All-in-one](https://www.waveshare.com/product/raspberry-pi/laptop.htm)
+                *   [Magic Mirror / All-in-one](https://www.waveshare.com/product/raspberry-pi/laptop/all-in-one.htm)
+
+            *   [HomeLab](https://www.waveshare.com/product/raspberry-pi/homelab.htm)
+            *   [Robots](https://www.waveshare.com/product/raspberry-pi/robots.htm)
+                *   [Mobile Robots](https://www.waveshare.com/product/raspberry-pi/robots/mobile-robots.htm)
+                *   [Robot Arm / Control](https://www.waveshare.com/product/raspberry-pi/robots/robot-arm-control.htm)
+
+            *   [Portable Gaming](https://www.waveshare.com/product/raspberry-pi/portable-gaming.htm)
+            *   [Accessories](https://www.waveshare.com/product/raspberry-pi/accessories.htm)
+                *   [Pi Cases](https://www.waveshare.com/product/raspberry-pi/accessories/pi-cases.htm)
+                *   [Display Cases](https://www.waveshare.com/product/raspberry-pi/accessories/display-cases.htm)
+                *   [Wires / Power / SD Card...](https://www.waveshare.com/product/raspberry-pi/accessories/wires-power-sd-card.htm)
+
+        *   [AI](https://www.waveshare.com/product/ai.htm)
+            *   [Boards / Kits](https://www.waveshare.com/product/ai/boards-kits.htm)
+                *   [Jetson Nano](https://www.waveshare.com/product/ai/boards-kits/jetson-nano.htm)
+                *   [Jetson TX2](https://www.waveshare.com/product/ai/boards-kits/jetson-tx2.htm)
+                *   [Jetson Xavier NX](https://www.waveshare.com/product/ai/boards-kits/jetson-xavier-nx-cata.htm)
+                *   [Jetson Orin](https://www.waveshare.com/product/ai/boards-kits/jetson-orin.htm)
+                *   [AI Cameras](https://www.waveshare.com/product/ai/boards-kits/ai-cameras.htm)
+                *   [OPS Computer](https://www.waveshare.com/product/ai/boards-kits/ops-computer.htm)
+                *   [Raspberry Pi](https://www.waveshare.com/product/ai/boards-kits/raspberry-pi.htm)
+                *   [D-Robotics](https://www.waveshare.com/product/ai/boards-kits/d-robotics.htm)
+                *   [Luckfox](https://www.waveshare.com/product/ai/boards-kits/luckfox.htm)
+
+            *   [Displays](https://www.waveshare.com/product/ai/displays.htm)
+                *   [LCD](https://www.waveshare.com/product/ai/displays/lcd-oled.htm)
+                *   [OLED](https://www.waveshare.com/product/ai/displays/oled.htm)
+                *   [e-Paper](https://www.waveshare.com/product/ai/displays/e-paper.htm)
+
+            *   [Cameras](https://www.waveshare.com/product/ai/cameras.htm)
+                *   [Single Cameras](https://www.waveshare.com/product/ai/cameras/single-cameras.htm)
+                *   [Binocular Cameras](https://www.waveshare.com/product/ai/cameras/binocular-cameras.htm)
+                *   [USB Cameras](https://www.waveshare.com/product/ai/cameras/ai-usb-cameras.htm)
+                *   [GMSL Cameras](https://www.waveshare.com/product/ai/cameras/gmsl-cameras.htm)
+                *   [Others](https://www.waveshare.com/product/ai/cameras/others.htm)
+
+            *   [Expansions](https://www.waveshare.com/product/ai/expansions.htm)
+                *   [IoT](https://www.waveshare.com/product/ai/expansions/iot.htm)
+                *   [Motors / Relays / SCR](https://www.waveshare.com/product/ai/expansions/motors-relays.htm)
+                *   [AD / DA / Versatile](https://www.waveshare.com/product/ai/expansions/ad-da-versatile.htm)
+                *   [Power Supply](https://www.waveshare.com/product/ai/expansions/power-supply.htm)
+
+            *   [Robots](https://www.waveshare.com/product/ai/robots.htm)
+                *   [Mobile Robots](https://www.waveshare.com/product/ai/robots/mobile-robots.htm)
+                *   [Robot Arm / Control](https://www.waveshare.com/product/ai/robots/robot-arm-control.htm)
+
+            *   [Accessories](https://www.waveshare.com/product/ai/accessories.htm)
+                *   [Cases](https://www.waveshare.com/product/ai/accessories/cases.htm)
+                *   [Wires / Power / SD Card...](https://www.waveshare.com/product/ai/accessories/wires-power-sd-card.htm)
+
+        *   [Luckfox](https://www.waveshare.com/product/luckfox.htm)
+            *   [Linux Boards / Modules](https://www.waveshare.com/product/luckfox/boards-modules.htm)
+                *   [Omni3576-RK3576](https://www.waveshare.com/product/luckfox/boards-modules/core3576.htm)
+                *   [Luckfox Lyra-RK3506](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-lyra-23.htm)
+                *   [LuckFox Pico-RV1106](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-pico-core1106.htm)
+                *   [Luckfox Aura-RV1126](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-aura-rv1126.htm)
+                *   [Core3566-RK3566](https://www.waveshare.com/product/luckfox/boards-modules/core3566-9.htm)
+                *   [LuckFox Lume-T153](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-lume-t153.htm)
+
+            *   [Displays](https://www.waveshare.com/product/luckfox/displays.htm)
+                *   [LCD/OLED](https://www.waveshare.com/product/luckfox/displays/lcd-oled.htm)
+
+            *   [Cameras](https://www.waveshare.com/product/luckfox/cameras.htm)
+                *   [3MP Cameras](https://www.waveshare.com/product/luckfox/cameras/3mp-cameras.htm)
+                *   [8MP Cameras](https://www.waveshare.com/product/luckfox/cameras/8mp-cameras.htm)
+                *   [5MP Cameras](https://www.waveshare.com/product/luckfox/cameras/5mp-cameras.htm)
+                *   [1MP Cameras](https://www.waveshare.com/product/luckfox/cameras/1mp-cameras.htm)
+
+        *   [RISC-V](https://www.waveshare.com/product/risc-v.htm)
+            *   [Boards / Kits](https://www.waveshare.com/product/risc-v/boards-kits.htm)
+                *   [VisionFive2](https://www.waveshare.com/product/risc-v/boards-kits/visionfive2.htm)
+                *   [VisionFive2 Lite](https://www.waveshare.com/product/risc-v/boards-kits/visionfive2-lite-7832.htm)
+
+            *   [Displays](https://www.waveshare.com/product/risc-v/displays.htm)
+                *   [LCD](https://www.waveshare.com/product/risc-v/displays/lcd.htm)
+
+            *   [Expansions / Accessories](https://www.waveshare.com/product/risc-v/expansions-accessories.htm)
+                *   [Audio / Sensors](https://www.waveshare.com/product/risc-v/expansions-accessories/audio-sensors.htm)
+                *   [Relays / Motors / Servos](https://www.waveshare.com/product/risc-v/expansions-accessories/relays-motors-servos.htm)
+                *   [Cooling Fan](https://www.waveshare.com/product/risc-v/expansions-accessories/cooling-fan.htm)
+
+            *   [Cameras](https://www.waveshare.com/product/risc-v/cameras.htm)
+                *   [8MP IMX219 Cameras](https://www.waveshare.com/product/risc-v/cameras/8mp-imx219-cameras.htm)
+
+        *   [ESP32](https://www.waveshare.com/product/esp32-related.htm)
+            *   [Boards / Kits](https://www.waveshare.com/product/esp32-related/boards-kits.htm)
+                *   [ESP32-P4](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-p4.htm)
+                *   [ESP32-S3](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-s3.htm)
+                *   [ESP32-C6](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-c6.htm)
+                *   [ESP32-C5](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-c5.htm)
+                *   [ESP32-C3](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-c3.htm)
+                *   [ESP32-H2](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-h2.htm)
+                *   [ESP32-S2](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-s2-1.htm)
+                *   [ESP32](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-esp8266.htm)
+
+            *   [Displays](https://www.waveshare.com/product/esp32-related/displays.htm)
+                *   [LCD (SPI/QSPI)](https://www.waveshare.com/product/esp32-related/displays/lcd-spi-qspi.htm)
+                *   [LCD (RGB)](https://www.waveshare.com/product/esp32-related/displays/lcd-rgb.htm)
+                *   [LCD (MIPI)](https://www.waveshare.com/product/esp32-related/displays/lcd-mipi.htm)
+                *   [AMOLED](https://www.waveshare.com/product/esp32-related/displays/amoled.htm)
+                *   [e-Paper](https://www.waveshare.com/product/esp32-related/displays/e-paper.htm)
+                *   [RLCD](https://www.waveshare.com/product/esp32-related/displays/rlcd.htm)
+                *   [RGB LED Matrix](https://www.waveshare.com/product/esp32-related/displays/rgb-led-matrix.htm)
+
+            *   [AI Chat](https://www.waveshare.com/product/esp32-related/ai-chat.htm)
+            *   [Cameras](https://www.waveshare.com/product/esp32-related/cameras.htm)
+            *   [Industrial Controller](https://www.waveshare.com/product/esp32-related/industrial-controller.htm)
+            *   [Robots](https://www.waveshare.com/product/esp32-related/robots.htm)
+                *   [Mobile Robots](https://www.waveshare.com/product/esp32-related/robots/mobile-robots.htm)
+
+        *   [Arduino](https://www.waveshare.com/product/arduino-5.htm)
+            *   [Official Arduino®](https://www.waveshare.com/product/arduino-5/official-arduino.htm)
+                *   [Boards / Core Boards](https://www.waveshare.com/product/arduino-5/official-arduino/boards-core-boards.htm)
+                    *   [Arduino UNO Q](https://www.waveshare.com/product/arduino-5/official-arduino/boards-core-boards/arduino-uno-q-1.htm)
+
+            *   [Compatible with Arduino®](https://www.waveshare.com/product/arduino-5/compatible-with-arduino.htm)
+                *   [Cases](https://www.waveshare.com/product/arduino-5/compatible-with-arduino/arduino-cases.htm)
+                *   [Kits](https://www.waveshare.com/product/arduino-5/compatible-with-arduino/arduino-kits.htm)
+                *   [Accessories](https://www.waveshare.com/product/arduino-5/compatible-with-arduino/accessories.htm)
+
+        *   [Displays](https://www.waveshare.com/product/displays.htm)
+            *   [LCD](https://www.waveshare.com/product/displays/lcd-oled.htm)
+                *   [5″ - 24.5″](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-1.htm)
+                *   [2.8″ - 4.3″](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-2.htm)
+                *   [0.71″ - 2.4″](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-3.htm)
+
+            *   [OLED](https://www.waveshare.com/product/displays/oled.htm)
+                *   [5″ - 15.6″](https://www.waveshare.com/product/displays/oled/oled-1.htm)
+                *   [0.49″ - 2.4″](https://www.waveshare.com/product/displays/oled/oled-3.htm)
+
+            *   [e-Paper](https://www.waveshare.com/product/displays/e-paper.htm)
+                *   [5.65″ - 13.3″](https://www.waveshare.com/product/displays/e-paper/epaper-1.htm)
+                *   [2.66″ - 5″](https://www.waveshare.com/product/displays/e-paper/epaper-2.htm)
+                *   [1.02″ - 2.36″](https://www.waveshare.com/product/displays/e-paper/epaper-3.htm)
+                *   [Driver Boards](https://www.waveshare.com/product/displays/e-paper/driver-boards.htm)
+
+            *   [Accessories](https://www.waveshare.com/product/displays/accessories.htm)
+                *   [Cables / Adapters](https://www.waveshare.com/product/displays/accessories/cables-adapters.htm)
+                *   [Cases](https://www.waveshare.com/product/displays/accessories/cases.htm)
+                *   [Speakers](https://www.waveshare.com/product/displays/accessories/speakers.htm)
+                *   [Stand](https://www.waveshare.com/product/displays/accessories/stand.htm)
+
+            *   [USB Monitor](https://www.waveshare.com/product/displays/usb-monitor.htm)
+                *   [2.1“ - 7“](https://www.waveshare.com/product/displays/usb-monitor/2-1-7.htm)
+
+        *   [IoT / Communication](https://www.waveshare.com/product/iot-communication.htm)
+            *   [Long Range Wireless](https://www.waveshare.com/product/iot-communication/long-range-wireless.htm)
+                *   [NB-IoT / Cat-M / LoRa / LoRaWAN](https://www.waveshare.com/product/iot-communication/long-range-wireless/nb-iot-lora.htm)
+                *   [5G / 4G / Cat-1 / GSM / GPRS](https://www.waveshare.com/product/iot-communication/long-range-wireless/4g-gsm-gprs.htm)
+                *   [GNSS / GPS](https://www.waveshare.com/product/iot-communication/long-range-wireless/gnss-gps.htm)
+
+            *   [Short Range Wireless](https://www.waveshare.com/product/iot-communication/short-range-wireless.htm)
+                *   [WiFi](https://www.waveshare.com/product/iot-communication/short-range-wireless/wifi.htm)
+                *   [ZigBee](https://www.waveshare.com/product/iot-communication/short-range-wireless/zigbee.htm)
+                *   [Bluetooth](https://www.waveshare.com/product/iot-communication/short-range-wireless/bluetooth.htm)
+                *   [NFC / RF](https://www.waveshare.com/product/iot-communication/short-range-wireless/nfc-rf.htm)
+
+            *   [Wired Comm / Converter](https://www.waveshare.com/product/iot-communication/wired-comm-converter.htm)
+                *   [USB](https://www.waveshare.com/product/iot-communication/wired-comm-converter/usb.htm)
+                *   [USB TO RS232 / RS485 / UART/ CAN](https://www.waveshare.com/product/iot-communication/wired-comm-converter/usb-to-rs232-uart-rs485.htm)
+                *   [Ethernet](https://www.waveshare.com/product/iot-communication/wired-comm-converter/ethernet.htm)
+                *   [Ethernet TO UART / RS232 / RS485](https://www.waveshare.com/product/iot-communication/wired-comm-converter/ethernet-to-uart-rs232-rs485.htm)
+                *   [RS232 / RS485 / CAN / DALI2](https://www.waveshare.com/product/iot-communication/wired-comm-converter/rs232-rs485-can-dali2.htm)
+
+        *   [Misc Modules](https://www.waveshare.com/product/modules.htm)
+            *   [Cameras / Audio / Video](https://www.waveshare.com/product/modules/cameras-audio-video.htm)
+                *   [Speech / Image Recognition / AI Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/speech-image-recognition-ai-vision.htm)
+                *   [MIPI Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/mipi-cameras.htm)
+                *   [USB Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/usb-cameras.htm)
+                *   [GMSL Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/gmsl-cameras.htm)
+                *   [Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/cameras.htm)
+                *   [Audio Decoder](https://www.waveshare.com/product/modules/cameras-audio-video/audio-decoder.htm)
+
+            *   [Sensors](https://www.waveshare.com/product/modules/sensors.htm)
+                *   [Accelerometer / Angular Rate / Compass](https://www.waveshare.com/product/modules/sensors/accelerometer-angular-rate-compass.htm)
+                *   [Fingerprint / Sound / Image / Gesture](https://www.waveshare.com/product/modules/sensors/fingerprint-sound-image-gesture.htm)
+                *   [Temperature / Humidity / Barometer](https://www.waveshare.com/product/modules/sensors/temperature-humidity-barometer.htm)
+                *   [Gas](https://www.waveshare.com/product/modules/sensors/gas.htm)
+                *   [Light / Ranging / Lidar](https://www.waveshare.com/product/modules/sensors/light-ranging.htm)
+                *   [Others](https://www.waveshare.com/product/modules/sensors/others.htm)
+
+            *   [Motors / Servos](https://www.waveshare.com/product/modules/motors-servos.htm)
+                *   [Drivers](https://www.waveshare.com/product/modules/motors-servos/drivers.htm)
+                *   [Motors / Servos](https://www.waveshare.com/product/modules/motors-servos/motors-servos.htm)
+
+            *   [Others](https://www.waveshare.com/product/modules/others.htm)
+                *   [Interface Expansion](https://www.waveshare.com/product/modules/others/interface-expansion.htm)
+                *   [LED / Buttons](https://www.waveshare.com/product/modules/others/led-buttons.htm)
+                *   [Storage](https://www.waveshare.com/product/modules/others/storage.htm)
+                *   [AD / DA](https://www.waveshare.com/product/modules/others/ad-da.htm)
+                *   [RTC](https://www.waveshare.com/product/modules/others/rtc.htm)
+                *   [Power / Relays / SCR](https://www.waveshare.com/product/modules/others/power-relays.htm)
+                *   [Laser Module](https://www.waveshare.com/product/modules/others/laser-module.htm)
+
+        *   [Robotics](https://www.waveshare.com/product/robotics.htm)
+            *   [Mobile Robots](https://www.waveshare.com/product/robotics/mobile-robots.htm)
+                *   [Jetson Series AI Robots](https://www.waveshare.com/product/robotics/mobile-robots/jetson-series-ai-robots.htm)
+                *   [Raspberry Pi Robots](https://www.waveshare.com/product/robotics/mobile-robots/raspberry-pi-robots.htm)
+                *   [ESP32 Robots](https://www.waveshare.com/product/robotics/mobile-robots/esp32-robots.htm)
+                *   [Arduino-Related Robots](https://www.waveshare.com/product/robotics/mobile-robots/arduino-robots.htm)
+
+            *   [Dog-like Robots](https://www.waveshare.com/product/robotics/dog-like-robots.htm)
+                *   [Raspberry Pi Dog-like Robots](https://www.waveshare.com/product/robotics/dog-like-robots/raspberry-pi-dog-like-robots.htm)
+
+            *   [Drivers / Sensors / Lidar](https://www.waveshare.com/product/robotics/drivers-sensors.htm)
+                *   [Drivers](https://www.waveshare.com/product/robotics/drivers-sensors/drivers.htm)
+                *   [Sensors](https://www.waveshare.com/product/robotics/drivers-sensors/sensors.htm)
+                *   [Lidar](https://www.waveshare.com/product/robotics/drivers-sensors/lidar.htm)
+
+            *   [Motors / Servos](https://www.waveshare.com/product/robotics/motors-servos.htm)
+                *   [Motors](https://www.waveshare.com/product/robotics/motors-servos/motors.htm)
+                *   [Servos](https://www.waveshare.com/product/robotics/motors-servos/servos.htm)
+
+            *   [Robot Arm / Control](https://www.waveshare.com/product/robotics/robot-arm-control.htm)
+                *   [Robot Arm](https://www.waveshare.com/product/robotics/robot-arm-control/robot-arm.htm)
+                *   [Pan Tilt Control](https://www.waveshare.com/product/robotics/robot-arm-control/pan-tilt-control.htm)
+
+            *   [Remote Controller](https://www.waveshare.com/product/robotics/remote-controller.htm)
+            *   [Robotic Components](https://www.waveshare.com/product/robotics/robotic-components.htm)
+                *   [Gearing](https://www.waveshare.com/product/robotics/robotic-components/gearing.htm)
+                *   [Chassis Accessories](https://www.waveshare.com/product/robotics/robotic-components/chassis-accessories.htm)
+
+        *   [MCU / FPGA](https://www.waveshare.com/product/mcu-tools.htm)
+            *   [Core Boards / Compact Boards](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards.htm)
+                *   [STM32 Core](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/stm32-core.htm)
+                *   [STM32 Discovery](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/stm32-discovery.htm)
+                *   [STM32 Nucleo](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/stm32-nucleo.htm)
+                *   [LPC Core](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/lpc-core.htm)
+                *   [BeagleBoard](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/beagleboard.htm)
+                *   [ALTERA Core](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/altera-core.htm)
+                *   [Arduino® Compatible](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/arduino.htm)
+                *   [micro:bit](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/micro-bit-boards.htm)
+
+            *   [Development Boards / Expansions](https://www.waveshare.com/product/mcu-tools/development-boards.htm)
+                *   [STM32 Open](https://www.waveshare.com/product/mcu-tools/development-boards/stm32-open.htm)
+                *   [STM32 EVK](https://www.waveshare.com/product/mcu-tools/development-boards/stm32-evk.htm)
+                *   [AVR Arduino Shields](https://www.waveshare.com/product/mcu-tools/development-boards/avr-arduino-shields.htm)
+                *   [Arduino Shields Compatible](https://www.waveshare.com/product/mcu-tools/development-boards/arduino-shields-compatible.htm)
+                *   [Displays / Buttons / Sound](https://www.waveshare.com/product/mcu-tools/development-boards/displays-buttons-sound.htm)
+                *   [Motors / Interface](https://www.waveshare.com/product/mcu-tools/development-boards/motors-interface.htm)
+
+            *   [Debugger / Programmer](https://www.waveshare.com/product/mcu-tools/debugger-programmer.htm)
+                *   [STM32 / STM8](https://www.waveshare.com/product/mcu-tools/debugger-programmer/stm32-stm8.htm)
+                *   [AVR](https://www.waveshare.com/product/mcu-tools/debugger-programmer/avr.htm)
+                *   [PIC](https://www.waveshare.com/product/mcu-tools/debugger-programmer/pic.htm)
+                *   [ALTERA Core](https://www.waveshare.com/product/mcu-tools/debugger-programmer/altera-core.htm)
+                *   [XILINX](https://www.waveshare.com/product/mcu-tools/debugger-programmer/xilinx.htm)
+
+            *   [Programming Adapters](https://www.waveshare.com/product/mcu-tools/programming-adapters.htm)
+                *   [STM32](https://www.waveshare.com/product/mcu-tools/programming-adapters/stm32.htm)
+                *   [STM8](https://www.waveshare.com/product/mcu-tools/programming-adapters/stm8.htm)
+                *   [AVR](https://www.waveshare.com/product/mcu-tools/programming-adapters/avr.htm)
+
+            *   [Robots](https://www.waveshare.com/product/mcu-tools/robots.htm)
+                *   [Robot Arm](https://www.waveshare.com/product/mcu-tools/robots/robot-arm.htm)
+
+        *   [Sockets / Adapters](https://www.waveshare.com/product/sockets-adapters.htm)
+            *   [Specific Programming Adapters](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters.htm)
+                *   [STM32 Series](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters/stm32-series.htm)
+                *   [STM8 Series](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters/stm8-series.htm)
+                *   [AVR Series](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters/avr-series.htm)
+
+            *   [QFP](https://www.waveshare.com/product/sockets-adapters/qfp.htm)
+                *   [Sockets](https://www.waveshare.com/product/sockets-adapters/qfp/sockets.htm)
+                *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/qfp/to-dip.htm)
+                *   [With Pinheader](https://www.waveshare.com/product/sockets-adapters/qfp/with-pinheader.htm)
+
+            *   [QFN / MLF](https://www.waveshare.com/product/sockets-adapters/qfn-mlf.htm)
+                *   [Sockets](https://www.waveshare.com/product/sockets-adapters/qfn-mlf/sockets.htm)
+                *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/qfn-mlf/to-dip.htm)
+                *   [With Pinheader](https://www.waveshare.com/product/sockets-adapters/qfn-mlf/with-pinheader.htm)
+
+            *   [SOP](https://www.waveshare.com/product/sockets-adapters/sop.htm)
+                *   [Sockets](https://www.waveshare.com/product/sockets-adapters/sop/sockets.htm)
+                *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/sop/to-dip.htm)
+
+            *   [SSOP / TSSOP](https://www.waveshare.com/product/sockets-adapters/ssop-tssop.htm)
+                *   [Sockets](https://www.waveshare.com/product/sockets-adapters/ssop-tssop/sockets.htm)
+                *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/ssop-tssop/to-dip.htm)
+
+            *   [TSOP / MSOP / SOT](https://www.waveshare.com/product/sockets-adapters/tsop-msop-sot.htm)
+                *   [Sockets](https://www.waveshare.com/product/sockets-adapters/tsop-msop-sot/sockets.htm)
+                *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/tsop-msop-sot/to-dip.htm)
+
+            *   [PLCC](https://www.waveshare.com/product/sockets-adapters/plcc.htm)
+                *   [Sockets](https://www.waveshare.com/product/sockets-adapters/plcc/sockets.htm)
+                *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/plcc/to-dip.htm)
+
+        *   [Accessories](https://www.waveshare.com/product/accessories.htm)
+            *   [Adapters / Cables / Antennas](https://www.waveshare.com/product/accessories/adapters-cables-antennas.htm)
+                *   [HDMI](https://www.waveshare.com/product/accessories/adapters-cables-antennas/hdmi.htm)
+                *   [USB](https://www.waveshare.com/product/accessories/adapters-cables-antennas/usb.htm)
+                *   [Serial Cables](https://www.waveshare.com/product/accessories/adapters-cables-antennas/serial-cables.htm)
+                *   [Jumper Wires](https://www.waveshare.com/product/accessories/adapters-cables-antennas/jumper-wires.htm)
+                *   [FFC](https://www.waveshare.com/product/accessories/adapters-cables-antennas/ffc.htm)
+                *   [Antennas](https://www.waveshare.com/product/accessories/adapters-cables-antennas/antennas.htm)
+
+            *   [Motors / Servos](https://www.waveshare.com/product/accessories/motors-servos.htm)
+                *   [Motors](https://www.waveshare.com/product/accessories/motors-servos/motors.htm)
+                *   [Servos](https://www.waveshare.com/product/accessories/motors-servos/servos.htm)
+
+            *   [Power / Heat Sinks](https://www.waveshare.com/product/accessories/power-heat-sinks.htm)
+                *   [Power Supply](https://www.waveshare.com/product/accessories/power-heat-sinks/power-supply.htm)
+                *   [Solar Power](https://www.waveshare.com/product/accessories/power-heat-sinks/solar-power.htm)
+                *   [Heat Sinks](https://www.waveshare.com/product/accessories/power-heat-sinks/heat-sinks.htm)
+                *   [Cooling Fans](https://www.waveshare.com/product/accessories/power-heat-sinks/cooling-fans.htm)
+
+            *   [Misc](https://www.waveshare.com/product/accessories/misc.htm)
+                *   [Raspberry Pi Cases](https://www.waveshare.com/product/accessories/misc/raspberry-pi-cases.htm)
+                *   [Jetson Nano Cases](https://www.waveshare.com/product/accessories/misc/jetson-nano-cases.htm)
+                *   [Display Cases](https://www.waveshare.com/product/accessories/misc/display-cases.htm)
+                *   [Speakers](https://www.waveshare.com/product/accessories/misc/speakers.htm)
+                *   [Storage](https://www.waveshare.com/product/accessories/misc/storage.htm)
+
+*   [Home](https://www.waveshare.com/)
+*   [New Arrivals](https://www.waveshare.com/new?dir=desc&order=position)
+*   [Displays](https://www.waveshare.com/product/displays.htm)
+*   [AI](https://www.waveshare.com/product/ai.htm)
+*   [Shipping](https://www.waveshare.com/shipping)
+*   [Payment](https://www.waveshare.com/payment)
+*   [Customization](https://www.waveshare.com/customization.html)
+*   [Wiki](https://www.waveshare.com/wiki)
+*   [Shopping Q&A](https://www.waveshare.com/shopping_q_a)
+
+*   [Home](https://www.waveshare.com/ "Go to Home Page")>
+*   **24703**
+
+*   [![Image 2](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-1.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-1.jpg)
+*   [![Image 3](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-2.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-2.jpg)
+*   [![Image 4](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-3.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-3.jpg)
+*   [![Image 5](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-4.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-4.jpg)
+*   [![Image 6](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-5.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-5.jpg)
+*   [![Image 7](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-6.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-6.jpg)
+*   [![Image 8](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-7.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-7.jpg)
+*   [![Image 9](https://www.waveshare.com/media/catalog/product/cache/1/thumbnail/122x122/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-8.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-8.jpg)
+
+[![Image 10: 25kg.cm Wide Range Voltage Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder](https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-1.jpg)](https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-1.jpg)
+
+[Motors / Servos](https://www.waveshare.com/product/modules/motors-servos/motors-servos.htm), [Servos](https://www.waveshare.com/product/robotics/motors-servos/servos.htm), [Servos](https://www.waveshare.com/product/accessories/motors-servos/servos.htm)
+
+# 25kg.cm Wide Range Voltage Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder
+
+SKU:24703  
+Part No.:ST3020 Servo  
+Brand:Waveshare
+
+$19.99 Qty: Increase Decrease Add to Cart
+
+↓Please select all required options below before ordering.
+
+Price Quantity
+$19.99 1
+$19.59 2
+$19.39 3
+$19.31 4+
+
+**Related Products:**
+
+[![Image 11: 40kg.cm Metal Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder and Brushless Motor](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/t/st3025-servo-1.jpg)](https://www.waveshare.com/product/st3025-servo.htm "40kg.cm Metal Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder and Brushless Motor")
+
+[![Image 12: ST3215 Series Serial Bus Servo, High precision and torque, 360 Degrees Magnetic Encoder, Two-way Feedback, Servo/Motor Mode Switchable, Options For 30kg.cm@12V / 19.5kg.cm@7.4V Torque](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/t/st3215-servo-1_5.jpg)](https://www.waveshare.com/product/st3215-servo.htm "ST3215 Series Serial Bus Servo, High precision and torque, 360 Degrees Magnetic Encoder, Two-way Feedback, Servo/Motor Mode Switchable, Options For 30kg.cm@12V / 19.5kg.cm@7.4V Torque")
+
+[![Image 13: 30kg.cm ST3235 Serial Bus Servo, High Precision And Large Torque, Aluminum Alloy Case, With Programmable 360 Degrees Magnetic Encoder](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/t/st3235-servo-1.jpg)](https://www.waveshare.com/product/st3235-servo.htm "30kg.cm ST3235 Serial Bus Servo, High Precision And Large Torque, Aluminum Alloy Case, With Programmable 360 Degrees Magnetic Encoder")
+
+[![Image 14: 25kg.cm Wide Range Voltage Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/t/st3020-servo-1.jpg)](https://www.waveshare.com/ST3020-Servo.htm#none; "25kg.cm Wide Range Voltage Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder")
+
+[![Image 15: SC15 17kg Large Torque Programmable Serial Bus Servo](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/c/sc15-servo-2.jpg)](https://www.waveshare.com/product/sc15-servo.htm "SC15 17kg Large Torque Programmable Serial Bus Servo")
+
+[![Image 16: MG996R Servo, Metal Gear, High Torque](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/m/g/mg996r-servo-1.jpg)](https://www.waveshare.com/catalog/product/view/id/3614/s/mg996r-servo/category/37/ "MG996R Servo, Metal Gear, High Torque")
+
+[![Image 17: 2.3kg Serial Bus Servo, Two-way Feedback, Servo/Motor Mode Switchable, Compact Size, 300° Rotation Angle](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/c/sc09-servo-1.jpg)](https://www.waveshare.com/product/sc09-servo.htm "2.3kg Serial Bus Servo, Two-way Feedback, Servo/Motor Mode Switchable, Compact Size, 300° Rotation Angle")
+
+[![Image 18: High-Reliability 180° Copper Gear Digital Servo, 2.3kg.Cm Large Torque, Compact Size & Lightweight](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/w/p/wp90-servo-1.jpg)](https://www.waveshare.com/product/wp90-servo.htm "High-Reliability 180° Copper Gear Digital Servo, 2.3kg.Cm Large Torque, Compact Size & Lightweight")
+
+[![Image 19: 20kg.cm / 35kg.cm Large Torque 180° Digital Servo, Copper Gear / Steel Gear, Comes With Multiple Servo Arms For Flexible Assembly, Waterproof And Dustproof](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/w/p/wp5320-1.jpg)](https://www.waveshare.com/product/wp5320-series.htm "20kg.cm / 35kg.cm Large Torque 180° Digital Servo, Copper Gear / Steel Gear, Comes With Multiple Servo Arms For Flexible Assembly, Waterproof And Dustproof")
+
+[![Image 20: MG90S Micro Servo, Metal Gear](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/m/g/mg90s-servo-1.jpg)](https://www.waveshare.com/catalog/product/view/id/3613/s/mg90s-servo/category/37/ "MG90S Micro Servo, Metal Gear")
+
+[![Image 21: SG90 Micro Servo](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/g/sg90-servo-1_1.jpg)](https://www.waveshare.com/catalog/product/view/id/3612/s/sg90-servo/category/37/ "SG90 Micro Servo")
+
+[![Image 22: ESP32 Servo Driver Expansion Board, Built-In WiFi and Bluetooth, ESP32-WROOM-32, ESP32s](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/s/e/servo-driver-with-esp32-1.jpg)](https://www.waveshare.com/product/servo-driver-with-esp32.htm "ESP32 Servo Driver Expansion Board, Built-In WiFi and Bluetooth, ESP32-WROOM-32, ESP32s")
+
+[![Image 23: Serial Bus Servo Driver Board, Integrates Servo Power Supply And Control Circuit, Applicable for ST/SC Series Serial Bus Servos](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/b/u/bus-servo-adapter-a-1_2.jpg)](https://www.waveshare.com/product/bus-servo-adapter-a.htm "Serial Bus Servo Driver Board, Integrates Servo Power Supply And Control Circuit, Applicable for ST/SC Series Serial Bus Servos")
+
+[![Image 24: Serial Bus Servo DC Buck Adapter, Mini Module, Design for Serial Bus Servos, Easy to Use, 7.2V / 6V Buck Regulator](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/d/c/dc-buck-adapter-7.2v-1.jpg)](https://www.waveshare.com/product/dc-buck-adapter-7.2v.htm "Serial Bus Servo DC Buck Adapter, Mini Module, Design for Serial Bus Servos, Easy to Use, 7.2V / 6V Buck Regulator")
+
+[![Image 25: Metal Flat Key Shaft Flange Plate, Suitable For Using with Serial Bus Servo](https://www.waveshare.com/media/catalog/product/cache/1/image/264x/9df78eab33525d08d6e5fb8d27136e95/m/e/metal-flat-key-shaft-flange-plate-a-1.jpg)](https://www.waveshare.com/product/metal-flat-key-shaft-flange-plate-a.htm "Metal Flat Key Shaft Flange Plate, Suitable For Using with Serial Bus Servo")
+
+Share: 
+
+![Image 26: facebook sharing button](https://platform-cdn.sharethis.com/img/facebook.svg)Share
+
+![Image 27: twitter sharing button](https://platform-cdn.sharethis.com/img/twitter.svg)Post
+
+![Image 28: email sharing button](https://platform-cdn.sharethis.com/img/email.svg)Email
+
+![Image 29: whatsapp sharing button](https://platform-cdn.sharethis.com/img/whatsapp.svg)Share
+
+![Image 30: sharethis sharing button](https://platform-cdn.sharethis.com/img/sharethis.svg)Share
+
+*   [Description](javascript:void(0);)
+*   [Package Content](javascript:void(0);)
+*   [Wiki](javascript:void(0);)
+
+*   Add to Cart
+
+## Details
+
+25kg.cm Wide Range Voltage Serial Bus Servo, High Precision And Large Torque, With Programmable 360 Degrees Magnetic Encoder, Two-Way Feedback, Servo/Motor Mode Switchable
+
+25kg.cm Wide Range Voltage   
+serial bus servo
+
+Supports 6~14V Wide Range Voltage input, with 360° Magnetic Encoder
+
+![Image 31](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-1.jpg)
+
+Specifications
+
+| Product type | ST3020 serial bus servo |
+| --- |
+| Torque | 25kg.cm@12V |
+| Rotation angle | 360° (0~4095) |
+| Position sensor resolution | 0.088° (360°/4096) |
+| Mechanism limit angle | No Limit |
+| Working voltage | 6 ~ 14 V (typ. 12V) |
+| Gear | high precision metal gear |
+| No-load speed | 0.167sec/60° (60RPM)@12V |
+| Encoder type | 12Bits magnetic encoder |
+| ID range | 1 ~ 253 |
+| Baudrate | 38400bps ~ 1Mbps (1Mbps by default) |
+| Feedback | Position, Load, Speed, Input Voltage, Current, Temperature |
+| No-load current | 200mA@12V |
+| Locked-rotor current | 2.7A@12V |
+| Kt | 9.26kg.cm/A |
+
+  
+
+Application Examples
+
+*   Servos will provide various feedback like load, position, speed, torque lock, and working mode (servo mode, servo motor mode, etc.) for advanced projects requiring closed-loop automatic control.
+*   Ideal choice for building quadruped robots, hexapod walkers, robotic arms and other robotic projects requiring multiple servos. (This product provides the open source models as shown in the picture below)
+
+![Image 32](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-3-1.jpg)
+**Download models:**[![Image 33](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-STEP.png)](https://www.waveshare.com/w/upload/9/91/CLAWER-6_based_on_ST3020_Servo_STEP.zip)[![Image 34](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-F3Z.png)](https://www.waveshare.com/w/upload/4/43/CLAWER-6_based_on_ST3020_Servo_F3Z.zip)
+
+![Image 35](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-3-2.jpg)
+**Download models:**[![Image 36](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-STEP.png)](https://www.waveshare.com/w/upload/3/3f/CLAWER-4_based_on_ST3020_Servo_STEP.zip)[![Image 37](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-F3Z.png)](https://www.waveshare.com/w/upload/1/11/CLAWER-4_based_on_ST3020_Servo_F3Z.zip)
+
+![Image 38](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-3-3.jpg)
+**Download models:**[![Image 39](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-STEP.png)](https://www.waveshare.com/w/upload/8/8b/ARM_based_on_ST3020_STEP.zip)[![Image 40](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-F3Z.png)](https://www.waveshare.com/w/upload/c/ce/ARM_based_on_ST3020_F3Z.zip)
+
+![Image 41](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-3-4.jpg)
+**Download models:**[![Image 42](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-STEP.png)](https://www.waveshare.com/w/upload/e/e8/PT_based_on_ST3020_STEP.zip)[![Image 43](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-F3Z.png)](https://www.waveshare.com/w/upload/c/cd/PT_based_on_ST3020_F3Z.zip)
+
+* images here are for reference ONLY
+
+  
+
+UART Serial Bus Control
+
+Allows controlling up to 253 serial bus servos at the same time
+
+![Image 44](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-5.jpg)
+Note: though one channel UART can control up to 253 serial bus servos, due to the high power of the servos, it is necessary to consider whether the power supply solution is enough when using too many servos. For reference only, the [servo driver board](https://www.waveshare.com/servo-driver-with-esp32.htm) is NOT included
+
+Easy to use, Large Torque
+
+Supports 6.0~14V Wide range Voltage Input, And Can Be Directly Powered By 2S  
+ or 3S lithium batteries. Up To 25kg.Cm Torque On 12V Voltage, Suitable For Building  
+ Quadruped Robots, Hexapod Walkers, Robotic Arms And Other Robotic Projects  
+ Requiring Multiple Servos
+
+![Image 45](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-7.jpg)
+
+Aluminum alloy middle case + Iron-core Motor + Metal Gear Box
+
+Adopts high-reliability Design, suitable for industrial equipments, robotics, and other application scenarios that require angle or speed closed-loop control
+
+![Image 46](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-9.jpg)
+
+360° Magnetic Encoder  
+ High Precision, Longer Lifetime
+
+Adopts 12-bit high-precision magnetic encoding angle sensor. Compared with the carbon film potentiometer, the angle of the magnetic encoder is enlarged to 360°, and the resolution is increased by 4 times. Since there is a gap and no friction between the magnetic encoder and the radial magnet, the lifetime of the servo is effectively extended.
+
+![Image 47](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-11.jpg)
+
+Acceleration Start-stop Function
+
+The speed and acceleration values are settable to make the motion effect softer
+
+![Image 48](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-13.gif)
+
+One Button to Calibrate the Middle Position
+
+360° installation at any position, one button to set the current position as middle position. Easy to install and debug
+
+![Image 49](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-15-1.jpg)
+1. In the default program, a hotspot will be created automatically after the servo driver board is turned on. Use your mobile phone to connect to this hotspot, open the browser, and enter the IP address to enter the control interface.
+
+![Image 50](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-15-2.gif)
+2. Click Release to unlock, then turn the servo to the middle position where you need to set
+
+![Image 51](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-15-3.gif)
+3. Click Set Middle Position then confirm.
+
+![Image 52](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-15-4.gif)
+4. Turn the servo to any angle, then click Middle, and the servo will automatically return to the middle position initially set.
+
+Two-Way Feedback
+
+The Servo Will Provide Various Feedback Like Position, Load, Speed,   
+Input Voltage, Current and Temperature In Real Time
+
+![Image 53](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-17.jpg)
+* images here are for reference ONLY
+
+Multiple operation modes  
+ suitable for more application scenarios
+
+![Image 54](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-19-1.gif)
+**Angle servo mode**  
+ Default mode, the angle position is controllable at 0~360° degrees
+
+![Image 55](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-19-2.gif)
+**Speed closed-loop motor mode**  
+ Motor mode, intelligently control and maintain speed when the load changes
+
+![Image 56](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-19-3.gif)
+**Step mode**  
+ Can perform step motion relative to the current position
+
+Multi-Loop angle Position control
+
+Supports angle position control in both positive and negative directions up to 7.5  
+ loops under the default precision setting, but the number of loops will not be saved in case of power loss. Lowering the angle resolution can double the number of control loops
+
+![Image 57](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-21.gif)
+
+  
+
+  
+
+Supports installing flat key shaft flange
+
+With the flat key shaft flange designed for this serial bus servo, the output shaft of the servo can be installed on more devices, making full use of various working modes and excellent low-speed performance. It can be used to install various transmission parts such as 6mm shaft couplings, wheels, timing pulleys, and gears.
+
+![Image 58](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-22.jpg)
+
+* for reference only, the [flat key shaft flange](https://www.waveshare.com/metal-flat-key-shaft-flange-plate-a.htm) and wheels are Not included.
+
+  
+
+All-metal servo bracket
+
+More Convenient to Develop the Structural Components, Combination Use More Flexible
+
+![Image 59](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-23.jpg)
+
+Details Introduction
+
+![Image 60](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-25-1.jpg)
+**CNC Aluminum alloy middle case**  
+ Improved heat tolerance, size stability, rigidity, and mechanical performance
+
+![Image 61](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-25-2.jpg)
+**High strength aluminum servo wheels**  
+ Using T6061 aluminum alloy, good anti-corrosion performance
+
+![Image 62](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-25-3.jpg)
+**High precision copper and steel gears**  
+ The combination of the two types of gears allows the servo to work with lower working noise, and enhances its stability and mechanical performance
+
+![Image 63](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-25-4.jpg)
+**All-metal bracket**  
+ More convenient to combine it with other devices
+
+Open Source Control Program
+
+We provide the open-source web control demo of the servo driver board and a secondary development tutorial, which can be directly used for remote setting and remote control of the servo. At the same time, we also provide a 3D model for you to build your project quickly.
+
+![Image 64](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-27.jpg)
+
+  
+
+product show
+
+![Image 65](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-29.jpg)
+
+  
+
+Outline dimensions
+
+![Image 66](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-size.jpg)
+
+Resources & Services
+
+![Image 67](https://www.waveshare.com/img/devkit/LCD/common/res_banner.png)
+
+![Image 68](https://www.waveshare.com/img/devkit/LCD/common/res_content.png)
+
+* * *
+
+**WIKI:**[www.waveshare.com/wiki/ST3020_Servo](http://www.waveshare.com/wiki/ST3020_Servo)
+
+* Resources for different product may vary, please check the wiki page to confirm the actually provided resources.
+
+Product Selection
+
+| Product | Voltage | Control Method | Precision | NO-LOAD SPEED | Continuous Rotation | LOCKED-ROTOR TORQUE * | LOCKED-ROTOR CURRENT | Range | Feedback |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [WP90](https://www.waveshare.com/wp90-servo.htm) | 4.8 ~ 7.4 | PWM | ≤2° | 0.1sec/60° | - | 2.3kg.cm | 1.0A | 180° | - |
+| [WP5320](https://www.waveshare.com/wp5320-series.htm?sku=31512) | 4 ~ 8.4 | PWM | ≤5° | 0.151sec/60° | - | 20kg.cm | 3A | 180° | - |
+| [WP5335](https://www.waveshare.com/wp5320-series.htm?sku=31391) | 4 ~ 8.4 | PWM | ≤1° | 0.192sec/60° | - | 35.5kg.cm | 3.9A | 180° | - |
+| [SC09](https://www.waveshare.com/SC09-Servo.htm) | 4~6V | TTL | 300°/1024 | 0.1sec/60° | √ | 2.3kg.cm | 1.0A | 300° | √ |
+| [SC15](https://www.waveshare.com/sc15-servo.htm) | 4.8 ~ 8.4 | TTL | 210° / 1024 | 0.16 sec / 60° | √ | 15kg.cm | 1.5A | 210° | √ |
+| [ST3020](https://www.waveshare.com/ST3020-Servo.htm) | 6 ~ 14.0 | TTL | 360° / 4096 | 0.167sec / 60° | √ | 25kg.cm | 2.7A | 360° | √ |
+| [ST3215-7.4V](https://www.waveshare.com/st3215-servo.htm?sku=33014) | 4.0~7.4 | TTL | 360° / 4096 | 0.192 sec / 60° | √ | 19.5kg.cm | 2.5A | 360° | √ |
+| [ST3215](https://www.waveshare.com/st3215-servo.htm?sku=22414) | 6 ~ 12.6 | TTL | 360° / 4096 | 0.222 sec / 60° | √ | 30kg.cm | 2.7A | 360° | √ |
+| [ST3025](https://www.waveshare.com/ST3025-Servo.htm) | 6 ~ 12.6 | TTL | 360° / 4096 | 0.117sec / 60° | √ | 40kg.cm | 4.4A | 360° | √ |
+| [ST3235](https://www.waveshare.com/ST3235-Servo.htm) | 6 ~ 12.6 | TTL | 360° / 4096 | 0.222sec/60° | √ | 30kg.cm | 2.7A | 360° | √ |
+| [CF35-12](https://www.waveshare.com/CF35-12.htm) | 9.0 ~ 12.6 | TTL | 360° / 4096 | 0.222sec/60° | √ | 35kg.cm | 2.8A | 360° | √ |
+| [RSBL35-24-HS](https://www.waveshare.com/rsbl45-24.htm?sku=28094) | 9.0 ~ 24.0 | RS485 | 360° / 4096 | 0.087sec/60° | √ | 35kg.cm | 1.8A | 360° | √ |
+| [RSBL45-24](https://www.waveshare.com/rsbl45-24.htm?sku=27162) | 9.0 ~ 24.0 | RS485 | 360° / 4096 | 0.142sec/60° | √ | 45kg.cm | 2.3A | 360° | √ |
+| [RSBL85-12](https://www.waveshare.com/rsbl85-12.htm?sku=27163) | 9.0 ~ 12.0 | RS485 | 360° / 4096 | 0.167sec/60° | √ | 85kg.cm | 7.9A | 360° | √ |
+| [RSBL85-24](https://www.waveshare.com/rsbl85-12.htm?sku=27164) | 9.0 ~ 24.0 | RS485 | 360° / 4096 | 0.154sec/60° | √ | 85kg.cm | 5.6A | 360° | √ |
+| [RSBL120-24](https://www.waveshare.com/rsbl120-24.htm) | 9.0 ~ 24.0 | RS485 | 360° / 4096 | 0.2sec/60° | √ | 120kg.cm | 4A | 360° | √ |
+
+* the Locked-rotor torque is measured at the typical voltage of each servo, please refer to the documentation in the wiki for more details
+
+**Weight:**0.097 kg
+
+## Quick Overview
+
+ST3020 Servo x1
+
+![Image 69](https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-pack.jpg)
+
+xxxxxx
+
+History Price
+
+Retail Price:
+
+Distributor Price:
+
+[confirm](javascript:void(0))
+
+#### Category Navigation:
+
+*   Products
+    *   [Raspberry Pi](https://www.waveshare.com/product/raspberry-pi.htm)
+        *   [Boards / Kits](https://www.waveshare.com/product/raspberry-pi/boards-kits.htm)
+            *   [Raspberry Pi 5](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-5.htm)
+            *   [Raspberry Pi 4](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-4.htm)
+            *   [Raspberry Pi 3](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-3.htm)
+            *   [Raspberry Pi 400](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-400.htm)
+            *   [Raspberry Pi Zero 2 W](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-zero-2-w-cat.htm)
+            *   [Raspberry Pi Zero](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-zero.htm)
+            *   [Raspberry Pi Pico](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-pico-cat.htm)
+            *   [Compute Module 4/4S](https://www.waveshare.com/product/raspberry-pi/boards-kits/compute-module-4-4s-cat.htm)
+            *   [Compute Module 3](https://www.waveshare.com/product/raspberry-pi/boards-kits/compute-module.htm)
+            *   [Raspberry Pi Pico 2](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-pico-13.htm)
+            *   [Compute Module 5](https://www.waveshare.com/product/raspberry-pi/boards-kits/cm5.htm)
+            *   [Raspberry Pi 500](https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-500-and-kits.htm)
+
+        *   [Displays](https://www.waveshare.com/product/raspberry-pi/displays.htm)
+            *   [LCD](https://www.waveshare.com/product/raspberry-pi/displays/lcd-oled.htm)
+            *   [OLED](https://www.waveshare.com/product/raspberry-pi/displays/oled.htm)
+            *   [e-Paper](https://www.waveshare.com/product/raspberry-pi/displays/e-paper.htm)
+
+        *   [Cameras](https://www.waveshare.com/product/raspberry-pi/cameras.htm)
+            *   [≥10MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/10mp-pixels.htm)
+            *   [8MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/8m-pixels.htm)
+            *   [5MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/5m-pixels.htm)
+            *   [2MP Rolling Shutter](https://www.waveshare.com/product/raspberry-pi/cameras/2m-pixels.htm)
+            *   [Global Shutter Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/global-shutter-cameras.htm)
+            *   [USB Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/usb-cameras.htm)
+            *   [AI Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/ai-cameras.htm)
+            *   [GMSL Cameras](https://www.waveshare.com/product/raspberry-pi/cameras/gmsl-cameras.htm)
+
+        *   [HATs](https://www.waveshare.com/product/raspberry-pi/hats.htm)
+            *   [IoT](https://www.waveshare.com/product/raspberry-pi/hats/iot.htm)
+            *   [Interface / Expansion / Power](https://www.waveshare.com/product/raspberry-pi/hats/interface-power.htm)
+            *   [Motors / Relays / SCR](https://www.waveshare.com/product/raspberry-pi/hats/motors-relays.htm)
+            *   [AD / DA / Audio / Sensors](https://www.waveshare.com/product/raspberry-pi/hats/ad-da-audio-sensors.htm)
+            *   [LED / Buttons](https://www.waveshare.com/product/raspberry-pi/hats/led-buttons.htm)
+            *   [Versatile](https://www.waveshare.com/product/raspberry-pi/hats/versatile.htm)
+
+        *   [All-in-one](https://www.waveshare.com/product/raspberry-pi/laptop.htm)
+            *   [Magic Mirror / All-in-one](https://www.waveshare.com/product/raspberry-pi/laptop/all-in-one.htm)
+
+        *   [HomeLab](https://www.waveshare.com/product/raspberry-pi/homelab.htm)
+        *   [Robots](https://www.waveshare.com/product/raspberry-pi/robots.htm)
+            *   [Mobile Robots](https://www.waveshare.com/product/raspberry-pi/robots/mobile-robots.htm)
+            *   [Robot Arm / Control](https://www.waveshare.com/product/raspberry-pi/robots/robot-arm-control.htm)
+
+        *   [Portable Gaming](https://www.waveshare.com/product/raspberry-pi/portable-gaming.htm)
+        *   [Accessories](https://www.waveshare.com/product/raspberry-pi/accessories.htm)
+            *   [Pi Cases](https://www.waveshare.com/product/raspberry-pi/accessories/pi-cases.htm)
+            *   [Display Cases](https://www.waveshare.com/product/raspberry-pi/accessories/display-cases.htm)
+            *   [Wires / Power / SD Card...](https://www.waveshare.com/product/raspberry-pi/accessories/wires-power-sd-card.htm)
+
+    *   [AI](https://www.waveshare.com/product/ai.htm)
+        *   [Boards / Kits](https://www.waveshare.com/product/ai/boards-kits.htm)
+            *   [Jetson Nano](https://www.waveshare.com/product/ai/boards-kits/jetson-nano.htm)
+            *   [Jetson TX2](https://www.waveshare.com/product/ai/boards-kits/jetson-tx2.htm)
+            *   [Jetson Xavier NX](https://www.waveshare.com/product/ai/boards-kits/jetson-xavier-nx-cata.htm)
+            *   [Jetson Orin](https://www.waveshare.com/product/ai/boards-kits/jetson-orin.htm)
+            *   [AI Cameras](https://www.waveshare.com/product/ai/boards-kits/ai-cameras.htm)
+            *   [OPS Computer](https://www.waveshare.com/product/ai/boards-kits/ops-computer.htm)
+            *   [Raspberry Pi](https://www.waveshare.com/product/ai/boards-kits/raspberry-pi.htm)
+            *   [D-Robotics](https://www.waveshare.com/product/ai/boards-kits/d-robotics.htm)
+            *   [Luckfox](https://www.waveshare.com/product/ai/boards-kits/luckfox.htm)
+
+        *   [Displays](https://www.waveshare.com/product/ai/displays.htm)
+            *   [LCD](https://www.waveshare.com/product/ai/displays/lcd-oled.htm)
+            *   [OLED](https://www.waveshare.com/product/ai/displays/oled.htm)
+            *   [e-Paper](https://www.waveshare.com/product/ai/displays/e-paper.htm)
+
+        *   [Cameras](https://www.waveshare.com/product/ai/cameras.htm)
+            *   [Single Cameras](https://www.waveshare.com/product/ai/cameras/single-cameras.htm)
+            *   [Binocular Cameras](https://www.waveshare.com/product/ai/cameras/binocular-cameras.htm)
+            *   [USB Cameras](https://www.waveshare.com/product/ai/cameras/ai-usb-cameras.htm)
+            *   [GMSL Cameras](https://www.waveshare.com/product/ai/cameras/gmsl-cameras.htm)
+            *   [Others](https://www.waveshare.com/product/ai/cameras/others.htm)
+
+        *   [Expansions](https://www.waveshare.com/product/ai/expansions.htm)
+            *   [IoT](https://www.waveshare.com/product/ai/expansions/iot.htm)
+            *   [Motors / Relays / SCR](https://www.waveshare.com/product/ai/expansions/motors-relays.htm)
+            *   [AD / DA / Versatile](https://www.waveshare.com/product/ai/expansions/ad-da-versatile.htm)
+            *   [Power Supply](https://www.waveshare.com/product/ai/expansions/power-supply.htm)
+
+        *   [Robots](https://www.waveshare.com/product/ai/robots.htm)
+            *   [Mobile Robots](https://www.waveshare.com/product/ai/robots/mobile-robots.htm)
+            *   [Robot Arm / Control](https://www.waveshare.com/product/ai/robots/robot-arm-control.htm)
+
+        *   [Accessories](https://www.waveshare.com/product/ai/accessories.htm)
+            *   [Cases](https://www.waveshare.com/product/ai/accessories/cases.htm)
+            *   [Wires / Power / SD Card...](https://www.waveshare.com/product/ai/accessories/wires-power-sd-card.htm)
+
+    *   [Luckfox](https://www.waveshare.com/product/luckfox.htm)
+        *   [Linux Boards / Modules](https://www.waveshare.com/product/luckfox/boards-modules.htm)
+            *   [Omni3576-RK3576](https://www.waveshare.com/product/luckfox/boards-modules/core3576.htm)
+            *   [Luckfox Lyra-RK3506](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-lyra-23.htm)
+            *   [LuckFox Pico-RV1106](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-pico-core1106.htm)
+            *   [Luckfox Aura-RV1126](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-aura-rv1126.htm)
+            *   [Core3566-RK3566](https://www.waveshare.com/product/luckfox/boards-modules/core3566-9.htm)
+            *   [LuckFox Lume-T153](https://www.waveshare.com/product/luckfox/boards-modules/luckfox-lume-t153.htm)
+
+        *   [Displays](https://www.waveshare.com/product/luckfox/displays.htm)
+            *   [LCD/OLED](https://www.waveshare.com/product/luckfox/displays/lcd-oled.htm)
+
+        *   [Cameras](https://www.waveshare.com/product/luckfox/cameras.htm)
+            *   [3MP Cameras](https://www.waveshare.com/product/luckfox/cameras/3mp-cameras.htm)
+            *   [8MP Cameras](https://www.waveshare.com/product/luckfox/cameras/8mp-cameras.htm)
+            *   [5MP Cameras](https://www.waveshare.com/product/luckfox/cameras/5mp-cameras.htm)
+            *   [1MP Cameras](https://www.waveshare.com/product/luckfox/cameras/1mp-cameras.htm)
+
+    *   [RISC-V](https://www.waveshare.com/product/risc-v.htm)
+        *   [Boards / Kits](https://www.waveshare.com/product/risc-v/boards-kits.htm)
+            *   [VisionFive2](https://www.waveshare.com/product/risc-v/boards-kits/visionfive2.htm)
+            *   [VisionFive2 Lite](https://www.waveshare.com/product/risc-v/boards-kits/visionfive2-lite-7832.htm)
+
+        *   [Displays](https://www.waveshare.com/product/risc-v/displays.htm)
+            *   [LCD](https://www.waveshare.com/product/risc-v/displays/lcd.htm)
+
+        *   [Expansions / Accessories](https://www.waveshare.com/product/risc-v/expansions-accessories.htm)
+            *   [Audio / Sensors](https://www.waveshare.com/product/risc-v/expansions-accessories/audio-sensors.htm)
+            *   [Relays / Motors / Servos](https://www.waveshare.com/product/risc-v/expansions-accessories/relays-motors-servos.htm)
+            *   [Cooling Fan](https://www.waveshare.com/product/risc-v/expansions-accessories/cooling-fan.htm)
+
+        *   [Cameras](https://www.waveshare.com/product/risc-v/cameras.htm)
+            *   [8MP IMX219 Cameras](https://www.waveshare.com/product/risc-v/cameras/8mp-imx219-cameras.htm)
+
+    *   [ESP32](https://www.waveshare.com/product/esp32-related.htm)
+        *   [Boards / Kits](https://www.waveshare.com/product/esp32-related/boards-kits.htm)
+            *   [ESP32-P4](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-p4.htm)
+            *   [ESP32-S3](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-s3.htm)
+            *   [ESP32-C6](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-c6.htm)
+            *   [ESP32-C5](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-c5.htm)
+            *   [ESP32-C3](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-c3.htm)
+            *   [ESP32-H2](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-h2.htm)
+            *   [ESP32-S2](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-s2-1.htm)
+            *   [ESP32](https://www.waveshare.com/product/esp32-related/boards-kits/esp32-esp8266.htm)
+
+        *   [Displays](https://www.waveshare.com/product/esp32-related/displays.htm)
+            *   [LCD (SPI/QSPI)](https://www.waveshare.com/product/esp32-related/displays/lcd-spi-qspi.htm)
+            *   [LCD (RGB)](https://www.waveshare.com/product/esp32-related/displays/lcd-rgb.htm)
+            *   [LCD (MIPI)](https://www.waveshare.com/product/esp32-related/displays/lcd-mipi.htm)
+            *   [AMOLED](https://www.waveshare.com/product/esp32-related/displays/amoled.htm)
+            *   [e-Paper](https://www.waveshare.com/product/esp32-related/displays/e-paper.htm)
+            *   [RLCD](https://www.waveshare.com/product/esp32-related/displays/rlcd.htm)
+            *   [RGB LED Matrix](https://www.waveshare.com/product/esp32-related/displays/rgb-led-matrix.htm)
+
+        *   [AI Chat](https://www.waveshare.com/product/esp32-related/ai-chat.htm)
+        *   [Cameras](https://www.waveshare.com/product/esp32-related/cameras.htm)
+        *   [Industrial Controller](https://www.waveshare.com/product/esp32-related/industrial-controller.htm)
+        *   [Robots](https://www.waveshare.com/product/esp32-related/robots.htm)
+            *   [Mobile Robots](https://www.waveshare.com/product/esp32-related/robots/mobile-robots.htm)
+
+    *   [Arduino](https://www.waveshare.com/product/arduino-5.htm)
+        *   [Official Arduino®](https://www.waveshare.com/product/arduino-5/official-arduino.htm)
+            *   [Boards / Core Boards](https://www.waveshare.com/product/arduino-5/official-arduino/boards-core-boards.htm)
+                *   [Arduino UNO Q](https://www.waveshare.com/product/arduino-5/official-arduino/boards-core-boards/arduino-uno-q-1.htm)
+
+        *   [Compatible with Arduino®](https://www.waveshare.com/product/arduino-5/compatible-with-arduino.htm)
+            *   [Cases](https://www.waveshare.com/product/arduino-5/compatible-with-arduino/arduino-cases.htm)
+            *   [Kits](https://www.waveshare.com/product/arduino-5/compatible-with-arduino/arduino-kits.htm)
+            *   [Accessories](https://www.waveshare.com/product/arduino-5/compatible-with-arduino/accessories.htm)
+
+    *   [Displays](https://www.waveshare.com/product/displays.htm)
+        *   [LCD](https://www.waveshare.com/product/displays/lcd-oled.htm)
+            *   [5″ - 24.5″](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-1.htm)
+            *   [2.8″ - 4.3″](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-2.htm)
+            *   [0.71″ - 2.4″](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-3.htm)
+
+        *   [OLED](https://www.waveshare.com/product/displays/oled.htm)
+            *   [5″ - 15.6″](https://www.waveshare.com/product/displays/oled/oled-1.htm)
+            *   [0.49″ - 2.4″](https://www.waveshare.com/product/displays/oled/oled-3.htm)
+
+        *   [e-Paper](https://www.waveshare.com/product/displays/e-paper.htm)
+            *   [5.65″ - 13.3″](https://www.waveshare.com/product/displays/e-paper/epaper-1.htm)
+            *   [2.66″ - 5″](https://www.waveshare.com/product/displays/e-paper/epaper-2.htm)
+            *   [1.02″ - 2.36″](https://www.waveshare.com/product/displays/e-paper/epaper-3.htm)
+            *   [Driver Boards](https://www.waveshare.com/product/displays/e-paper/driver-boards.htm)
+
+        *   [Accessories](https://www.waveshare.com/product/displays/accessories.htm)
+            *   [Cables / Adapters](https://www.waveshare.com/product/displays/accessories/cables-adapters.htm)
+            *   [Cases](https://www.waveshare.com/product/displays/accessories/cases.htm)
+            *   [Speakers](https://www.waveshare.com/product/displays/accessories/speakers.htm)
+            *   [Stand](https://www.waveshare.com/product/displays/accessories/stand.htm)
+
+        *   [USB Monitor](https://www.waveshare.com/product/displays/usb-monitor.htm)
+            *   [2.1“ - 7“](https://www.waveshare.com/product/displays/usb-monitor/2-1-7.htm)
+
+    *   [IoT / Communication](https://www.waveshare.com/product/iot-communication.htm)
+        *   [Long Range Wireless](https://www.waveshare.com/product/iot-communication/long-range-wireless.htm)
+            *   [NB-IoT / Cat-M / LoRa / LoRaWAN](https://www.waveshare.com/product/iot-communication/long-range-wireless/nb-iot-lora.htm)
+            *   [5G / 4G / Cat-1 / GSM / GPRS](https://www.waveshare.com/product/iot-communication/long-range-wireless/4g-gsm-gprs.htm)
+            *   [GNSS / GPS](https://www.waveshare.com/product/iot-communication/long-range-wireless/gnss-gps.htm)
+
+        *   [Short Range Wireless](https://www.waveshare.com/product/iot-communication/short-range-wireless.htm)
+            *   [WiFi](https://www.waveshare.com/product/iot-communication/short-range-wireless/wifi.htm)
+            *   [ZigBee](https://www.waveshare.com/product/iot-communication/short-range-wireless/zigbee.htm)
+            *   [Bluetooth](https://www.waveshare.com/product/iot-communication/short-range-wireless/bluetooth.htm)
+            *   [NFC / RF](https://www.waveshare.com/product/iot-communication/short-range-wireless/nfc-rf.htm)
+
+        *   [Wired Comm / Converter](https://www.waveshare.com/product/iot-communication/wired-comm-converter.htm)
+            *   [USB](https://www.waveshare.com/product/iot-communication/wired-comm-converter/usb.htm)
+            *   [USB TO RS232 / RS485 / UART/ CAN](https://www.waveshare.com/product/iot-communication/wired-comm-converter/usb-to-rs232-uart-rs485.htm)
+            *   [Ethernet](https://www.waveshare.com/product/iot-communication/wired-comm-converter/ethernet.htm)
+            *   [Ethernet TO UART / RS232 / RS485](https://www.waveshare.com/product/iot-communication/wired-comm-converter/ethernet-to-uart-rs232-rs485.htm)
+            *   [RS232 / RS485 / CAN / DALI2](https://www.waveshare.com/product/iot-communication/wired-comm-converter/rs232-rs485-can-dali2.htm)
+
+    *   [Misc Modules](https://www.waveshare.com/product/modules.htm)
+        *   [Cameras / Audio / Video](https://www.waveshare.com/product/modules/cameras-audio-video.htm)
+            *   [Speech / Image Recognition / AI Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/speech-image-recognition-ai-vision.htm)
+            *   [MIPI Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/mipi-cameras.htm)
+            *   [USB Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/usb-cameras.htm)
+            *   [GMSL Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/gmsl-cameras.htm)
+            *   [Cameras](https://www.waveshare.com/product/modules/cameras-audio-video/cameras.htm)
+            *   [Audio Decoder](https://www.waveshare.com/product/modules/cameras-audio-video/audio-decoder.htm)
+
+        *   [Sensors](https://www.waveshare.com/product/modules/sensors.htm)
+            *   [Accelerometer / Angular Rate / Compass](https://www.waveshare.com/product/modules/sensors/accelerometer-angular-rate-compass.htm)
+            *   [Fingerprint / Sound / Image / Gesture](https://www.waveshare.com/product/modules/sensors/fingerprint-sound-image-gesture.htm)
+            *   [Temperature / Humidity / Barometer](https://www.waveshare.com/product/modules/sensors/temperature-humidity-barometer.htm)
+            *   [Gas](https://www.waveshare.com/product/modules/sensors/gas.htm)
+            *   [Light / Ranging / Lidar](https://www.waveshare.com/product/modules/sensors/light-ranging.htm)
+            *   [Others](https://www.waveshare.com/product/modules/sensors/others.htm)
+
+        *   [Motors / Servos](https://www.waveshare.com/product/modules/motors-servos.htm)
+            *   [Drivers](https://www.waveshare.com/product/modules/motors-servos/drivers.htm)
+            *   [Motors / Servos](https://www.waveshare.com/product/modules/motors-servos/motors-servos.htm)
+
+        *   [Others](https://www.waveshare.com/product/modules/others.htm)
+            *   [Interface Expansion](https://www.waveshare.com/product/modules/others/interface-expansion.htm)
+            *   [LED / Buttons](https://www.waveshare.com/product/modules/others/led-buttons.htm)
+            *   [Storage](https://www.waveshare.com/product/modules/others/storage.htm)
+            *   [AD / DA](https://www.waveshare.com/product/modules/others/ad-da.htm)
+            *   [RTC](https://www.waveshare.com/product/modules/others/rtc.htm)
+            *   [Power / Relays / SCR](https://www.waveshare.com/product/modules/others/power-relays.htm)
+            *   [Laser Module](https://www.waveshare.com/product/modules/others/laser-module.htm)
+
+    *   [Robotics](https://www.waveshare.com/product/robotics.htm)
+        *   [Mobile Robots](https://www.waveshare.com/product/robotics/mobile-robots.htm)
+            *   [Jetson Series AI Robots](https://www.waveshare.com/product/robotics/mobile-robots/jetson-series-ai-robots.htm)
+            *   [Raspberry Pi Robots](https://www.waveshare.com/product/robotics/mobile-robots/raspberry-pi-robots.htm)
+            *   [ESP32 Robots](https://www.waveshare.com/product/robotics/mobile-robots/esp32-robots.htm)
+            *   [Arduino-Related Robots](https://www.waveshare.com/product/robotics/mobile-robots/arduino-robots.htm)
+
+        *   [Dog-like Robots](https://www.waveshare.com/product/robotics/dog-like-robots.htm)
+            *   [Raspberry Pi Dog-like Robots](https://www.waveshare.com/product/robotics/dog-like-robots/raspberry-pi-dog-like-robots.htm)
+
+        *   [Drivers / Sensors / Lidar](https://www.waveshare.com/product/robotics/drivers-sensors.htm)
+            *   [Drivers](https://www.waveshare.com/product/robotics/drivers-sensors/drivers.htm)
+            *   [Sensors](https://www.waveshare.com/product/robotics/drivers-sensors/sensors.htm)
+            *   [Lidar](https://www.waveshare.com/product/robotics/drivers-sensors/lidar.htm)
+
+        *   [Motors / Servos](https://www.waveshare.com/product/robotics/motors-servos.htm)
+            *   [Motors](https://www.waveshare.com/product/robotics/motors-servos/motors.htm)
+            *   [Servos](https://www.waveshare.com/product/robotics/motors-servos/servos.htm)
+
+        *   [Robot Arm / Control](https://www.waveshare.com/product/robotics/robot-arm-control.htm)
+            *   [Robot Arm](https://www.waveshare.com/product/robotics/robot-arm-control/robot-arm.htm)
+            *   [Pan Tilt Control](https://www.waveshare.com/product/robotics/robot-arm-control/pan-tilt-control.htm)
+
+        *   [Remote Controller](https://www.waveshare.com/product/robotics/remote-controller.htm)
+        *   [Robotic Components](https://www.waveshare.com/product/robotics/robotic-components.htm)
+            *   [Gearing](https://www.waveshare.com/product/robotics/robotic-components/gearing.htm)
+            *   [Chassis Accessories](https://www.waveshare.com/product/robotics/robotic-components/chassis-accessories.htm)
+
+    *   [MCU / FPGA](https://www.waveshare.com/product/mcu-tools.htm)
+        *   [Core Boards / Compact Boards](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards.htm)
+            *   [STM32 Core](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/stm32-core.htm)
+            *   [STM32 Discovery](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/stm32-discovery.htm)
+            *   [STM32 Nucleo](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/stm32-nucleo.htm)
+            *   [LPC Core](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/lpc-core.htm)
+            *   [BeagleBoard](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/beagleboard.htm)
+            *   [ALTERA Core](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/altera-core.htm)
+            *   [Arduino® Compatible](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/arduino.htm)
+            *   [micro:bit](https://www.waveshare.com/product/mcu-tools/core-boards-compact-boards/micro-bit-boards.htm)
+
+        *   [Development Boards / Expansions](https://www.waveshare.com/product/mcu-tools/development-boards.htm)
+            *   [STM32 Open](https://www.waveshare.com/product/mcu-tools/development-boards/stm32-open.htm)
+            *   [STM32 EVK](https://www.waveshare.com/product/mcu-tools/development-boards/stm32-evk.htm)
+            *   [AVR Arduino Shields](https://www.waveshare.com/product/mcu-tools/development-boards/avr-arduino-shields.htm)
+            *   [Arduino Shields Compatible](https://www.waveshare.com/product/mcu-tools/development-boards/arduino-shields-compatible.htm)
+            *   [Displays / Buttons / Sound](https://www.waveshare.com/product/mcu-tools/development-boards/displays-buttons-sound.htm)
+            *   [Motors / Interface](https://www.waveshare.com/product/mcu-tools/development-boards/motors-interface.htm)
+
+        *   [Debugger / Programmer](https://www.waveshare.com/product/mcu-tools/debugger-programmer.htm)
+            *   [STM32 / STM8](https://www.waveshare.com/product/mcu-tools/debugger-programmer/stm32-stm8.htm)
+            *   [AVR](https://www.waveshare.com/product/mcu-tools/debugger-programmer/avr.htm)
+            *   [PIC](https://www.waveshare.com/product/mcu-tools/debugger-programmer/pic.htm)
+            *   [ALTERA Core](https://www.waveshare.com/product/mcu-tools/debugger-programmer/altera-core.htm)
+            *   [XILINX](https://www.waveshare.com/product/mcu-tools/debugger-programmer/xilinx.htm)
+
+        *   [Programming Adapters](https://www.waveshare.com/product/mcu-tools/programming-adapters.htm)
+            *   [STM32](https://www.waveshare.com/product/mcu-tools/programming-adapters/stm32.htm)
+            *   [STM8](https://www.waveshare.com/product/mcu-tools/programming-adapters/stm8.htm)
+            *   [AVR](https://www.waveshare.com/product/mcu-tools/programming-adapters/avr.htm)
+
+        *   [Robots](https://www.waveshare.com/product/mcu-tools/robots.htm)
+            *   [Robot Arm](https://www.waveshare.com/product/mcu-tools/robots/robot-arm.htm)
+
+    *   [Sockets / Adapters](https://www.waveshare.com/product/sockets-adapters.htm)
+        *   [Specific Programming Adapters](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters.htm)
+            *   [STM32 Series](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters/stm32-series.htm)
+            *   [STM8 Series](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters/stm8-series.htm)
+            *   [AVR Series](https://www.waveshare.com/product/sockets-adapters/specific-programming-adapters/avr-series.htm)
+
+        *   [QFP](https://www.waveshare.com/product/sockets-adapters/qfp.htm)
+            *   [Sockets](https://www.waveshare.com/product/sockets-adapters/qfp/sockets.htm)
+            *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/qfp/to-dip.htm)
+            *   [With Pinheader](https://www.waveshare.com/product/sockets-adapters/qfp/with-pinheader.htm)
+
+        *   [QFN / MLF](https://www.waveshare.com/product/sockets-adapters/qfn-mlf.htm)
+            *   [Sockets](https://www.waveshare.com/product/sockets-adapters/qfn-mlf/sockets.htm)
+            *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/qfn-mlf/to-dip.htm)
+            *   [With Pinheader](https://www.waveshare.com/product/sockets-adapters/qfn-mlf/with-pinheader.htm)
+
+        *   [SOP](https://www.waveshare.com/product/sockets-adapters/sop.htm)
+            *   [Sockets](https://www.waveshare.com/product/sockets-adapters/sop/sockets.htm)
+            *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/sop/to-dip.htm)
+
+        *   [SSOP / TSSOP](https://www.waveshare.com/product/sockets-adapters/ssop-tssop.htm)
+            *   [Sockets](https://www.waveshare.com/product/sockets-adapters/ssop-tssop/sockets.htm)
+            *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/ssop-tssop/to-dip.htm)
+
+        *   [TSOP / MSOP / SOT](https://www.waveshare.com/product/sockets-adapters/tsop-msop-sot.htm)
+            *   [Sockets](https://www.waveshare.com/product/sockets-adapters/tsop-msop-sot/sockets.htm)
+            *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/tsop-msop-sot/to-dip.htm)
+
+        *   [PLCC](https://www.waveshare.com/product/sockets-adapters/plcc.htm)
+            *   [Sockets](https://www.waveshare.com/product/sockets-adapters/plcc/sockets.htm)
+            *   [TO DIP](https://www.waveshare.com/product/sockets-adapters/plcc/to-dip.htm)
+
+    *   [Accessories](https://www.waveshare.com/product/accessories.htm)
+        *   [Adapters / Cables / Antennas](https://www.waveshare.com/product/accessories/adapters-cables-antennas.htm)
+            *   [HDMI](https://www.waveshare.com/product/accessories/adapters-cables-antennas/hdmi.htm)
+            *   [USB](https://www.waveshare.com/product/accessories/adapters-cables-antennas/usb.htm)
+            *   [Serial Cables](https://www.waveshare.com/product/accessories/adapters-cables-antennas/serial-cables.htm)
+            *   [Jumper Wires](https://www.waveshare.com/product/accessories/adapters-cables-antennas/jumper-wires.htm)
+            *   [FFC](https://www.waveshare.com/product/accessories/adapters-cables-antennas/ffc.htm)
+            *   [Antennas](https://www.waveshare.com/product/accessories/adapters-cables-antennas/antennas.htm)
+
+        *   [Motors / Servos](https://www.waveshare.com/product/accessories/motors-servos.htm)
+            *   [Motors](https://www.waveshare.com/product/accessories/motors-servos/motors.htm)
+            *   [Servos](https://www.waveshare.com/product/accessories/motors-servos/servos.htm)
+
+        *   [Power / Heat Sinks](https://www.waveshare.com/product/accessories/power-heat-sinks.htm)
+            *   [Power Supply](https://www.waveshare.com/product/accessories/power-heat-sinks/power-supply.htm)
+            *   [Solar Power](https://www.waveshare.com/product/accessories/power-heat-sinks/solar-power.htm)
+            *   [Heat Sinks](https://www.waveshare.com/product/accessories/power-heat-sinks/heat-sinks.htm)
+            *   [Cooling Fans](https://www.waveshare.com/product/accessories/power-heat-sinks/cooling-fans.htm)
+
+        *   [Misc](https://www.waveshare.com/product/accessories/misc.htm)
+            *   [Raspberry Pi Cases](https://www.waveshare.com/product/accessories/misc/raspberry-pi-cases.htm)
+            *   [Jetson Nano Cases](https://www.waveshare.com/product/accessories/misc/jetson-nano-cases.htm)
+            *   [Display Cases](https://www.waveshare.com/product/accessories/misc/display-cases.htm)
+            *   [Speakers](https://www.waveshare.com/product/accessories/misc/speakers.htm)
+            *   [Storage](https://www.waveshare.com/product/accessories/misc/storage.htm)
+
+**Browse By**
+
+Category
+1.   [Raspberry Pi](https://www.waveshare.com/product/raspberry-pi.htm) (918) 
+2.   [AI](https://www.waveshare.com/product/ai.htm) (386) 
+3.   [Luckfox](https://www.waveshare.com/product/luckfox.htm) (100) 
+4.   [RISC-V](https://www.waveshare.com/product/risc-v.htm) (14) 
+5.   [ESP32](https://www.waveshare.com/product/esp32-related.htm) (173) 
+6.   [Arduino](https://www.waveshare.com/product/arduino-5.htm) (4) 
+7.   [Displays](https://www.waveshare.com/product/displays.htm) (403) 
+8.   [IoT / Communication](https://www.waveshare.com/product/iot-communication.htm) (366) 
+9.   [Misc Modules](https://www.waveshare.com/product/modules.htm) (313) 
+10.   [Robotics](https://www.waveshare.com/product/robotics.htm) (113) 
+11.   [MCU / FPGA](https://www.waveshare.com/product/mcu-tools.htm) (143) 
+12.   [Sockets / Adapters](https://www.waveshare.com/product/sockets-adapters.htm) (192) 
+13.   [Accessories](https://www.waveshare.com/product/accessories.htm) (205) 
+
+15 Days Returnable
+
+12 Months Warranty
+
+Trustworthy Brand
+
+Discount for Large Quantity
+
+Worldwide Shipping
+
+### INFO & SERVICES
+
+*   [About Us](https://www.waveshare.com/about_us)
+*   [Contact Us](https://www.waveshare.com/contact_us)
+*   [Distributors](https://www.waveshare.com/distributors)
+*   [Customization](https://www.waveshare.com/customization.html)
+*   [Join Affiliate](https://www.waveshare.com/join_affiliate.html)
+
+### HELP
+
+*   [Payment](https://www.waveshare.com/payment)
+*   [Shipping](https://www.waveshare.com/shipping)
+*   [Warranty & Returns](https://www.waveshare.com/warranty_returns)
+*   [Privacy Policy](https://www.waveshare.com/privacy_policy)
+*   [Shopping Q&A](https://www.waveshare.com/shopping_q_a)
+*   [Tech Support](https://service.waveshare.com/)
+
+### LINKS
+
+*   [Product Categories](https://www.waveshare.com/catalog/seo_sitemap/category/)
+*   [Advanced Search](https://www.waveshare.com/catalogsearch/advanced/)
+*   [WIKI](https://www.waveshare.com/wiki)
+
+### BE THE FIRST TO KNOW
+
+Get all the latest information, subscribe now.
+
+SUBMIT
+
+[![Image 70](https://www.waveshare.com/skin/frontend/venedor/default/images/icons/waveshare/youtube.svg)](https://www.youtube.com/channel/UCV_48_r0rplaYB-VqxXB04g/videos)[![Image 71](https://www.waveshare.com/skin/frontend/venedor/default/images/icons/waveshare/twitter.svg)](https://twitter.com/waveshare00)[![Image 72](https://www.waveshare.com/skin/frontend/venedor/default/images/icons/waveshare/instagram.svg)](https://www.instagram.com/waveshareelectronics)[![Image 73](https://www.waveshare.com/skin/frontend/venedor/default/images/icons/waveshare/tiktok.svg)](https://www.tiktok.com/@waveshareelectronics)[![Image 74](https://www.waveshare.com/skin/frontend/venedor/default/images/icons/waveshare/linkin.svg)](https://www.linkedin.com/company/waveshare/)[![Image 75](https://www.waveshare.com/skin/frontend/venedor/default/images/icons/waveshare/github.svg)](https://github.com/waveshareteam)
+
+![Image 76: logo about paypal, mastercard, visa and American Express](https://www.waveshare.com/img/banner/payment.svg)
+
+Copyright © 2026 Waveshare. All Rights Reserved.
+
+[![Image 77: StatCounter - Free Web Tracker and Counter](blob:http://localhost/8b7591d2b4b2ee949ae22e480afb396e)](https://www.statcounter.com/)
+
+[](https://www.waveshare.com/ST3020-Servo.htm#)
+
+![Image 79](https://www.waveshare.com/ST3020-Servo.htm)
+
+[](https://www.waveshare.com/ST3020-Servo.htm)[](https://www.waveshare.com/ST3020-Servo.htm)
+
+[](https://www.waveshare.com/ST3020-Servo.htm)
+
+[](https://www.waveshare.com/ST3020-Servo.htm)
+
+# WE CARE ABOUT YOUR PRIVACY
+
+Manage Settings
+
+Vendors
+
+## Vendor Settings
+
+### Purposes
+
+#### Vendors can:
+
+Store and/or access information on a device 
+
+Use limited data to select advertising 
+
+Create profiles for personalised advertising 
+
+Use profiles to select personalised advertising 
+
+Create profiles to personalise content 
+
+Use profiles to select personalised content 
+
+Measure advertising performance 
+
+Measure content performance 
+
+Understand audiences through statistics or combinations of data from different sources 
+
+Develop and improve services 
+
+Use limited data to select content 
+
+### Special Purposes
+
+#### Vendors can:
+
+*   Ensure security, prevent and detect fraud, and fix errors
+*   Deliver and present advertising and content
+*   Save and communicate privacy choices
+
+### Features
+
+#### Vendors can:
+
+*   Match and combine data from other data sources
+*   Link different devices
+*   Identify devices based on information transmitted automatically
+
+### Special Features
+
+#### Vendors can:
+
+Use precise geolocation data 
+
+Identify devices based on information actively requested 
+
+Some partners do not ask for your consent to process your data, instead, they rely on their legitimate business interest. Personal data processed includes but is not limited to cookies, IP addresses, and URLs visited.[View our list of partners](https://www.waveshare.com/ST3020-Servo.htm)to see the purposes they believe they have a legitimate interest for and object to legitimate interests on a per vendor basis.[Manage your settings](https://www.waveshare.com/ST3020-Servo.htm)and object to purposes as a legitimate interest in general.
+
+You can change your settings at any time, including by withdrawing your consent, by clicking on the cog icon in the bottom right hand corner.
+
+Manage Settings
+
+Vendors (1034)
+
+Accept All
+
+Reject All
+
+Save & Exit
+
+![Image 80](https://static.waveshare.com/c9f0f895fb98ab91/c60fb24c27787ad5d69ea9ae8eea162a.png)
+
+Chat

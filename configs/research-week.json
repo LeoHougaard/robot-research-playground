@@ -1,0 +1,15 @@
+{
+  "mode": "simulation",
+  "state_dir": "state/week",
+  "max_generations": 100000,
+  "steps_per_generation": 24,
+  "max_run_seconds": 604800,
+  "disk_reserve_bytes": 21474836480,
+  "mission": "Learn to predict unfamiliar robot actions. Investigate prediction errors, test predecessor findings, and preserve useful programs. Prefer questions that improve reliable control or reveal reproducible limitations. End each generation with a concrete question for the next researcher.",
+  "llm": {
+    "base_url": "http://127.0.0.1:18080/v1",
+    "model": "",
+    "timeout_seconds": 120,
+    "max_tokens": 1024
+  }
+}

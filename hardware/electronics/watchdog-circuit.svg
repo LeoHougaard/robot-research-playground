@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1450" viewBox="0 0 2200 1450">
+<rect width="2200" height="1450" fill="white" />
+<text x="60" y="65" class="title" font-family="Arial,sans-serif" fill="#132238" font-size="40px" font-weight="bold">External watchdog and motor power cutoff</text>
+<text x="60" y="110" class="sub" font-family="Arial,sans-serif" fill="#132238" font-size="25px">Prototype 1 | 3.3 V logic | 12.0 V supply, limited to 2 A total | no hardware verification claimed</text>
+<rect x="45" y="155" width="2110" height="705" rx="12" class="box" fill="#f5f8fc" stroke="#8294a8" stroke-width="2" />
+<text x="70" y="195" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">Logic and relay coil, low current only</text>
+
+
+<rect x="510" y="340" width="290" height="370" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="540" y="380" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">U1 CD74HC123E</text>
+<text x="540" y="415" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">Channel 1, DIP16</text>
+<path d="M800 445H930V260H1070" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="825" y="432" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">15 Rx/Cx</text>
+<path d="M800 500H870V285H980" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="825" y="490" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">14 Cx</text>
+<path d="M980 285V275M980 255V240H930" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M930 240V260" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M958 255H1002M958 275H1002" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="915" y="220" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">C1 1.5 uF film, 5%</text>
+<circle cx="930" cy="260" r="5" class="dot" fill="#24374a" />
+<path d="M1070 260H1090M1140 260H1160V225" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1090" y="247" width="50" height="26" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="1050" y="325" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R1 82 kOhm, 1%</text>
+<text x="1130" y="215" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">3V3</text>
+<text x="550" y="465" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">2 B, rising edges</text>
+<text x="550" y="530" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">1 A = GND</text>
+<text x="550" y="595" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">3 /RESET = ENABLE_IN</text>
+<text x="550" y="660" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">13 Q = watchdog alive</text>
+<path d="M450 455H510M450 520H510M450 585H510" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="115" y="425" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">GPIO32, toggles every 20 ms</text>
+<path d="M110 455H230M300 455H450" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="230" y="442" width="70" height="26" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="222" y="497" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R2 1 kOhm</text>
+<path d="M375 455V490M375 550V568" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="362" y="490" width="26" height="60" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="255" y="548" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R3 10 k</text>
+<circle cx="375" cy="455" r="5" class="dot" fill="#24374a" />
+<path d="M355 568H395M362 578H388M370 588H380" class="ground" stroke="#24374a" stroke-width="3" />
+<path d="M450 520V540M430 540H470M437 550H463M445 560H455" class="ground" stroke="#24374a" stroke-width="3" />
+<text x="115" y="618" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">GPIO25 motor enable</text>
+<path d="M110 645H230M300 645H405V585H450" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="230" y="632" width="70" height="26" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="222" y="691" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R4 1 kOhm</text>
+<path d="M345 645V685M345 745V765" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="332" y="685" width="26" height="60" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="205" y="739" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R6 10 k</text>
+<circle cx="345" cy="645" r="5" class="dot" fill="#24374a" />
+<path d="M325 765H365M332 775H358M340 785H350" class="ground" stroke="#24374a" stroke-width="3" />
+<text x="370" y="680" class="tiny" font-family="Arial,sans-serif" fill="#132238" font-size="17px">ENABLE_IN</text>
+
+
+<rect x="1170" y="455" width="240" height="210" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="1195" y="495" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">U2 SN74HC08N</text>
+<text x="1195" y="530" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">Gate 1, DIP14</text>
+<path d="M1070 565H1170" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1000" y="550" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">ENABLE_IN</text>
+<text x="1188" y="574" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">1 A</text>
+<path d="M800 650H1020V620H1170" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="825" y="682" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">Q pin 13</text>
+<text x="1188" y="631" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">2 B</text>
+<path d="M1410 595H1460M1530 595H1620" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1420" y="580" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">3 Y</text>
+<rect x="1460" y="582" width="70" height="26" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="1445" y="643" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R5 1 kOhm</text>
+
+
+<text x="1580" y="240" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">12V_COIL_FUSED via F2 1 A</text>
+<path d="M1690 255V310" class="power" fill="none" stroke="#ad3b30" stroke-width="5" />
+<text x="1702" y="286" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">K1 pin 1</text>
+<rect x="1662" y="310" width="56" height="90" rx="8" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<path d="M1678 320q38 10 0 20q38 10 0 20q38 10 0 20" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1560" y="435" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">K1 G5CA-1A DC12</text>
+<text x="1560" y="462" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">12 V coil, 16.7 mA nominal</text>
+<path d="M1690 400V480M1690 480V495M1690 525V550" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1705" y="418" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">pin 2</text>
+<path d="M1690 300H1910V325M1910 380V470H1690" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1690" cy="300" r="5" class="dot" fill="#24374a" />
+<circle cx="1690" cy="470" r="5" class="dot" fill="#24374a" />
+<path d="M1890 330H1930M1890 365L1910 330L1930 365Z M1910 365V380" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1940" y="345" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">D1</text>
+<text x="1940" y="374" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">1N4007</text>
+<text x="1825" y="288" class="tiny" font-family="Arial,sans-serif" fill="#132238" font-size="17px">Cathode stripe to +12 V</text>
+<circle cx="1690" cy="495" r="5" class="dot" fill="#24374a" /><circle cx="1690" cy="525" r="5" class="dot" fill="#24374a" />
+<path d="M1690 495L1690 525" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1745" y="515" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">S1A physical NC E-stop</text>
+<text x="1745" y="543" class="tiny" font-family="Arial,sans-serif" fill="#132238" font-size="17px">Opens coil return independently</text>
+
+
+<path d="M1620 575V625M1640 575V625M1640 582H1690V550M1640 619H1690V680" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1580" y="570" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">G</text>
+<text x="1700" y="575" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">D</text>
+<text x="1700" y="670" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">S</text>
+<text x="1745" y="613" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">Q1 AO3400A</text>
+<text x="1745" y="644" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">SOT23 on BOB-00717 carrier</text>
+<path d="M1585 595V700M1585 755V785" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1585" cy="595" r="5" class="dot" fill="#24374a" />
+<rect x="1572" y="700" width="26" height="55" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="1410" y="740" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R7 100 kOhm</text>
+<path d="M1565 785H1605M1572 795H1598M1580 805H1590M1690 680V720M1670 720H1710M1677 730H1703M1685 740H1695" class="ground" stroke="#24374a" stroke-width="3" />
+
+<text x="520" y="750" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">U1: pin16 = 3V3; pin8 = GND; 100 nF C2 beside IC</text>
+<text x="520" y="785" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">U1 unused: inputs9,10,11 = GND; pins4,5,6,7,12 = NC</text>
+<text x="70" y="833" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">U2: pin14 = 3V3; pin7 = GND; inputs4,5,9,10,12,13 = GND; outputs6,8,11 = NC; 100 nF C3 beside IC</text>
+
+
+<rect x="45" y="890" width="2110" height="260" rx="12" class="box" fill="#f5f8fc" stroke="#8294a8" stroke-width="2" />
+<text x="70" y="930" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">Motor power, separate rated wire and terminals</text>
+<text x="110" y="980" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">12.0 V supply</text>
+<text x="110" y="1010" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">2 A current limit</text>
+<path d="M310 995H400M480 995H720M850 995H1320" class="power" fill="none" stroke="#ad3b30" stroke-width="5" />
+<rect x="400" y="977" width="80" height="36" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<text x="385" y="1045" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">F1 2 A, 32 VDC</text>
+<circle cx="720" cy="995" r="6" class="dot" fill="#24374a" /><circle cx="850" cy="995" r="6" class="dot" fill="#24374a" />
+<path d="M720 995L825 963" class="power" fill="none" stroke="#ad3b30" stroke-width="5" />
+<text x="693" y="955" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">3</text><text x="842" y="955" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">4</text>
+<text x="630" y="1045" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">K1 normally open contact</text>
+<text x="1060" y="985" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">MOTOR_PLUS</text>
+<text x="1335" y="1005" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">Adapter +12 V</text>
+<path d="M310 1100H1320" class="power" fill="none" stroke="#ad3b30" stroke-width="5" />
+<text x="115" y="1108" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">Supply return</text>
+<text x="1335" y="1110" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">Adapter GND</text>
+<path d="M1120 995V1020M1120 1075V1100" class="wire" fill="none" stroke="#24374a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1107" y="1020" width="26" height="55" class="part" fill="white" stroke="#24374a" stroke-width="3" />
+<circle cx="1120" cy="995" r="5" class="dot" fill="#24374a" /><circle cx="1120" cy="1100" r="5" class="dot" fill="#24374a" />
+<text x="1160" y="1055" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">R8 1 kOhm, 0.5 W bleeder</text>
+<text x="1160" y="1084" class="tiny" font-family="Arial,sans-serif" fill="#132238" font-size="17px">Stored energy decay must be measured</text>
+<text x="70" y="1188" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">S1B second NC contact: GPIO27 -&gt; contact -&gt; GND. R9 330 Ohm pulls GPIO27 to 3V3, about 10 mA sense current.</text>
+<text x="70" y="1223" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">10 uF C4 across local 3V3/GND. Common signal GND; motor return must bypass ESP32 USB ground wiring.</text>
+<rect x="45" y="1250" width="2110" height="155" rx="10" class="note" fill="#fff4dc" stroke="#d7af54" stroke-width="2" />
+<text x="70" y="1290" class="label" font-family="Arial,sans-serif" fill="#132238" font-size="24px" font-weight="bold">Timing and qualification</text>
+<text x="70" y="1325" font-family="Arial,sans-serif" fill="#132238" font-size="22px">82 kOhm x 1.5 uF x typical K ~0.48 at 3.3 V gives inferred ~59 ms. Rising edges every 40 ms retrigger U1.</text>
+<text x="70" y="1360" font-family="Arial,sans-serif" fill="#132238" font-size="22px">Measure Q timeout50-70 ms, supply disconnect and actual motor cessation&lt;=100 ms. Diode release and rail capacitance count.</text>
+<text x="70" y="1390" class="small" font-family="Arial,sans-serif" fill="#132238" font-size="19px">Exact pin netlist and parts: netlist.json / bill-of-materials.csv. Firmware gate stays0 until bench checks pass; no certified safety claim.</text>
+</svg>

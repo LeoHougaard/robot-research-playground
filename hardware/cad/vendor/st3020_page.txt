@@ -1,0 +1,478 @@
+Title: ST3020 Servo - Waveshare Wiki
+
+URL Source: https://www.waveshare.com/wiki/ST3020_Servo
+
+Markdown Content:
+**ST3020 Servo** [![Image 1: ST3020 Servo.jpg](https://www.waveshare.com/w/upload/thumb/7/7a/ST3020_Servo.jpg/300px-ST3020_Servo.jpg)](https://www.waveshare.com/st3020-servo.htm) TTL Serial Bus Servo Interface
+
+## Overview
+
+## Introduction
+
+This product is a dual-axis serial bus servo with high torque. It incorporates a 360° high-precision magnetic encoder, allowing for angle control within a 360° range and the angle resolution is up to 0.088°.  
+ It can be programmatically controlled to set any angle as the servo's middle position, and it can also be switched to continuous rotation mode as a motor/stepper motor. Each servo has two interfaces, allowing them to be connected in series. In theory, up to 253 bus servos can be controlled simultaneously, and each servo can provide information about its current angle, load, voltage, mode, and other parameters. This servo is suitable for robotics projects that require closed-loop control, such as robotic arms, hexapod robots, humanoid robots, and wheeled robots.
+
+Furthermore, we provide open-source models for this servo model, including hexapod robots, quadruped robots, camera gimbals, and robotic arms. You can download these open-source model files and engineering documents in the [#Open Source Model](https://www.waveshare.com/wiki/ST3020_Servo#Open_Source_Model) section.
+
+## Specification
+
+*   Input Voltage: 6V-14V DC
+*   Mechanical Limited Angle: No Limit
+*   Rotating Angle: 360° (servo mode angle control)/motor mode continuous rotation
+*   Baudrate: 38400bps~1Mbps (1Mbps by default)
+*   Gear: high-precision metal gear
+*   Idling Speed: 0.167sec/60°(60RPM)@12V
+*   Position Sensor Resolution: 0.088°（360°/4096）
+*   ID Range: 0-253
+*   Locked Rotor: 25kg.cm(347.79oz.in)@12V
+*   Feedback: Position, Load, Speed, Input Voltage, Current, Temperature
+*   Load Current: 200mA
+*   Locked-rotor Current: 2.7A
+*   Dimension: 40.2mm x 20.2mm x 40mm
+
+## Featues
+
+*   Wide-range voltage input, support 6-14V DC current input, and can be directly powered by 2S or 3S Lithium batteries.
+*   Large torque, up to 25kg.cm@12v.
+*   Can be used in series to control up to 253 servos simultaneously (sufficient power is required) and get feedback from each servo.
+*   360° magnetic encoder with wider angle control range.
+*   High precision, the angle control precision is up to 360°/4096.
+*   The middle position can be set at any angle, facilitating assembly.
+*   The acceleration and deceleration functions provide smoother motion effects.
+*   The compact structural design enhances the product's aesthetics.
+*   The working mode can be programmatically set to either servo mode for angle control or motor mode for continuous rotation.
+
+## Open-source Model
+
+[![Image 2: ST3020-model-04.png](https://www.waveshare.com/w/upload/9/93/ST3020-model-04.png)](https://www.waveshare.com/wiki/File:ST3020-model-04.png)
+
+*   The open-source robotic arm based on ST3020 servo.
+*   [Open-source Robotic Arm Model F3Z](https://files.waveshare.com/upload/c/ce/ARM_based_on_ST3020_F3Z.zip)
+*   [Open-source Robotic Arm Model STEP](https://files.waveshare.com/upload/8/8b/ARM_based_on_ST3020_STEP.zip)
+
+[![Image 3: ST3020-model-05.png](https://www.waveshare.com/w/upload/e/eb/ST3020-model-05.png)](https://www.waveshare.com/wiki/File:ST3020-model-05.png)
+
+*   Open source quadruped robot model based on ST3020 Servo servo.
+*   [Open-source CLAWER-4 Robot Model F3Z](https://files.waveshare.com/upload/1/11/CLAWER-4_based_on_ST3020_Servo_F3Z.zip)
+*   [Open-source CLAWER-4 Robot Model STEP](https://files.waveshare.com/upload/3/3f/CLAWER-4_based_on_ST3020_Servo_STEP.zip)
+
+[![Image 4: ST3020-model-06.png](https://www.waveshare.com/w/upload/4/4c/ST3020-model-06.png)](https://www.waveshare.com/wiki/File:ST3020-model-06.png)
+
+*   Open source hexapod robot model based on ST3020 Servo servo.
+*   [Open-source CLAWER-6 Robot Model F3Z](https://files.waveshare.com/upload/4/43/CLAWER-6_based_on_ST3020_Servo_F3Z.zip)
+*   [Open-source CLAWER-6 Robot Model STEP](https://files.waveshare.com/upload/9/91/CLAWER-6_based_on_ST3020_Servo_STEP.zip)
+
+[![Image 5: ST3020-model-07.png](https://www.waveshare.com/w/upload/6/61/ST3020-model-07.png)](https://www.waveshare.com/wiki/File:ST3020-model-07.png)
+
+*   Open source camera gimbal model based on ST3020 Servo servo.
+*   [PT_based_on_ST3020_F3Z](https://files.waveshare.com/upload/c/cd/PT_based_on_ST3020_F3Z.zip)
+*   [PT_based_on_ST3020_STEP](https://files.waveshare.com/upload/e/e8/PT_based_on_ST3020_STEP.zip)
+
+## Hardware Usage
+
+*   You can use our [Servo Driver](https://www.waveshare.com/servo-driver-with-esp32.htm) to control the bus servo.
+*   If you want to use the bus servo in your own project, you can refer to the following schematic diagram: [Serial bus servo drive circuit schematic](https://files.waveshare.com/upload/d/d3/Bus_servo_control_circuit.pdf).
+
+## Software Usage
+
+### ST Servo
+
+Generally, we control the ST series servos by compiling and uploading the demo through the Arduino IDE. However, compiling through Arduino requires installing various dependency libraries before use. Therefore, we provide an ESP32 download tool. With this tool, users can download the demo to the driver board without needing to download other dependency libraries or the Arduino IDE software.
+
+*   Click [here](https://files.waveshare.com/wiki/Servo-Driver-with-ESP32/SERVO_DRIVER_WITH_ESP32_ST_FACTORY.zip) to download ESP32 Flash Download Tool. Once downloaded, extract the files and double-click on the "flash_download_tool_3.9.5.exe" program. After opening, two windows will appear. The UI interface of the download tool is the one you need to operate, while the other window serves as a terminal to display the working status of the download tool.
+*   In the "DOWNLOAD TOOL MODE" interface, select Chip Type as ESP32 and WorkMode as Factory. When using Factory to call the binary file, it will use a relative path, eliminating the need for users to manually input the binary file path. After making these selections, click OK.
+
+[![Image 6: ST3020 SERVO esp.png](https://www.waveshare.com/w/upload/e/e4/ST3020_SERVO_esp.png)](https://www.waveshare.com/wiki/File:ST3020_SERVO_esp.png)
+
+*   In this software interface, keep the "LockSettings" option checked. On the right side, you can simultaneously upload demos to 8 driver boards. Next, connect the servo driver board to the computer using a USB cable. Click on "COM" and select the newly appeared COM port (in my case, it's COM3). BAUD is used to set the download speed, higher values result in faster speeds, with the ESP32 supporting speeds up to 921600.
+
+[![Image 7: ST3020 SERVO esp2.png](https://www.waveshare.com/w/upload/5/57/ST3020_SERVO_esp2.png)](https://www.waveshare.com/wiki/File:ST3020_SERVO_esp2.png)
+
+*   After selecting, click START to begin uploading the demo. Once the upload is complete, "IDLE" will change to "FINISH". After completing this process, you can disconnect the USB connection between the servo driver board and the computer. Then, connect the servos to the servo driver board, provide power to the driver board, and start controlling the ST series servos.
+
+[![Image 8: ST3020 SERVO esp4.png](https://www.waveshare.com/w/upload/7/7a/ST3020_SERVO_esp4.png)](https://www.waveshare.com/wiki/File:ST3020_SERVO_esp4.png)[![Image 9: ST3020 SERVO esp3.png](https://www.waveshare.com/w/upload/0/0f/ST3020_SERVO_esp3.png)](https://www.waveshare.com/wiki/File:ST3020_SERVO_esp3.png)
+
+### Compile Arduino IDE
+
+*   We provide ST3020 servo demos for the [serial bus servo driver board](https://www.waveshare.com/servo-driver-with-esp32.htm), you can control ST series servos by downloading this [open-source demo (Arduino)](https://files.waveshare.com/upload/d/d8/ST_Servo.zip) on the [serial bus servo driver board](https://www.waveshare.com/servo-driver-with-esp32.htm), the following is the specific method:
+
+#### Install Arduino IDE
+
+*   You can directly click this [link](https://downloads.arduino.cc/arduino-1.8.19-windows.exe) to download the Arduino IDE from [Arduino.cc](https://www.arduino.cc/).
+
+1.    Download the latest Arduino IDE 2.1.0 package from [Arduino website](https://www.arduino.cc/). The official IDE supports different operating systems, just download it according to your operating system. The one I downloaded here is for Windows. (If you have already installed it, just skip to the second step) The installation process is very simple, just keep clicking next step.   
+[![Image 10: Arduino IDE 2.1.0.png](https://www.waveshare.com/w/upload/b/bb/Arduino_IDE_2.1.0.png)](https://www.waveshare.com/wiki/File:Arduino_IDE_2.1.0.png)  
+**Note: It will prompt you to install the driver during installation, you can click to install.**
+
+1.    Open Arduino IDE, click the File on the left corner and choose "Preferences".  
+[![Image 11: RoArm-M1 Manual01.png](https://www.waveshare.com/w/upload/a/a8/RoArm-M1_Manual01.png)](https://www.waveshare.com/wiki/File:RoArm-M1_Manual01.png)
+2.    Add the following link in the additional development board manager URL, then click OK.  
+https://dl.espressif.com/dl/package_esp32_index.json
+[![Image 12: RoArm-M1 Manual02.png](https://www.waveshare.com/w/upload/thumb/f/fd/RoArm-M1_Manual02.png/600px-RoArm-M1_Manual02.png)](https://www.waveshare.com/wiki/File:RoArm-M1_Manual02.png)  
+**Note: If you need to add more than one development board URL, it is not necessary to delete the URL of the ESP32 development board support, you can directly add the other URL to another line, the default display is comma separated URL.**For example, if you need to add the URL of the ESP8266 development board, add it directly to another line, it will be displayed as follows:
+
+https://dl.espressif.com/dl/package_esp32_index.json，http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+[![Image 13: RoArm-M1 Manual03.png](https://www.waveshare.com/w/upload/thumb/e/e3/RoArm-M1_Manual03.png/600px-RoArm-M1_Manual03.png)](https://www.waveshare.com/wiki/File:RoArm-M1_Manual03.png)  
+[![Image 14: RoArm-M1 Manual04.png](https://www.waveshare.com/w/upload/thumb/3/37/RoArm-M1_Manual04.png/600px-RoArm-M1_Manual04.png)](https://www.waveshare.com/wiki/File:RoArm-M1_Manual04.png)
+
+3.    Download the [package](https://files.waveshare.com/upload/7/70/Packages.rar), and copy the unzipped packages files to the following path:  
+C:\Users\username\AppData\Local\Arduino15
+The "username" here would vary according to your computer's username, copy the unzipped packages file to the Arduino15 folder.  
+[![Image 15: L76K GPS Module ESP32204.jpg](https://www.waveshare.com/w/upload/e/e4/L76K_GPS_Module_ESP32204.jpg)](https://www.waveshare.com/wiki/File:L76K_GPS_Module_ESP32204.jpg)
+
+#### Download the Program & Install Dependency Libraries
+
+*   Please install the following libraries through Manage Libraries: 
+    *   Adafruit SSD1306
+    *   Adafruit NeoPixel
+
+*   Click Tools > Manage Libraries to open the library manager.
+
+[![Image 16: QQ screenshot 20211130115318.png](https://www.waveshare.com/w/upload/thumb/c/c1/QQ_screenshot_20211130115318.png/500px-QQ_screenshot_20211130115318.png)](https://www.waveshare.com/wiki/File:QQ_screenshot_20211130115318.png)
+
+*   Enter the libraries that need to be installed through the library manager in the search box, and install: 
+    *   Adafruit SSD1306
+    *   Adafruit NeoPixel
+
+*   Click "Update", and if there is no "Update", please click "Install" for the newest version.
+
+[![Image 17: QQ screenshot 20211130135130.png](https://www.waveshare.com/w/upload/thumb/f/fa/QQ_screenshot_20211130135130.png/500px-QQ_screenshot_20211130135130.png)](https://www.waveshare.com/wiki/File:QQ_screenshot_20211130135130.png)[![Image 18: QQ screenshot 20211130135223.png](https://www.waveshare.com/w/upload/thumb/1/15/QQ_screenshot_20211130135223.png/500px-QQ_screenshot_20211130135223.png)](https://www.waveshare.com/wiki/File:QQ_screenshot_20211130135223.png)
+
+*   Download the bus servo library and the Arduino program for the servo driver board:
+*   [ServoDriverST Open Source Program (Arduino)](https://files.waveshare.com/wiki/ST3215_Servo/ST_Servo.zip)
+*   After downloading, unzip it, and you can get two file folders: 
+    *   "ServoDriverST": control ST series servo demo
+    *   "SCServo": control servo library
+
+*   Copy the SCServo folder to \Documents\Arduino\libraries after decompression, and install them for controlling the servo.
+
+#### Upload Demo
+
+1. Double-click on ServoDriverST.ino:  
+[![Image 19: Upload Servo demo01.png](https://www.waveshare.com/w/upload/b/bc/Upload_Servo_demo01.png)](https://www.waveshare.com/wiki/File:Upload_Servo_demo01.png)  
+ 2. Click on "Tools" -> "Port", please remember the COM port on your PC, and do not click on this COM port (COM1 is the port on my PC, different computers show different COMs).   
+[![Image 20: Upload Servo demo02.png](https://www.waveshare.com/w/upload/7/7f/Upload_Servo_demo02.png)](https://www.waveshare.com/wiki/File:Upload_Servo_demo02.png)  
+ 3. Connect the serial bus servo with the PC with a USB cable, click on "Tools" -> "Port", and then click on the new COM port (here is COM10):  
+[![Image 21: Upload Servo demo03.png](https://www.waveshare.com/w/upload/2/22/Upload_Servo_demo03.png)](https://www.waveshare.com/wiki/File:Upload_Servo_demo03.png)  
+ 4. In Arduino IDE, click on "Tools" -> "Board:'ESP32 Dev Module" -> "esp32" -> "ESP32 Dev Module".  
+[![Image 22: Upload Servo demo04.png](https://www.waveshare.com/w/upload/5/54/Upload_Servo_demo04.png)](https://www.waveshare.com/wiki/File:Upload_Servo_demo04.png)  
+ 5. Click on "Tools", and the other settings as shown below: (it is recommended to set "Huge APP" for "Partition Scheme", and "PSARM" must be enabled).  
+[![Image 23: Upload Servo demo05.png](https://www.waveshare.com/w/upload/3/32/Upload_Servo_demo05.png)](https://www.waveshare.com/wiki/File:Upload_Servo_demo05.png)  
+ 6. After setting, click to upload, and the demo will be uploaded to the device.  
+[![Image 24: Upload Servo demo06.png](https://www.waveshare.com/w/upload/0/09/Upload_Servo_demo06.png)](https://www.waveshare.com/wiki/File:Upload_Servo_demo06.png)  
+ After uploading, "Leaving... Hard resetting via RTS pin..." indicates the successful uploading.
+
+### Product Usage Tutorial
+
+*   The following tutorial uses [servo driver](https://www.waveshare.com/servo-driver-with-esp32.htm) by default to explain how to use the servo, if you need to use it in your own project, you can refer to the sample program and the [bus servo drive circuit schematic](https://files.waveshare.com/upload/d/d3/Bus_servo_control_circuit.pdf) for secondary development.
+*   The factory default ID of the servo is 1. Among the servos connected to the same servo drive board, the same ID can only correspond to one servo, and there cannot be more than one servo with the same ID in the one control circuit. When you set the ID for the servo, try to ensure that only one servo whose ID is to be changed is connected to the driver board. After the ID is changed, it will be permanently saved in the servo and will not be lost even if the power is off.
+*   First of all, you need to set an independent ID for each servo. When setting an ID for one servo, the driver board should not be connected to other servos.
+*   If you use the ST3020 servo, after connecting it to the driver board, you need to provide 6-12.6V (12V is recommended) via the DC port (5.5*2.1mm) on the board, and the port will directly power the servo. If you use a large number of servos, you need to provide enough currents for the port.
+*   After the driver board is powered on, a WiFi hotspot will be created by default. The default hotspot name is ESP32_DEV, and its password is 12345678. Please connect to this hotspot with your phone.
+*   After connecting to the hotspot issued by the servo driver board, it is recommended to use Google Chrome to access the address 192.168.4.1. Noted that the phone will fail to verify the server with ping after connecting the WiFi, so it may automatically switch to the other known WiFi. In this case, you should connect ESP32_DEV again, and the phone will not connect to other WiFi automatically after the reconnection is successful.
+*   The driver board will automatically scan the servo ID (0-20) when it is powered on (in order to save the boot time). If your servo ID is more than 20, you must change the MAX_ID value in ServoDriverST.ino and upload it to the driver board again.
+
+[![Image 25: ST3215-Servo-details-023.jpg](https://www.waveshare.com/w/upload/thumb/a/aa/ST3215-Servo-details-023.jpg/600px-ST3215-Servo-details-023.jpg)](https://www.waveshare.com/wiki/File:ST3215-Servo-details-023.jpg)
+
+*   If the servo is connected after the driver board is powered on, you need to click Start Searching on the mobile browser page to scan again.
+*   Active ID is the currently selected servo ID number, ID to Set is the new ID number to be set, adjust the value of ID to Set through ID to Set+and ID to Set-, and press the Set New ID button to set the servo ID Active ID as ID to Set.
+*   When the IDs of all servos are set, you can connect them all. If you do not restart the device, you need to click Start Searching to scan all servos.
+*   ID： shows all ID numbers of servos currently connected to the servo driver board.
+*   Active ID The currently selected servo ID number, and the subsequent operations are all controlling this Active ID servo.
+*   You can select the Active ID servo via the ID to Set+ and ID to Set- buttons.
+*   Middle key, you can turn the servo to the middle position, the position range of the servo is 0-4095, and the middle position is 2047.
+*   Stop key, the default program will not let the servo move all the time. If the servo cannot be stopped after the secondary development, you can press the Stop key to hault the servo movement.
+*   Release key, press it and the servo will close torque lock (Torque Off), then you can turn the servo by hand.
+*   Torque key, after pressing the servo, the servo will turn on the torque lock (Torque On), at this time, the servo will maintain the specified position with force.
+*   Position+key, after pressing the servo, the servo will start to rotate clockwise. When the servo is in the servo mode, it will not continue to rotate after turning to the 4095 position.
+*   Position-key, after pressing the servo, the servo will start to rotate counterclockwise. When the servo is in the servo mode, it will not continue to rotate after turning to the 0 position.
+*   Speed+ and Speed- are used to set the speed of the servo. The maximum setting for ST series servos is about 3073. The speed is the number of steps per second, 50 steps/sec≈0.732RPM.
+*   Set Middle Position key, no matter what position the current servo is in, when this key is pressed, the servo will set the current position to the middle position (2047).
+*   Set Servo Mode key, set the servo to servo mode, 360° absolute angle control can be performed in the servo mode, the setting will be permanently saved and will not be lost even if the power is turned off.
+*   Set Motor Mode key, set the servo to stepper motor mode, the servo can rotate continuously 30,000 steps. If you press it continuously, the motor will keep rotating. This mode can control the relative angle within ±7 circles and the number of circles will not be saved when power is off, but the stepper motor mode settings will be permanently saved even if power is off.
+*   Start Serial Forwarding button, set the servo driver board to serial forwarding mode, you can directly control the servo and get the feedback of the servo with the type C interface on the board. This function is used to debug the servo.
+*   Normal key, set the servo driver board to normal mode, in this mode, it will not send or receive any information via ESP-NOW.
+*   Leader key, set the servo driver board as the host, in this mode, the driver board continuously sends the ID, position, and speed of the current Active ID servo to the driver board of the controlled slave through the ESP-NOW protocol. After the servo driver board is turned on, the MAC:on the first line of the screen is the MAC address of this development board, which is unique, such as MAC: 08 3A F2 93 5F A8. The premise of ESP-NOW communication is to get the MAC address of the slave, please write down the address, and fill it in the broadcastAddress[] = {0x08, 0x3A, 0xF2, 0x93, 0x5F, 0xA8} of ServoDriverST.ino, then upload it to the driver of the host and the function is enabled.
+*   Follower key, set the servo drive board as the slave, after changing the MAC address of the slave in the program of the host, it can act under the remote control of the host.
+*   RainbowON and RainbowOFF keys are used to turn on and off the rainbow effect of RGB lights.
+
+#### Secondary Development Tutorial
+
+*   Servo Initialization
+
+Each demo that controls the servo needs to initialize the servo, and the initialization is done before it can be used.
+
+#include <SCServo.h>
+SMS_STS st;
+void setup(){
+	Serial1.begin(1000000);  
+	
+	st.pSerial = &Serial1;
+	while(!Serial1) {}
+}
+*   Change servo ID
+
+Among the servos connected in series, each ID should only correspond to one servo. Otherwise, the servo feedback information cannot be obtained properly.  
+ When changing the servo ID, it is advisable to ensure that the driver board is only connected to one servo. The ID will be permanently stored in the servo.
+
+#include <SCServo.h>
+SMS_STS st;
+int ID_ChangeFrom = 1;   
+int ID_Changeto      = 2;   
+void setup(){
+  Serial1.begin(1000000);
+  st.pSerial = &Serial1;
+  while(!Serial1) {}
+
+  st.unLockEprom(ID_ChangeFrom); 
+  st.writeByte(ID_ChangeFrom, SMS_STS_ID, ID_Changeto);
+  st.LockEprom(ID_Changeto); 
+}
+
+void loop(){
+}
+*   Ping
+
+Used to test whether a particular servo is properly connected.
+
+#include <SCServo.h>
+SMS_STS st;
+int TEST_ID = 3;  
+void setup(){
+  Serial.begin(115200);
+  Serial1.begin(1000000, SERIAL_8N1, RX, TX); 
+  st.pSerial = &Serial1;
+  while(!Serial1) {}
+}
+
+void loop(){
+  int ID = st.Ping(TEST_ID);  
+  if(ID!=-1){
+    Serial.print("Servo ID:");
+    Serial.println(ID, DEC);
+    delay(100);
+  }else{
+    Serial.println("Ping servo ID error!");
+    delay(2000);
+  }
+}
+*   Write position
+
+Can be used to control individual servo rotation.
+
+#include <SCServo.h>
+SMS_STS st;
+void setup(){
+  Serial1.begin(1000000); 
+  st.pSerial = &Serial1;
+  while(!Serial1) {}
+}
+
+void loop(){
+  st.WritePos(1, 1000, 1500, 50); 
+  delay(754);
+
+  st.WritePos(1, 20, 1500, 50); 
+  delay(754);
+}
+*   Synchronous writing
+
+Can be used to control multiple servos at the same time (rotating to different positions and at different speeds).
+
+#include <SCServo.h>
+SMS_STS st;
+
+#define S_RXD 18 
+#define S_TXD 19
+
+byte ID[2];
+s16 Position[2];
+u16 Speed[2];
+byte ACC[2];
+
+void setup(){
+  Serial1.begin(1000000, SERIAL_8N1, S_RXD, S_TXD);
+  st.pSerial = &Serial1;
+  delay(1000);
+  ID[0] = 1;   
+  ID[1] = 2;   
+  Speed[0] = 3400;  
+  Speed[1] = 3400;  
+  ACC[0] = 50;   
+  ACC[1] = 50;
+}
+
+void loop(){
+  Position[0] = 3000;  
+  Position[1] = 3000;  
+  st.SyncWritePosEx(ID, 2, Position, Speed, ACC);
+  delay(2000);
+
+  Position[0] = 100;
+  Position[1] = 100;
+  st.SyncWritePosEx(ID, 2, Position, Speed, ACC);
+  delay(2000);
+}
+*   Get servo feedback
+
+#define S_RXD 18
+#define S_TXD 19
+#include <SCServo.h>
+
+SMS_STS sms_sts;
+
+void setup(){
+  Serial1.begin(1000000, SERIAL_8N1, S_RXD, S_TXD);
+  Serial.begin(115200);
+  sms_sts.pSerial = &Serial1;
+  delay(1000);
+}
+
+void loop(){
+  int Pos;
+  int Speed;
+  int Load;
+  int Voltage;
+  int Temper;
+  int Move;
+  int Current;
+  if(sms_sts.FeedBack(1)!=-1){
+    Pos = sms_sts.ReadPos(-1);
+    Speed = sms_sts.ReadSpeed(-1);
+    Load = sms_sts.ReadLoad(-1);
+    Voltage = sms_sts.ReadVoltage(-1);
+    Temper = sms_sts.ReadTemper(-1);
+    Move = sms_sts.ReadMove(-1);
+    Current = sms_sts.ReadCurrent(-1);
+    Serial.print("Position:");
+    Serial.println(Pos);
+    Serial.print("Speed:");
+    Serial.println(Speed);
+    Serial.print("Load:");
+    Serial.println(Load);
+    Serial.print("Voltage:");
+    Serial.println(Voltage);
+    Serial.print("Temper:");
+    Serial.println(Temper);
+    Serial.print("Move:");
+    Serial.println(Move);
+    Serial.print("Current:");
+    Serial.println(Current);
+    delay(10);
+  }else{
+    Serial.println("FeedBack err");
+    delay(500);
+  }
+  
+  Pos = sms_sts.ReadPos(1);  
+  if(Pos!=-1){
+    Serial.print("Servo position:");
+    Serial.println(Pos, DEC);
+    delay(10);
+  }else{
+    Serial.println("read position err");
+    delay(500);
+  }
+  
+  Voltage = sms_sts.ReadVoltage(1);   
+  if(Voltage!=-1){
+	Serial.print("Servo Voltage:");
+    Serial.println(Voltage, DEC);
+    delay(10);
+  }else{
+    Serial.println("read Voltage err");
+    delay(500);
+  }
+  
+  Temper = sms_sts.ReadTemper(1);   
+  if(Temper!=-1){
+    Serial.print("Servo temperature:");
+    Serial.println(Temper, DEC);
+    delay(10);
+  }else{
+    Serial.println("read temperature err");
+    delay(500);    
+  }
+
+  Speed = sms_sts.ReadSpeed(1);   
+  if(Speed!=-1){
+    Serial.print("Servo Speed:");
+    Serial.println(Speed, DEC);
+    delay(10);
+  }else{
+    Serial.println("read Speed err");
+    delay(500);    
+  }
+  
+  Load = sms_sts.ReadLoad(1);   
+  if(Load!=-1){
+    Serial.print("Servo Load:");
+    Serial.println(Load, DEC);
+    delay(10);
+  }else{
+    Serial.println("read Load err");
+    delay(500);    
+  }
+  
+  Current = sms_sts.ReadCurrent(1);   
+  if(Current!=-1){
+    Serial.print("Servo Current:");
+    Serial.println(Current, DEC);
+    delay(10);
+  }else{
+    Serial.println("read Current err");
+    delay(500);    
+  }
+
+  Move = sms_sts.ReadMove(1);   
+  if(Move!=-1){
+    Serial.print("Servo Move:");
+    Serial.println(Move, DEC);
+    delay(10);
+  }else{
+    Serial.println("read Move err");
+    delay(500);    
+  }
+  Serial.println();
+}
+## Resource
+
+## 3D Model
+
+*   [Servo Driver Board STEP Model](https://files.waveshare.com/upload/e/e8/PT_based_on_ST3020_STEP.zip)
+*   [ST3020 Servo STEP Model](https://files.waveshare.com/upload/6/61/St3020_servo.rar)
+
+## Document
+
+*   [Serial Bus Servo Driver User Manual](https://files.waveshare.com/upload/d/d4/Servo_Driver_with_ESP32_User_Manual.pdf)
+*   [Serial Bus Servo Driver Circuit Schematic](https://files.waveshare.com/upload/d/d3/Bus_servo_control_circuit.pdf)
+
+## Demo
+
+*   [ServoDriverST open-source demo (Arduino)](https://files.waveshare.com/wiki/ST3215_Servo/ST_Servo.zip)
+
+## Software
+
+*   [Arduino IDE](https://www.arduino.cc/en/software)
+
+## FAQ
+
+#### [Question: When using the ping.py demo, why does connecting two servos simultaneously result in incorrect status packets?](https://www.waveshare.com/wiki/ST3020_Servo#accordion1)
+
+**Answer:**
+
+Because servos leave the factory with a default ID of 1. The bus does not allow servos with the same ID, as this causes ID conflicts. You need to assign a different ID to the other servo according to the servo protocol and memory table address. Remember to unlock the EPROM area before modifying parameters in the memory table; otherwise, changes will not be saved after power loss.
+
+#### [Question: Can the screws that are too long for mounting other structures on the servo come into contact with the servo body?](https://www.waveshare.com/wiki/ST3020_Servo#accordion2)
+
+**Answer:**
+
+No, they cannot. If screws make contact with the servo body during tightening, it creates significant resistance. This leads to a sharp increase in the servo's current, which can ultimately cause the servo to burn out.
+
+## Support
+
+Technical Support
+
+If you need technical support or have any feedback/review, please click the **Submit Now** button to submit a ticket, Our support team will check and reply to you within 1 to 2 working days. Please be patient as we make every effort to help you to resolve the issue.   
+ Working Time: 9 AM - 6 PM GMT+8 (Monday to Friday)

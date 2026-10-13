@@ -1,0 +1,31 @@
+{
+  "revision": "prototype-1",
+  "hardware_verified": false,
+  "logic_supply_v": 3.3,
+  "motor_supply_v": 12.0,
+  "commissioning_total_supply_limit_a": 2.0,
+  "timing": {"r_ohm": 82000, "c_f": 0.0000015, "k_typical_inferred_at_3v3": 0.48, "nominal_inferred_ms": 59.04, "firmware_toggle_ms": 20, "rising_edge_interval_ms": 40, "required_measured_q_timeout_ms": [50, 70], "required_measured_supply_disconnect_ms_max": 100},
+  "components": {"U1": "TI CD74HC123E PDIP16", "U2": "TI SN74HC08N PDIP14", "Q1": "AOS AO3400A SOT23 on SparkFun BOB-00717", "K1": "Omron/Aratas G5CA-1A DC12", "D1": "Vishay 1N4007-E3/54", "S1": "Omron A22E-M-02 2NC"},
+  "nets": {
+    "3V3": ["ESP32.3V3", "U1.16", "U2.14", "R1.1", "C2.1", "C3.1", "C4.+", "R9.1"],
+    "GND": ["ESP32.GND", "12V_SUPPLY.-", "ADAPTER.GND", "U1.8", "U1.1", "U1.9", "U1.10", "U1.11", "U2.7", "U2.4", "U2.5", "U2.9", "U2.10", "U2.12", "U2.13", "Q1.S", "R3.2", "R6.2", "R7.2", "R8.2", "C2.2", "C3.2", "C4.-", "S1B.2"],
+    "PULSE_OUT": ["ESP32.GPIO32", "R2.1"],
+    "PULSE_IN": ["R2.2", "R3.1", "U1.2"],
+    "ENABLE_OUT": ["ESP32.GPIO25", "R4.1"],
+    "ENABLE_IN": ["R4.2", "R6.1", "U1.3", "U2.1"],
+    "WATCHDOG_Q": ["U1.13", "U2.2"],
+    "TIMING_RC": ["U1.15", "R1.2", "C1.2"],
+    "TIMING_C": ["U1.14", "C1.1"],
+    "AND_OUT": ["U2.3", "R5.1"],
+    "COIL_GATE": ["R5.2", "R7.1", "Q1.G"],
+    "12V_RAW": ["12V_SUPPLY.+", "F1.1", "F2.1"],
+    "12V_MOTOR_FUSED": ["F1.2", "K1.3"],
+    "MOTOR_PLUS": ["K1.4", "ADAPTER.12V", "R8.1"],
+    "12V_COIL_FUSED": ["F2.2", "K1.1", "D1.K"],
+    "COIL_LOW": ["K1.2", "D1.A", "S1A.1"],
+    "COIL_RETURN": ["S1A.2", "Q1.D"],
+    "ESTOP_SENSE": ["ESP32.GPIO27", "R9.2", "S1B.1"]
+  },
+  "not_connected": ["U1.4", "U1.5", "U1.6", "U1.7", "U1.12", "U2.6", "U2.8", "U2.11"],
+  "polarity": {"D1": "Cathode stripe to K1.1 +12V; anode to K1.2 before NC E-stop", "Q1": "AO3400A actual pad1=G pad2=S pad3=D; verify breakout trace mapping", "K1": "Coil terminals1/2; NO contacts3/4; vendor drawing BOTTOM VIEW", "C4": "Positive to3.3V, negative toGND"}
+}

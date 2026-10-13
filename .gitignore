@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.tools/
+.mechanical-venv/
+.build-venv/
+.pio-core/
+firmware/.pio/
+**/.pio/
+hardware/cad/_deps/
+artifacts/*.zip
+state/
+*.sqlite*
+.env
+!.env.example
+

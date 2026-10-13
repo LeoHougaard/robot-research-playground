@@ -1,0 +1,21 @@
+{
+  "revision": "prototype-1",
+  "hardware_verified": false,
+  "physical_experiments_performed": false,
+  "checks": [
+    "Primary vendor PDF timer pinout and K graph visually inspected",
+    "Primary vendor relay bottom-view pinout and DC load/coil ratings visually inspected",
+    "AOS MOSFET top-view G/S/D pinout visually inspected",
+    "SVG rendered and visually checked",
+    "Netlist duplicate pins absent and every logic IC pin accounted for",
+    "Timer capacitor is between pins14/15; Q13 drives AND pin2; reset3 shares enable ANDpin1",
+    "Flyback cathode coilpositive; anode coillow before NC E-stop",
+    "Nominal timing arithmetic checked; no measured cutoff claimed"
+  ],
+  "artifacts_sha256": {
+    "bill-of-materials.csv": "e1d2bfb31d08641496eba2242d4ef61a0dc28451833f3a4f79aad7d1eb5264d2",
+    "netlist.json": "acc63d25b6bc3afe726abd5ae123bbf37ab7e2b094c858415eed3e3c5838723b",
+    "watchdog-circuit.png": "d7acc472a525feee990c2cac3563e0f24ca985586c298d0cc7236c80aba1f0ee",
+    "watchdog-circuit.svg": "566959d54a6c24a457c1b6934c9c722176cc71f37991f737a2d74f68854f90fa"
+  }
+}

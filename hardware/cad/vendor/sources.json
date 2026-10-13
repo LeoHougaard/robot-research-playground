@@ -1,0 +1,22 @@
+[
+  {
+    "file": "st3020_dimensions.jpg",
+    "source": "https://www.waveshare.com/img/devkit/accessories/ST3020-Servo/ST3020-Servo-details-size.jpg",
+    "sha256": "ccfde8c07d298fc5fc3b51d3cede186522f01796a915602ab4a2b86536d11611"
+  },
+  {
+    "file": "St3020_servo.rar",
+    "source": "https://files.waveshare.com/upload/6/61/St3020_servo.rar",
+    "sha256": "ecf6ab079b025678dca20fa50aa0ee14bc13deb0065487223db930637a1d9449"
+  },
+  {
+    "file": "st3020 servo.stp",
+    "source": "extracted from the vendor RAR",
+    "sha256": "cc92a724313ae4c5c1cf0afacdb65237cf88de704d847dfaba4f646072e9c51a"
+  },
+  {
+    "file": "pololu950_dimensions.pdf",
+    "source": "https://www.pololu.com/file/0J1636/pololu-ball-caster-with-0-375in-ball.pdf",
+    "sha256": "8c2b8159fbc16246b6469c83d89d31eb6aa87890ee4794c3a6100273ee02a238"
+  }
+]
