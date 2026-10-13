@@ -1,0 +1,10 @@
+# Keep Linux launchers executable by Bash after a Windows checkout.
+*.sh text eol=lf
+# Preserve exact exported-asset bytes recorded in verification reports.
+*.FCStd -text
+*.step -text
+*.stp -text
+*.stl -text
+*.bin -text
+*.png -text
+*.FCMacro text eol=lf
