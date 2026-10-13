@@ -5,7 +5,6 @@ import hashlib
 import math
 import random
 import secrets
-import shutil
 import threading
 import time
 from pathlib import Path
@@ -16,6 +15,8 @@ from .models import MotionModel, MeasurementUnavailable, checked_prediction, pre
 from .robot import RobotController, RobotError
 from .simulation import SimulationBackend
 from .state import StateLock
+from .storage import StateStorage, StorageLimitError, validate_storage_config, positive_number, MIB
+from .provenance import build_provenance, bind_state, safe_directory
 
 
 class ManualClock:
@@ -27,10 +28,20 @@ class ManualClock:
         self.value += seconds
 
 
-def simulation_controller(*, speed=0.075):
+def simulation_controller(*, speed=0.075, template=None):
     clock = ManualClock()
-    backend = SimulationBackend(clock=clock, max_wheel_mps=speed)
-    controller = RobotController(backend, clock=clock, start_watchdog=False)
+    if template is None:
+        backend = SimulationBackend(clock=clock, max_wheel_mps=speed)
+        controller = RobotController(backend, clock=clock, start_watchdog=False)
+    else:
+        original = template.backend
+        if type(original) is not SimulationBackend:
+            raise ValueError("Held-out simulation requires the reviewed SimulationBackend")
+        backend = SimulationBackend(clock=clock, arena_width=original.width,
+                                    arena_height=original.height, wheel_base=original.wheel_base,
+                                    radius=original.radius, max_wheel_mps=original.max_wheel_mps)
+        controller = RobotController(backend, limits=template.limits, clock=clock,
+                                     start_watchdog=False, tether_limit_rad=template._tether_limit)
     return controller, clock
 
 
@@ -76,16 +87,23 @@ Choose varied informative actions while keeping the robot away from boundaries. 
 
 class ResearchSupervisor:
     def __init__(self, state_dir, controller, *, clock=None, config=None):
-        self.state_dir = Path(state_dir).resolve()
+        self.config = {} if config is None else config
+        validate_storage_config(self.config)
+        self.controller, self.clock = controller, clock
+        self.stopping = threading.Event()
+        self.state_dir = safe_directory(state_dir)
         self.state_dir.mkdir(parents=True, exist_ok=True)
         self._state_lock = StateLock(self.state_dir)
         try:
-            self.archive = Archive(self.state_dir / "archive")
-        except Exception:
+            self.storage = StateStorage(self.state_dir, self.config, on_stop=self._stop_for_storage)
+            manifest = build_provenance(self.config, controller)
+            bind_state(self.state_dir, manifest)
+            self.archive = Archive(self.state_dir / "archive", storage=self.storage, provenance=manifest)
+        except BaseException:
+            if getattr(getattr(self, "storage", None), "connection", None) is not None:
+                self.storage.connection.close()
             self._state_lock.close()
             raise
-        self.controller, self.clock = controller, clock
-        self.config = config or {}
         self.model = MotionModel()
         self.lease_id = None
         self.stopping = threading.Event()
@@ -141,20 +159,23 @@ class ResearchSupervisor:
                 self.archive.close()
                 self._state_lock.close()
 
+    def _stop_for_storage(self, reason):
+        self.stopping.set()
+        self.controller.stop(reason)
+
     def check_storage(self):
-        reserve = int(self.config.get("disk_reserve_bytes", 20 * 1024**3))
-        if shutil.disk_usage(self.state_dir).free < reserve:
-            self.stopping.set()
-            self.controller.stop("disk reserve reached")
-            raise RuntimeError("Stopped before exhausting the disk reserve")
+        self.storage.check()
 
     def archive_workspace(self, workspace=None, generation=None):
         from .sandbox import validate_workspace
         workspace = self.current_workspace if workspace is None else workspace
         generation = self.active_generation if generation is None else generation
-        validate_workspace(workspace, 65 * 1024**2)
+        validate_workspace(workspace, self.storage.workspace_limit + MIB, max_files=4097)
+        paths = sorted(workspace.rglob("*"))
+        if any(len(path.relative_to(self.state_dir).as_posix().encode()) > 512 for path in paths):
+            raise ValueError("Artifact path exceeds the 512-byte metadata budget; workspace preserved")
         novel_program_data = False
-        for path in sorted(workspace.rglob("*")):
+        for path in paths:
             if not path.is_file() or path.name == "transcript.json":
                 continue
             relative = path.relative_to(self.state_dir)
@@ -167,6 +188,11 @@ class ResearchSupervisor:
         return novel_program_data
 
     def recover_workspaces(self):
+        from .sandbox import recover_workspace_publications
+        # Binding was validated in __init__; restore accepted files before any
+        # interrupted-generation artifact registration or status transition.
+        recover_workspace_publications(self.state_dir / "workspaces", self.storage.workspace_limit + MIB)
+        self.storage.refresh()
         for row in self.archive.db.execute("SELECT id FROM generations WHERE status='running'").fetchall():
             workspace = self.state_dir / "workspaces" / row["id"]
             if workspace.exists():
@@ -174,12 +200,12 @@ class ResearchSupervisor:
 
     def admit_workspace_write(self, size):
         from .sandbox import validate_workspace
-        validate_workspace(self.current_workspace, 64 * 1024**2)
+        validate_workspace(self.current_workspace, self.storage.workspace_limit)
         paths = list(self.current_workspace.rglob("*"))
         if len(paths) >= 4000:
             raise ValueError("Workspace file count reached")
         current = sum(p.stat().st_size for p in paths if p.is_file())
-        if current + size > 63 * 1024**2:
+        if current + size > self.storage.workspace_limit - MIB:
             raise ValueError("Workspace quota reached; one MiB is reserved for supervisor records")
 
     def import_artifact(self, artifact_id):
@@ -212,7 +238,12 @@ class ResearchSupervisor:
         if timeout < 1:
             raise RuntimeError("Insufficient remaining sandbox time budget")
         try:
-            return DockerSandbox().execute(self.current_workspace, command, timeout_s=timeout)
+            # Admission includes the original, bounded tar and snapshot at once.
+            self.check_storage()
+            return DockerSandbox(workspace_limit_bytes=self.storage.workspace_limit,
+                                 workspace_path_limit_bytes=512 - len(self.current_workspace.relative_to(self.state_dir).as_posix().encode()) - 1,
+                                 min_free_disk_bytes=self.storage.disk_reserve).execute(
+                                     self.current_workspace, command, timeout_s=timeout)
         except SandboxCleanupError:
             self.stopping.set()
             self.controller.stop("sandbox cleanup needs operator attention")
@@ -280,6 +311,8 @@ class ResearchSupervisor:
         return {"model": self.model.to_dict(), "training_trials": len(rows), "source": source}
 
     def evaluate_model(self, count=16):
+        if type(count) is not int or not 1 <= count <= 100:
+            raise ValueError("Evaluation count must be an integer from 1 to 100")
         baseline = MotionModel()
         baseline_errors, candidate_errors, best_errors, evidence = [], [], [], []
         if self.controller.backend.is_real:
@@ -295,8 +328,10 @@ class ResearchSupervisor:
         else:
             rng = random.Random(secrets.randbits(64))
             for _ in range(count):
-                evaluation, evaluation_clock = simulation_controller(speed=self.controller.backend.max_wheel_mps)
-                token = evaluation.acquire("heldout-evaluation", ttl_s=30)["lease_id"]
+                evaluation, evaluation_clock = simulation_controller(template=self.controller)
+                token = evaluation.acquire("heldout-evaluation", ttl_s=min(30, evaluation.limits.max_lease_s))["lease_id"]
+                if evaluation._tether_limit is not None:
+                    evaluation.reset_tether(human_confirmed=True)
                 evaluation.arm(token, human_confirmed=True)
                 before = evaluation.observe()
                 action = {"left": rng.uniform(-.9, .9), "right": rng.uniform(-.9, .9), "duration_s": rng.uniform(.15, .5)}
@@ -439,8 +474,9 @@ class ResearchSupervisor:
     def run(self, *, generations=4, steps=12, model=None, demo=False, max_seconds=3600):
         if type(generations) is not int or not 1 <= generations <= 100000:
             raise ValueError("Generations must be 1..100000")
-        if type(steps) is not int or not 1 <= steps <= 1000 or not math.isfinite(max_seconds) or max_seconds <= 0:
+        if type(steps) is not int or not 1 <= steps <= 1000:
             raise ValueError("Invalid run budgets")
+        positive_number(max_seconds, "max_seconds")
         if self.controller.backend.is_real and demo:
             raise ValueError("Demo cannot operate real hardware")
         self.recover_workspaces()
@@ -458,9 +494,15 @@ class ResearchSupervisor:
                 if self.stopping.is_set() or time.monotonic() >= deadline:
                     status = "stopped"
                     break
+                try:
+                    self.storage.begin_generation()
+                except StorageLimitError:
+                    status = "storage_limit"
+                    break
                 self.active_generation = self.archive.start_generation(run_id)
                 self.current_workspace = self.state_dir / "workspaces" / self.active_generation
                 self.current_workspace.mkdir(parents=True, exist_ok=True)
+                self.storage.active_workspace = self.current_workspace
                 messages = [{"role": "system", "content": MISSION}, {"role": "user", "content": canonical({
                     "mission": self.config.get("mission", "Learn reliable action predictions"),
                     "generation": generation_index + 1, "tool_budget": steps,
@@ -511,6 +553,7 @@ class ResearchSupervisor:
                     generation_status, summary = "failed", str(exc)
                     consecutive_failures += 1
                 finally:
+                    self.storage.finish_generation()
                     (self.current_workspace / "transcript.json").write_text(canonical(transcript), encoding="utf-8")
                     novel_files = self.archive_workspace()
                     measured = self.archive.db.execute("SELECT 1 FROM experiments WHERE generation_id=? AND status IN ('completed','inconclusive') LIMIT 1", (self.active_generation,)).fetchone()
@@ -522,6 +565,7 @@ class ResearchSupervisor:
                         generation_status = "no_progress"
                     self.archive.end_generation(self.active_generation, generation_status, summary)
                     self.archive.export_digest()
+                    self.storage.end_generation()
                 print(json.dumps({"generation": generation_index + 1, "status": generation_status, "summary": summary}), flush=True)
                 if consecutive_failures >= 3:
                     status = "failed"
@@ -530,7 +574,7 @@ class ResearchSupervisor:
                     status = "no_progress"
                     break
             if self.stopping.is_set():
-                status = "stopped"
+                status = "storage_limit" if self.storage.failed else "stopped"
             elif status == "completed" and consecutive_failures:
                 status = "failed"
             elif status == "completed" and not any_progress:
@@ -540,6 +584,7 @@ class ResearchSupervisor:
             raise
         finally:
             self.controller.stop("research run ended")
+            self.storage.finish_generation()
             self.archive.end_run(run_id, status)
             self.archive.export_digest()
         return {"run_id": run_id, "status": status, **self.archive.summary()}

@@ -117,7 +117,7 @@ def prior_results(request):
 class AgentIntegrationTests(unittest.TestCase):
     def make_supervisor(self, directory):
         controller, clock = simulation_controller()
-        supervisor = ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 0})
+        supervisor = ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 1})
         supervisor.start_robot(operator_confirmed=True)
         return supervisor
 
@@ -304,23 +304,34 @@ class AgentIntegrationTests(unittest.TestCase):
                 predecessor.archive.end_run(run, "completed")
             finally:
                 predecessor.close()
+            original_database = (Path(directory) / "archive/evidence.sqlite3").read_bytes()
             legacy.write_bytes(b"EVIL")  # Trusted fault injection, same length.
-            calls = 0
-            def decision(_):
-                nonlocal calls
-                calls += 1
-                return {"tool": "artifact_import", "arguments": {"id": artifact_id}} if calls == 1 else {"tool": "finish", "arguments": {}}
-            with local_model_server(decision) as (url, _):
-                successor = self.make_supervisor(directory)
-                try:
-                    with contextlib.redirect_stdout(io.StringIO()):
-                        result = successor.run(generations=1, steps=3, model=LocalModel(url), max_seconds=10)
-                    self.assertEqual(result["status"], "no_progress")
-                    transcript = json.loads((successor.current_workspace / "transcript.json").read_text())
-                    self.assertIn("integrity", transcript[0]["result"]["error"])
-                    self.assertEqual(list(successor.current_workspace.glob("*helper.py")), [])
-                finally:
-                    successor.close()
+            controller, clock = simulation_controller()
+            try:
+                with self.assertRaisesRegex(ValueError, "integrity"):
+                    ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 1})
+                self.assertEqual(legacy.read_bytes(), b"EVIL")
+                self.assertEqual((Path(directory) / "archive/evidence.sqlite3").read_bytes(), original_database)
+            finally:
+                controller.close()
+
+    def test_corruption_after_startup_is_still_refused_at_import(self):
+        with tempfile.TemporaryDirectory() as directory:
+            supervisor = self.make_supervisor(directory)
+            try:
+                original = Path(directory) / "workspaces/old/helper.py"
+                original.parent.mkdir(parents=True)
+                original.write_bytes(b"SAFE")
+                artifact_id = supervisor.archive.record_artifact("old", "workspaces/old/helper.py", hashlib.sha256(b"SAFE").hexdigest(), 4)
+                supervisor.current_workspace = Path(directory) / "workspaces/new"
+                supervisor.current_workspace.mkdir()
+                original.write_bytes(b"EVIL")  # Same-length fault after preflight.
+                with self.assertRaisesRegex(ValueError, "integrity"):
+                    supervisor.import_artifact(artifact_id)
+                self.assertEqual(original.read_bytes(), b"EVIL")
+                self.assertEqual(list(supervisor.current_workspace.iterdir()), [])
+            finally:
+                supervisor.close()
 
     def test_redirect_does_not_reach_second_local_endpoint(self):
         target = {}

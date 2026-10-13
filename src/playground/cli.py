@@ -11,10 +11,12 @@ import time
 from .llm import LocalModel
 from .research import ResearchSupervisor, simulation_controller
 from .viewer import read_status, serve
+from .storage import validate_storage_config
 
 
 def read_config(path):
     config = json.loads(Path(path).read_text(encoding="utf-8"))
+    validate_storage_config(config)
     if config.get("mode", "simulation") != "simulation":
         raise ValueError("run uses simulation only; physical operation requires the hardware command")
     if os.environ.get("PLAYGROUND_LLM_BASE_URL"):
@@ -47,9 +49,27 @@ def main(argv=None):
     viewer.add_argument("--state-dir", default="state")
     viewer.add_argument("--host", default="127.0.0.1")
     viewer.add_argument("--port", type=int, default=8765)
+    backup = commands.add_parser("backup", help="Back up a stopped state directory without changing its evidence")
+    backup.add_argument("--state-dir", required=True)
+    backup.add_argument("--destination", required=True)
+    backup.add_argument("--disk-reserve-bytes", type=int, help="Optional stricter free-space floor")
+    restore = commands.add_parser("restore", help="Validate and restore a backup into a new state directory")
+    restore.add_argument("--backup", required=True)
+    restore.add_argument("--state-dir", required=True)
+    restore.add_argument("--disk-reserve-bytes", type=int, help="Optional stricter free-space floor")
     commands.add_parser("self-check", help="Report software capabilities without motion or deployment")
     args = parser.parse_args(argv)
     try:
+        if args.command == "backup":
+            from .backup import create_backup
+            result = create_backup(args.state_dir, args.destination, disk_reserve_bytes=args.disk_reserve_bytes)
+            print(json.dumps(result, indent=2))
+            return 0
+        if args.command == "restore":
+            from .backup import restore_backup
+            result = restore_backup(args.backup, args.state_dir, disk_reserve_bytes=args.disk_reserve_bytes)
+            print(json.dumps(result, indent=2))
+            return 0
         if args.command == "serve":
             serve(args.state_dir, args.host, args.port)
             return 0
@@ -77,12 +97,18 @@ def main(argv=None):
                 raise ValueError("Calibration file changed after validation")
             state_dir = Path(args.state_dir)
             state_dir.mkdir(parents=True, exist_ok=True)
-            if shutil.disk_usage(state_dir).free < int(config.get("disk_reserve_bytes", 20 * 1024**3)):
+            if shutil.disk_usage(state_dir).free < config.get("disk_reserve_bytes", 20 * 1024**3):
                 raise RuntimeError("Physical research refused: disk reserve unavailable")
             dimensions = report.get("source_image_size_px")
             if not isinstance(dimensions, list) or len(dimensions) != 2 or any(type(v) is not int or v <= 0 for v in dimensions):
                 raise ValueError("Calibration report must specify the measured camera frame dimensions")
             config["mode"] = "physical"
+            config.setdefault("evidence_inputs", {}).update({
+                "calibration": str(calibration_path.resolve()),
+                "calibration_validation": str(report_path.resolve()),
+            })
+            if not all(config["evidence_inputs"].get(key) for key in ("geometry", "firmware")):
+                raise ValueError("Physical research requires evidence_inputs geometry and firmware source files")
             tracker = CameraTracker(Calibration.load(args.calibration), camera=args.camera, expected_frame_size=tuple(dimensions))
             supervisor = None
             controller = None
@@ -116,7 +142,7 @@ def main(argv=None):
         config = {} if args.command == "demo" else read_config(args.config)
         state_dir = args.state_dir or config.get("state_dir", "state")
         if args.command == "run":
-            reserve = int(config.get("disk_reserve_bytes", 20 * 1024**3))
+            reserve = config.get("disk_reserve_bytes", 20 * 1024**3)
             Path(state_dir).mkdir(parents=True, exist_ok=True)
             if shutil.disk_usage(state_dir).free < reserve:
                 raise RuntimeError("Research admission refused: disk reserve unavailable")

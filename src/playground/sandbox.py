@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
+import json
 import os
 from pathlib import Path, PurePosixPath
 import re
@@ -38,7 +39,7 @@ class SandboxCleanupError(SandboxError):
         super().__init__(f"Sandbox cleanup unconfirmed for {container_name}; session {session_id}. {detail}")
 
 
-def validate_workspace(path: Path, limit: int, max_files: int = 4096) -> int:
+def validate_workspace(path: Path, limit: int, max_files: int = 4096, *, max_path_bytes: int | None = None) -> int:
     """Reject links, devices and excessive data before importing or publishing."""
     if path.is_symlink() or not path.is_dir():
         raise SandboxError("workspace must be a real directory")
@@ -48,6 +49,8 @@ def validate_workspace(path: Path, limit: int, max_files: int = 4096) -> int:
         for name in dirs + files:
             item = Path(root) / name
             info = item.lstat()
+            if max_path_bytes is not None and len(item.relative_to(path).as_posix().encode()) > max_path_bytes:
+                raise SandboxError("workspace artifact path exceeds metadata quota")
             count += 1
             if count > max_files:
                 raise SandboxError("workspace file count exceeds quota")
@@ -156,6 +159,131 @@ def extract_workspace(archive: Path, destination: Path, limit: int, max_files: i
             target.chmod(0o600 | (member.mode & 0o100))
 
 
+def _publication_sync(directory: Path) -> None:
+    if os.name == "nt":
+        return
+    fd = os.open(directory, os.O_RDONLY | getattr(os, "O_DIRECTORY", 0))
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
+def _publication_journal(stage: Path, target: str, phase: str) -> None:
+    value = {"version": 1, "workspace_name": target, "phase": phase}
+    temporary = stage / "publication.json.tmp"
+    with temporary.open("w", encoding="utf-8") as stream:
+        json.dump(value, stream)
+        stream.write("\n")
+        stream.flush()
+        os.fsync(stream.fileno())
+    os.replace(temporary, stage / "publication.json")
+    _publication_sync(stage)
+    _publication_sync(stage.parent)
+
+
+def _read_publication(stage: Path) -> dict:
+    marker = stage / "publication.json"
+    if stage.is_symlink() or not stage.is_dir() or marker.is_symlink() or not marker.is_file():
+        raise SandboxError(f"Unidentified copyback stage retained for operator review: {stage}")
+    if marker.stat().st_size > 1024:
+        raise SandboxError("Copyback journal exceeds its bound; stage retained")
+    try:
+        value = json.loads(marker.read_text(encoding="utf-8"))
+        target = value["workspace_name"]
+        if (set(value) != {"version", "workspace_name", "phase"} or value["version"] != 1
+                or not isinstance(target, str) or not target or len(target.encode()) > 255
+                or target in (".", "..") or any(c in target for c in ("/", "\\", "\0"))
+                or target.startswith(".playground-export-")
+                or value["phase"] not in ("copying", "prepared", "committed", "rolled_back")):
+            raise ValueError()
+    except (ValueError, KeyError, TypeError, UnicodeError) as exc:
+        raise SandboxError("Invalid copyback journal; stage retained for operator review") from exc
+    return value
+
+
+def _discard_publication(stage: Path) -> None:
+    """Caller has established that the authoritative workspace is intact.
+
+    Remove the journal last. A crash during cleanup leaves a replayable journal
+    or an empty stage, never an unidentified directory containing the original.
+    """
+    for child in stage.iterdir():
+        if child.name == "publication.json":
+            continue
+        if child.is_symlink() or not child.is_dir():
+            child.unlink()
+        else:
+            shutil.rmtree(child)
+    marker = stage / "publication.json"
+    marker.unlink(missing_ok=True)
+    stage.rmdir()
+    _publication_sync(stage.parent)
+
+
+def _recover_publication(stage: Path, limit: int) -> bool:
+    """Restore an uncommitted original; quarantine its candidate, never adopt it."""
+    value = _read_publication(stage)
+    target = stage.parent / value["workspace_name"]
+    previous, snapshot = stage / "previous", stage / "workspace"
+    for path in (target, previous, snapshot):
+        if path.is_symlink() or (path.exists() and not path.is_dir()):
+            raise SandboxError("Unsafe copyback recovery path; stage retained")
+    phase = value["phase"]
+    if phase == "rolled_back":
+        if previous.exists() or not target.is_dir():
+            raise SandboxError("Previously restored workspace changed; stage retained")
+        return False
+    if phase == "committed":
+        if not target.is_dir() or snapshot.exists():
+            raise SandboxError("Committed copyback is incomplete; stage retained")
+        validate_workspace(target, limit)
+        _discard_publication(stage)
+        return True
+    if phase == "copying":
+        if not target.is_dir() or previous.exists():
+            raise SandboxError("Copyback source is missing; stage retained")
+    elif previous.exists():
+        validate_workspace(previous, limit)
+        if target.exists():
+            if snapshot.exists():
+                raise SandboxError("Ambiguous copyback destinations; stage retained")
+            # The second rename happened but commit did not. Retain the
+            # candidate separately and restore the last accepted original.
+            target.rename(snapshot)
+            _publication_sync(stage.parent)
+            _publication_sync(stage)
+        previous.rename(target)
+        _publication_sync(stage.parent)
+        _publication_sync(stage)
+    elif not target.is_dir() or not snapshot.is_dir():
+        raise SandboxError("Copyback original cannot be identified; stage retained")
+    validate_workspace(target, limit)
+    _publication_journal(stage, target.name, "rolled_back")
+    return True
+
+
+def recover_workspace_publications(root: Path, limit: int) -> int:
+    """Call only while holding supervisor ownership, after provenance validation.
+
+    Unresolved journals fail closed. Rolled-back candidates remain quarantined
+    under the state tree and count toward aggregate storage admission.
+    """
+    root = Path(root)
+    if not root.exists():
+        return 0
+    if root.is_symlink() or not root.is_dir():
+        raise SandboxError("Unsafe workspace publication root")
+    recovered = 0
+    for stage in sorted(root.glob(".playground-export-*")):
+        if stage.is_dir() and not stage.is_symlink() and not any(stage.iterdir()):
+            stage.rmdir()  # Only a crash after final journal unlink can leave this.
+            recovered += 1
+            continue
+        recovered += _recover_publication(stage, limit)
+    return recovered
+
+
 class DockerSandbox:
     """Image selection and resource flags are trusted operator configuration only.
 
@@ -165,7 +293,7 @@ class DockerSandbox:
     """
 
     def __init__(self, image: str | None = None, *, workspace_limit_bytes: int = 64 * 1024**2,
-                 stdout_limit_bytes: int = 1024**2, cpu: float = 1.0,
+                 stdout_limit_bytes: int = 1024**2, workspace_path_limit_bytes: int = 468, cpu: float = 1.0,
                  memory: str = "512m", pids: int = 64,
                  min_free_disk_bytes: int = 20 * 1024**3,
                  runner: Callable = bounded_run):
@@ -178,7 +306,10 @@ class DockerSandbox:
             raise SandboxError("invalid sandbox resource limits")
         if not re.fullmatch(r"(?:[1-9][0-9]{1,3})m", memory) or not 64 <= int(memory[:-1]) <= 4096:
             raise SandboxError("memory must be 64m to 4096m")
+        if type(workspace_path_limit_bytes) is not int or not 1 <= workspace_path_limit_bytes <= 468:
+            raise SandboxError("workspace path quota must be 1..468 UTF-8 bytes")
         self.workspace_limit_bytes = workspace_limit_bytes
+        self.workspace_path_limit_bytes = workspace_path_limit_bytes
         self.stdout_limit_bytes = stdout_limit_bytes
         self.cpu, self.memory, self.pids, self.runner = cpu, memory, pids, runner
         self.min_free_disk_bytes = min_free_disk_bytes
@@ -186,6 +317,46 @@ class DockerSandbox:
         if not re.fullmatch(r"[a-f0-9]{32}", self.session_id):
             raise SandboxError("invalid trusted launcher session identifier")
         self._lock = threading.Lock()
+
+    def _begin_intent(self, name: str) -> Path | None:
+        """Persist launch ambiguity outside the generated-code workspace.
+
+        Spark launchers set both variables. Direct/qualification callers without
+        a launcher session retain their existing explicit cleanup contract.
+        """
+        if not os.environ.get("PLAYGROUND_SESSION_ID"):
+            return None
+        state = os.environ.get("PLAYGROUND_STATE_DIR")
+        if not state:
+            raise SandboxError("launcher session requires its trusted state directory")
+        runtime = Path(state).resolve() / "runtime"
+        if runtime.is_symlink() or not runtime.is_dir():
+            raise SandboxError("trusted launcher runtime directory is unavailable")
+        path = runtime / f"docker-inflight-{self.session_id}.json"
+        try:
+            with path.open("x", encoding="utf-8") as out:
+                json.dump({"version": 1, "session_id": self.session_id,
+                           "container_name": name}, out)
+                out.write("\n")
+                out.flush()
+                os.fsync(out.fileno())
+            self._sync_intent_directory(runtime)
+        except FileExistsError as exc:
+            raise SandboxCleanupError(name, self.session_id,
+                                      "Prior durable Docker intent remains; operator review required") from exc
+        return path
+
+    @staticmethod
+    def _sync_intent_directory(directory: Path) -> None:
+        fd = os.open(directory, os.O_RDONLY | os.O_DIRECTORY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+
+    def _finish_intent(self, path: Path) -> None:
+        path.unlink()
+        self._sync_intent_directory(path.parent)
 
     def _run(self, args: list[str], timeout: float = 10) -> ExecutionResult:
         return self.runner(["docker", *args], timeout_s=max(0.1, timeout),
@@ -253,20 +424,22 @@ class DockerSandbox:
         if "," in str(workspace) or workspace == Path(workspace.anchor):
             raise SandboxError("unsafe workspace path")
         with self._lock:
-            validate_workspace(workspace, self.workspace_limit_bytes)
+            validate_workspace(workspace, self.workspace_limit_bytes, max_path_bytes=self.workspace_path_limit_bytes)
             if shutil.disk_usage(workspace).free < self.min_free_disk_bytes:
                 raise SandboxError("free disk is below admission floor")
             name = "playground-job-" + uuid.uuid4().hex
             deadline = time.monotonic() + timeout_s
             launch_attempted = False
             uncertain_startup = False
+            intent = None
             def checked(args):
-                nonlocal launch_attempted, uncertain_startup
+                nonlocal launch_attempted, uncertain_startup, intent
                 remaining = deadline - time.monotonic()
                 if remaining <= 0:
                     raise SandboxError("sandbox setup exceeded time budget")
                 launching = args[0] == "run"
                 if launching:
+                    intent = self._begin_intent(name)
                     launch_attempted = uncertain_startup = True
                 try:
                     result = self._run(args, remaining)
@@ -291,10 +464,14 @@ class DockerSandbox:
                     return result
                 # Freeze background children before snapshotting artifacts.
                 checked(["pause", name])
-                with tempfile.TemporaryDirectory(prefix=".playground-export-", dir=workspace.parent) as staging:
-                    snapshot = Path(staging) / "workspace"
+                stage = Path(tempfile.mkdtemp(prefix=".playground-export-", dir=workspace.parent))
+                publication_started = False
+                publication_committed = False
+                try:
+                    _publication_journal(stage, workspace.name, "copying")
+                    snapshot = stage / "workspace"
                     snapshot.mkdir()
-                    archive = Path(staging) / "workspace.tar"
+                    archive = stage / "workspace.tar"
                     copied = self.runner(["docker", "cp", f"{name}:/workspace/.", "-"],
                                          timeout_s=max(0.1, deadline-time.monotonic()),
                                          output_limit=self.workspace_limit_bytes + 16*1024**2,
@@ -302,15 +479,36 @@ class DockerSandbox:
                     if copied.exit_code:
                         raise SandboxError(copied.stderr or "artifact copy failed")
                     extract_workspace(archive, snapshot, self.workspace_limit_bytes)
-                    validate_workspace(snapshot, self.workspace_limit_bytes)
-                    # Publish a validated snapshot without clearing the original first.
-                    backup = Path(staging) / "previous"
-                    workspace.rename(backup)
-                    try:
-                        snapshot.rename(workspace)
-                    except OSError:
-                        backup.rename(workspace)
-                        raise
+                    validate_workspace(snapshot, self.workspace_limit_bytes, max_path_bytes=self.workspace_path_limit_bytes)
+                    _publication_journal(stage, workspace.name, "prepared")
+                    publication_started = True
+                    # Both renames are inside the BaseException boundary. No
+                    # auto-cleanup may ever delete the sole remaining original.
+                    workspace.rename(stage / "previous")
+                    _publication_sync(workspace.parent)
+                    _publication_sync(stage)
+                    snapshot.rename(workspace)
+                    _publication_sync(workspace.parent)
+                    _publication_sync(stage)
+                    _publication_journal(stage, workspace.name, "committed")
+                    publication_committed = True
+                    _discard_publication(stage)
+                except BaseException as exc:
+                    if publication_started and not publication_committed:
+                        try:
+                            _recover_publication(stage, self.workspace_limit_bytes)
+                        except BaseException as recovery_error:
+                            raise SandboxCleanupError(name, self.session_id,
+                                f"Copyback rollback unconfirmed; original/candidate retained at {stage}: {recovery_error}") from exc
+                        if isinstance(exc, (KeyboardInterrupt, SystemExit)):
+                            raise
+                        raise SandboxCleanupError(name, self.session_id,
+                            f"Copyback rolled back; candidate retained at {stage} for review") from exc
+                    if not publication_started:
+                        # Original has not moved; failed extraction may safely
+                        # discard only its own bounded temporary candidate.
+                        _discard_publication(stage)
+                    raise
                 return result
             except FileNotFoundError as exc:
                 raise SandboxError("Docker CLI or workspace is unavailable; arbitrary code has no host fallback") from exc
@@ -318,3 +516,8 @@ class DockerSandbox:
                 # Exact generated name, never prune or touch another workload.
                 if launch_attempted:
                     self._cleanup(name, uncertain_startup=uncertain_startup)
+                    if uncertain_startup:
+                        raise SandboxCleanupError(name, self.session_id,
+                                                  "Startup was interrupted; durable intent retained for operator review")
+                if intent is not None:
+                    self._finish_intent(intent)

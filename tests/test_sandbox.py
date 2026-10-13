@@ -154,6 +154,29 @@ class SandboxTests(unittest.TestCase):
             self.assertEqual((path / "keep").read_text(), "preserve")
             self.assertEqual(fake.calls[-1][1], "rm")
 
+    def test_long_artifact_path_rejected_before_snapshot_publication(self):
+        fake = FakeDocker()
+        def runner(argv, **kwargs):
+            if argv[1] == "cp":
+                fake.calls.append(argv)
+                with tarfile.open(kwargs["stdout_file"], "w") as archive:
+                    name = "/".join(["a"*180, "b"*180, "c"*180, "bad.py"])
+                    entry = tarfile.TarInfo(name)
+                    entry.size = 4
+                    archive.addfile(entry, io.BytesIO(b"nope"))
+                return ExecutionResult(0)
+            return fake(argv, **kwargs)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)/"work"
+            path.mkdir()
+            (path/"original.py").write_bytes(b"preserve")
+            with self.assertRaisesRegex(SandboxError, "path.*quota"):
+                DockerSandbox(IMAGE, runner=runner).execute(path, "true")
+            self.assertEqual((path/"original.py").read_bytes(), b"preserve")
+            self.assertEqual(list(path.iterdir()), [path/"original.py"])
+            self.assertEqual(fake.calls[-1][1], "rm")
+            self.assertEqual(list(Path(tmp).glob(".playground-export-*")), [])
+
     def test_rejects_unpinned_images_and_invalid_resources(self):
         for image in ("python:latest", "", "python@sha256:bad", "--privileged"):
             with self.assertRaises(SandboxError):
