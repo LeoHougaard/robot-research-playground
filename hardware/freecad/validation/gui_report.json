@@ -1,0 +1,591 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4"
+  ],
+  "passed": true,
+  "scope": "Actual GUI document opening and saved visibility; no OpenGL rendering",
+  "files": [
+    {
+      "path": "hardware/native/robot/01_horn_fit_coupon.FCStd",
+      "sha256": "6f436dc04d10456e886a0ed4d2e7f4f7d53d20bff2460096248fe4b28314939b",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/02_hole_clearance_coupon.FCStd",
+      "sha256": "b8a8abc29d59d6e1e5d08aa0660f41a27464b4023476cbaf7ec2a381af1ae8ec",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/03_servo_body_coupon.FCStd",
+      "sha256": "e2d5313c9ef9d5c9274ec656f2850ad41aac6c92e7ce44d41482077209ed88b6",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/04_gate_rail_coupon.FCStd",
+      "sha256": "a7cfd8b33bda6e1eac31975b0af1934b8df41ec00a4cf54c5d41e7c3e0e08005",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/05_gate_runner_coupon.FCStd",
+      "sha256": "ebf9f423f54383149ba476795a6ca096265a17a5b06dd5e9f5eabef281009915",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/10_chassis.FCStd",
+      "sha256": "d60843635763a4ad4ed192a7142b2161a2501d6154858bc298a4ae6549bb596d",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/11_drive_servo_cradle.FCStd",
+      "sha256": "ff6836999668a0561c03a060b3d11b9344aa06057120434b2fd5eb936f14618d",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/12_drive_wheel.FCStd",
+      "sha256": "0385c7e01f315a4cf223454f8d2c9b96f1f67c853699a2fe75d8b611f160c36f",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/13_tpu_tire.FCStd",
+      "sha256": "2ecc747bef90a417248f18c131fc5686af098097b6a830cccdb61e9d338416c7",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/14_caster_spacer.FCStd",
+      "sha256": "b8b040910ade796567d1dc0475e8850a2140b85a2f7c20c3cb45ea77a5e02a43",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/15_caster_shim_05.FCStd",
+      "sha256": "cf49c1c14a6beef7756dda479a7059fc5e6eb5a53fbbcb389af596bd8403e19b",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/16_caster_shim_10.FCStd",
+      "sha256": "f22a9e99354406c8e0af385151dfaad3684da2250b5506458d3b587cf7248e30",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/20_moving_jaw.FCStd",
+      "sha256": "a6af479282e947e942a4496d88d19bf20a71d5f54f54db14fb88957df6b8e58b",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/21_fixed_jaw.FCStd",
+      "sha256": "bcf8b4e368073513854dfe145ea3f46eb38eec7a93e024595828718c787102f3",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/22_gripper_servo_tower.FCStd",
+      "sha256": "91b3f6ca34415de9bd52eb3edbc44b9239789a48ff802e352bdb7bcf73bbc371",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/30_marker_tower.FCStd",
+      "sha256": "3158c68106dc98e304b79ea558484d1a40931e65439f79a1443b4f32e33edc1b",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/31_tether_mast.FCStd",
+      "sha256": "b2cb0bcefa72192631fe52aa7ce7eefe48e21e81629e6bc609582a0e335b8e82",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/32_overhead_tie_plate.FCStd",
+      "sha256": "269b20566b8d74971b5c7eeafc39710855bffde370c69851ef6b5605195c64fe",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/40_puck.FCStd",
+      "sha256": "a0b532f7c9abb5576335f8765c77d21fb2bca32549dcfdef07e6b062ed7d4e95",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/41_object_marker_cap.FCStd",
+      "sha256": "fa563cadfdb5177b0d68522575ef91ebb34dd2f639f9fd39459d51f00cb93927",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/42_calibration_marker_base.FCStd",
+      "sha256": "45868f69a95d2029899bbf47582e841ff0d24727ee1a0fd4d5b3146586546efb",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/50_gate_base.FCStd",
+      "sha256": "8d37433267cca89ae841c4dc052e364376e7ce25bd62d3e8852ce207735cb215",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/51_gate_slider.FCStd",
+      "sha256": "d6c61228285160c834a3077296232a7913835bb87954b52684baadfb7651da5c",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/52_gate_end_stop.FCStd",
+      "sha256": "297d03679251b3bcea462f3ca6fe157e61bbee4efaab1af8feb878eb5f26cae2",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/60_arena_wall_200.FCStd",
+      "sha256": "eae452945fc74059ec663790e838b39cf9fb5aafbdbc3c8ddad394028ffb2681",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/61_wall_joiner.FCStd",
+      "sha256": "ff324d067caefa569a3d80002a904124e5096b2a07d3a469e09c7708e2f6c3e5",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/62_arena_corner.FCStd",
+      "sha256": "6025f39c29b6482031689e43fb3893706a3b5f467766e7829f69d47755312028",
+      "visible": [
+        "FinalPart"
+      ],
+      "visible_geometry": [
+        "FinalPart"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/robot/robot_playground_assembly.FCStd",
+      "sha256": "0edc3d3684cda3840813d65b696ad921638fc4291ffc414646412a54d8300279",
+      "visible": [
+        "FinalAssembly"
+      ],
+      "visible_geometry": [
+        "FinalAssembly"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/electronics_box.FCStd",
+      "sha256": "fffe4192c4a24af61f5ea4415a6cb497c3770835c66296dc1783b367ff775b80",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/electronics_lid.FCStd",
+      "sha256": "53d8db1b00bce3edc1600e5e0341cf4308fe4d58dc51b62570398591665599fb",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/perfboard_carrier.FCStd",
+      "sha256": "66f6ea37bea0df2d4fc2ce069c021e3ef1ee7d2e75bf30b74d0f7568e195fd19",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/camera_plate.FCStd",
+      "sha256": "f00d981a497480e10ad9630c3f4e01c5226ebc118276998fb3e88d91db85c0b9",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/beam_clamp_lower.FCStd",
+      "sha256": "25c844d1b989ece96121f8ab20cb5c2c270b73536b7f6ec2c4bb4aa9333c5246",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/beam_clamp_upper.FCStd",
+      "sha256": "28a4718659e22fa85c938de7d0a3a8d15001035c134655ff23ced72f426841c1",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/tether_anchor_plate.FCStd",
+      "sha256": "3088fca34ee521fc3eb055cc960badb7fcb96c89a3cb4aef83b9678de0bc72f3",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/cable_clamp_lower.FCStd",
+      "sha256": "7f61db883db5a166035036c8cffca2bcef8ce087356a83147798e3577da3bc4e",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/cable_clamp_upper.FCStd",
+      "sha256": "0960812af4e6dd8f15c6c61ba9cc7d9f278590cdb3f5d9998dd649a78c45caec",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/estop_panel.FCStd",
+      "sha256": "c6a34ca827a8fb4003f3657fcd74f3342366fe30586a229a7b8c571d0a8b448a",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/estop_clearance_ring.FCStd",
+      "sha256": "ac008988e3f5a6be7009c67958bb4380f618e4b462ec68edac265e3557cc25ab",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/estop_panel_stand.FCStd",
+      "sha256": "cc0c573b9d215ee3051d86165721b6e5d569fbbde191658a9239b7092f8b097d",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/terminal_guard.FCStd",
+      "sha256": "e4cf5a87484cc56285fe775454ef908e756008cc96a1b6912614af07e3d562e5",
+      "visible": [
+        "Dimensions",
+        "Final"
+      ],
+      "visible_geometry": [
+        "Final"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/electronics_assembly.FCStd",
+      "sha256": "5ab596af16bb705980491beebe5f0b8def3560ed58b7ad55d3fde51e84e5cb7e",
+      "visible": [
+        "Dimensions",
+        "Dimensions001",
+        "Dimensions002",
+        "Dimensions003",
+        "FinalAssembly"
+      ],
+      "visible_geometry": [
+        "FinalAssembly"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/camera_assembly.FCStd",
+      "sha256": "034b4353e87ea72bdf5c36f1a181b0103150ac18a2ad10f91cd71028dcfb202a",
+      "visible": [
+        "Dimensions",
+        "Dimensions001",
+        "Dimensions002",
+        "FinalAssembly"
+      ],
+      "visible_geometry": [
+        "FinalAssembly"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/tether_assembly.FCStd",
+      "sha256": "d633d4b149121b7068aded9521112f676c375cccdcfcd0ee92dfb8c26ca110dd",
+      "visible": [
+        "Dimensions",
+        "Dimensions001",
+        "Dimensions002",
+        "FinalAssembly"
+      ],
+      "visible_geometry": [
+        "FinalAssembly"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/cable_assembly.FCStd",
+      "sha256": "5d3049500a2d146d38f4484c0ed5d6742a79288dd0ae202b5e1e5604c80d1bc4",
+      "visible": [
+        "Dimensions",
+        "Dimensions001",
+        "FinalAssembly"
+      ],
+      "visible_geometry": [
+        "FinalAssembly"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "hardware/native/accessories/operator_panel_assembly.FCStd",
+      "sha256": "ec906e2b528b5e8c635ff1f119100d44acb5fa3f1ab0088caf343e01f249d100",
+      "visible": [
+        "Dimensions",
+        "Dimensions001",
+        "Dimensions002",
+        "FinalAssembly"
+      ],
+      "visible_geometry": [
+        "FinalAssembly"
+      ],
+      "passed": true,
+      "source_unchanged": true
+    }
+  ]
+}

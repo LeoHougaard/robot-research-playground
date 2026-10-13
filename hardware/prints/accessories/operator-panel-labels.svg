@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70mm" height="35mm" viewBox="0 0 70 35">
+  <rect width="70" height="35" fill="white"/>
+  <rect x="5" y="3" width="60" height="10" rx="1" fill="white" stroke="#222" stroke-width="0.3"/>
+  <text x="35" y="10.2" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" font-weight="bold" fill="#b31818">E-STOP</text>
+  <rect x="5" y="17" width="60" height="10" rx="1" fill="white" stroke="#222" stroke-width="0.3"/>
+  <text x="35" y="24.2" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.8" font-weight="bold" fill="#111">PRESS TO AUTHORIZE</text>
+  <text x="35" y="33" text-anchor="middle" font-family="Arial,sans-serif" font-size="2.5" fill="#555">Print at 100% · each label is 60 × 10 mm</text>
+</svg>

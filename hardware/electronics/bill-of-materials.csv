@@ -6,6 +6,7 @@ Q1 carrier,1,SparkFun,BOB-00717,SOT23 to DIP adapter,Verify carrier-pad continui
 K1,1,Omron / Aratas,G5CA-1A DC12,12V 16.7mA coil; SPST-NO 10A at30VDC resistive,3A DC inductive rating; prototype supply limited to2A total,https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5ca.pdf
 D1,1,Vishay,1N4007-E3/54,1A axial diode,Cathode stripe to coil+12V; anode to coil low side BEFORE E-stop,https://www.vishay.com/docs/88503/1n4001.pdf
 S1,1,Omron,A22E-M-02,Latching turn-reset E-stop with two NC contacts,One NC opens coil return; second NC connects GPIO27 to GND,https://www.fa.omron.co.jp/product/item/A22E-M-02/
+S2,1,Adafruit,1505,Black normally-open momentary 16mm panel button; max shaft15.56mm totalheight29.4mm,GPIO26 to GND with firmware internal pullup; nominal16mm panel hole needs physical fit check; label PRESS TO AUTHORIZE; fresh press grants window then host arm required,https://www.adafruit.com/product/1505
 C1,1,TDK,B32529C0155J000,1.5uF 63V film +/-5%; 5mm lead spacing,Timing capacitor BETWEEN U1 pins14 and15; never substitute bulk electrolytic without requalification,https://www.tdk-electronics.tdk.com/inf/20/20/db/fc_2009/B32520_529.pdf
 R1,1,Commodity,82k axial metal-film 1%,0.25W minimum,Timing resistor from U1 pin15 to3.3V; measured timing gate required,https://www.ti.com/lit/ds/symlink/cd74hc123.pdf
 R2 R4 R5,3,Commodity,1k axial metal-film 1%,0.25W minimum,GPIO32 series; GPIO25 series; MOSFET gate series,

@@ -1,6 +1,9 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+*.FCBak
+*.FCStd1
+hardware/freecad/robot/preview_geometry.json
 .venv/
 .tools/
 .mechanical-venv/

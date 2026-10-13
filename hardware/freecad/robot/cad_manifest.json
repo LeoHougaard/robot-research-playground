@@ -1,0 +1,1003 @@
+{
+  "schema_version": 1,
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "source_path": "hardware/cad/generate.py",
+  "source_sha256": "c98f66a12b887c78602aac5dfdecc535f5e091ced44c28c4fce5f76944237f1a",
+  "parameters_path": "hardware/cad/parameters.json",
+  "parameters_sha256": "62816edd5e96c7778abd5de594dabd63e5ae385e443f9c887b2296d2fa6ee236",
+  "step_geometry": "Analytic native CSG solids, not triangle meshes",
+  "native_editing": "Native Box/Cylinder dimensions, booleans, and placements recompute through the feature tree.",
+  "onshape_editing": "STEP imports solid geometry but does not carry the FreeCAD feature history.",
+  "physical_fit_verified": false,
+  "parts": [
+    {
+      "id": "01_horn_fit_coupon",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; compare all four holes to the stock horn",
+      "native_path": "hardware/native/robot/01_horn_fit_coupon.FCStd",
+      "step_path": "hardware/step/robot/01_horn_fit_coupon.step",
+      "final_object": "FinalPart",
+      "feature_count": 17,
+      "stl_path": "hardware/prints/01_horn_fit_coupon.stl",
+      "mesh_volume_mm3": 1144.764,
+      "mesh_volume_relative_error": 0.000713839168240801,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -12.0,
+          -12.0,
+          0.0
+        ],
+        [
+          12.0,
+          12.0,
+          3.0
+        ]
+      ],
+      "volume_mm3": 1145.5817611315179,
+      "solid_count": 1,
+      "face_count": 8,
+      "surface_types": {
+        "Cylinder": 6,
+        "Plane": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "02_hole_clearance_coupon",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; hole sequence left to right 2.5,2.8,3.0,3.2,3.4 mm",
+      "native_path": "hardware/native/robot/02_hole_clearance_coupon.FCStd",
+      "step_path": "hardware/step/robot/02_hole_clearance_coupon.step",
+      "final_object": "FinalPart",
+      "feature_count": 17,
+      "stl_path": "hardware/prints/02_hole_clearance_coupon.stl",
+      "mesh_volume_mm3": 6859.075,
+      "mesh_volume_relative_error": -1.4738971314667134e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          70.0,
+          25.0,
+          4.0
+        ]
+      ],
+      "volume_mm3": 6858.9739057803545,
+      "solid_count": 1,
+      "face_count": 11,
+      "surface_types": {
+        "Plane": 6,
+        "Cylinder": 5
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "03_servo_body_coupon",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; open gap is40.2 mm",
+      "native_path": "hardware/native/robot/03_servo_body_coupon.FCStd",
+      "step_path": "hardware/step/robot/03_servo_body_coupon.step",
+      "final_object": "FinalPart",
+      "feature_count": 8,
+      "stl_path": "hardware/prints/03_servo_body_coupon.stl",
+      "mesh_volume_mm3": 2780.4,
+      "mesh_volume_relative_error": 0.0,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          46.2,
+          14.0,
+          13.0
+        ]
+      ],
+      "volume_mm3": 2780.4,
+      "solid_count": 1,
+      "face_count": 10,
+      "surface_types": {
+        "Plane": 10
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "04_gate_rail_coupon",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; same retaining lip as full gate, supports under lip",
+      "native_path": "hardware/native/robot/04_gate_rail_coupon.FCStd",
+      "step_path": "hardware/step/robot/04_gate_rail_coupon.step",
+      "final_object": "FinalPart",
+      "feature_count": 51,
+      "stl_path": "hardware/prints/04_gate_rail_coupon.stl",
+      "mesh_volume_mm3": 6852.0,
+      "mesh_volume_relative_error": -1.3273419465454297e-16,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          40.0,
+          20.0,
+          13.0
+        ]
+      ],
+      "volume_mm3": 6851.999999999999,
+      "solid_count": 1,
+      "face_count": 14,
+      "surface_types": {
+        "Plane": 14
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "05_gate_runner_coupon",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; slide through coupon channel before printing full gate",
+      "native_path": "hardware/native/robot/05_gate_runner_coupon.FCStd",
+      "step_path": "hardware/step/robot/05_gate_runner_coupon.step",
+      "final_object": "FinalPart",
+      "feature_count": 2,
+      "stl_path": "hardware/prints/05_gate_runner_coupon.stl",
+      "mesh_volume_mm3": 1280.0,
+      "mesh_volume_relative_error": -1.7763568394002508e-16,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          40.0,
+          8.0,
+          4.0
+        ]
+      ],
+      "volume_mm3": 1279.9999999999998,
+      "solid_count": 1,
+      "face_count": 6,
+      "surface_types": {
+        "Plane": 6
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "10_chassis",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat bottom; no supports",
+      "native_path": "hardware/native/robot/10_chassis.FCStd",
+      "step_path": "hardware/step/robot/10_chassis.step",
+      "final_object": "FinalPart",
+      "feature_count": 257,
+      "stl_path": "hardware/prints/10_chassis.stl",
+      "mesh_volume_mm3": 72447.375,
+      "mesh_volume_relative_error": -1.1275202942953834e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -110.0,
+          -60.0,
+          0.0
+        ],
+        [
+          50.0,
+          60.0,
+          4.0
+        ]
+      ],
+      "volume_mm3": 72446.55815035434,
+      "solid_count": 1,
+      "face_count": 118,
+      "surface_types": {
+        "Plane": 58,
+        "Cylinder": 60
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "11_drive_servo_cradle",
+      "quantity": 2,
+      "material": "PETG",
+      "print_orientation": "flat bottom; no supports",
+      "native_path": "hardware/native/robot/11_drive_servo_cradle.FCStd",
+      "step_path": "hardware/step/robot/11_drive_servo_cradle.step",
+      "final_object": "FinalPart",
+      "feature_count": 80,
+      "stl_path": "hardware/prints/11_drive_servo_cradle.stl",
+      "mesh_volume_mm3": 16385.913,
+      "mesh_volume_relative_error": -1.3094793195928495e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -30.0,
+          -28.0,
+          0.0
+        ],
+        [
+          30.0,
+          28.0,
+          12.4
+        ]
+      ],
+      "volume_mm3": 16385.698432667654,
+      "solid_count": 1,
+      "face_count": 46,
+      "surface_types": {
+        "Plane": 30,
+        "Cylinder": 16
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "12_drive_wheel",
+      "quantity": 2,
+      "material": "PETG",
+      "print_orientation": "flat side; no supports",
+      "native_path": "hardware/native/robot/12_drive_wheel.FCStd",
+      "step_path": "hardware/step/robot/12_drive_wheel.step",
+      "final_object": "FinalPart",
+      "feature_count": 23,
+      "stl_path": "hardware/prints/12_drive_wheel.stl",
+      "mesh_volume_mm3": 28089.925,
+      "mesh_volume_relative_error": 0.0007137788773673443,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -31.5,
+          -31.5,
+          0.0
+        ],
+        [
+          31.5,
+          31.5,
+          10.0
+        ]
+      ],
+      "volume_mm3": 28109.989316617222,
+      "solid_count": 1,
+      "face_count": 12,
+      "surface_types": {
+        "Cylinder": 8,
+        "Plane": 4
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "13_tpu_tire",
+      "quantity": 2,
+      "material": "TPU95A",
+      "print_orientation": "flat ring; no supports",
+      "native_path": "hardware/native/robot/13_tpu_tire.FCStd",
+      "step_path": "hardware/step/robot/13_tpu_tire.step",
+      "final_object": "FinalPart",
+      "feature_count": 5,
+      "stl_path": "hardware/prints/13_tpu_tire.stl",
+      "mesh_volume_mm3": 4022.552,
+      "mesh_volume_relative_error": 0.0007136560663362305,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -32.5,
+          -32.5,
+          0.0
+        ],
+        [
+          32.5,
+          32.5,
+          7.0
+        ]
+      ],
+      "volume_mm3": 4025.4247688058385,
+      "solid_count": 1,
+      "face_count": 4,
+      "surface_types": {
+        "Cylinder": 2,
+        "Plane": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "14_caster_spacer",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; nominal3.9 mm",
+      "native_path": "hardware/native/robot/14_caster_spacer.FCStd",
+      "step_path": "hardware/step/robot/14_caster_spacer.step",
+      "final_object": "FinalPart",
+      "feature_count": 8,
+      "stl_path": "hardware/prints/14_caster_spacer.stl",
+      "mesh_volume_mm3": 1646.539,
+      "mesh_volume_relative_error": -1.6495760901036054e-05,
+      "mesh_bounds_max_error_mm": 4.440892098500626e-16,
+      "bounds_mm": [
+        [
+          -12.0,
+          -9.0,
+          0.0
+        ],
+        [
+          12.0,
+          9.0,
+          3.9000000000000004
+        ]
+      ],
+      "volume_mm3": 1646.5118395343743,
+      "solid_count": 1,
+      "face_count": 8,
+      "surface_types": {
+        "Plane": 6,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "15_caster_shim_05",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; optional leveling",
+      "native_path": "hardware/native/robot/15_caster_shim_05.FCStd",
+      "step_path": "hardware/step/robot/15_caster_shim_05.step",
+      "final_object": "FinalPart",
+      "feature_count": 8,
+      "stl_path": "hardware/prints/15_caster_shim_05.stl",
+      "mesh_volume_mm3": 211.095,
+      "mesh_volume_relative_error": -1.7710450010415682e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -12.0,
+          -9.0,
+          0.0
+        ],
+        [
+          12.0,
+          9.0,
+          0.5
+        ]
+      ],
+      "volume_mm3": 211.09126147876594,
+      "solid_count": 1,
+      "face_count": 8,
+      "surface_types": {
+        "Plane": 6,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "16_caster_shim_10",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; optional leveling",
+      "native_path": "hardware/native/robot/16_caster_shim_10.FCStd",
+      "step_path": "hardware/step/robot/16_caster_shim_10.step",
+      "final_object": "FinalPart",
+      "feature_count": 8,
+      "stl_path": "hardware/prints/16_caster_shim_10.stl",
+      "mesh_volume_mm3": 422.19,
+      "mesh_volume_relative_error": -1.7710450010415682e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -12.0,
+          -9.0,
+          0.0
+        ],
+        [
+          12.0,
+          9.0,
+          1.0
+        ]
+      ],
+      "volume_mm3": 422.1825229575319,
+      "solid_count": 1,
+      "face_count": 8,
+      "surface_types": {
+        "Plane": 6,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "20_moving_jaw",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat; no supports",
+      "native_path": "hardware/native/robot/20_moving_jaw.FCStd",
+      "step_path": "hardware/step/robot/20_moving_jaw.step",
+      "final_object": "FinalPart",
+      "feature_count": 32,
+      "stl_path": "hardware/prints/20_moving_jaw.stl",
+      "mesh_volume_mm3": 8280.028,
+      "mesh_volume_relative_error": 0.00027091333937628463,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -12.0,
+          -12.0,
+          0.0
+        ],
+        [
+          70.0,
+          12.0,
+          10.0
+        ]
+      ],
+      "volume_mm3": 8282.271777904974,
+      "solid_count": 1,
+      "face_count": 19,
+      "surface_types": {
+        "Plane": 9,
+        "Cylinder": 10
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "21_fixed_jaw",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat jaw bottom; no supports",
+      "native_path": "hardware/native/robot/21_fixed_jaw.FCStd",
+      "step_path": "hardware/step/robot/21_fixed_jaw.step",
+      "final_object": "FinalPart",
+      "feature_count": 17,
+      "stl_path": "hardware/prints/21_fixed_jaw.stl",
+      "mesh_volume_mm3": 7493.114,
+      "mesh_volume_relative_error": -3.005088398642906e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          36.0,
+          -27.0,
+          0.0
+        ],
+        [
+          130.0,
+          -19.0,
+          12.0
+        ]
+      ],
+      "volume_mm3": 7492.888832066984,
+      "solid_count": 1,
+      "face_count": 14,
+      "surface_types": {
+        "Plane": 10,
+        "Cylinder": 4
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "22_gripper_servo_tower",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat bottom; cable-window bridge and strap slots may need supports",
+      "native_path": "hardware/native/robot/22_gripper_servo_tower.FCStd",
+      "step_path": "hardware/step/robot/22_gripper_servo_tower.step",
+      "final_object": "FinalPart",
+      "feature_count": 44,
+      "stl_path": "hardware/prints/22_gripper_servo_tower.stl",
+      "mesh_volume_mm3": 18266.836,
+      "mesh_volume_relative_error": -5.652039879184994e-06,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          20.0,
+          3.0,
+          0.0
+        ],
+        [
+          90.0,
+          43.0,
+          34.0
+        ]
+      ],
+      "volume_mm3": 18266.732755698,
+      "solid_count": 1,
+      "face_count": 39,
+      "surface_types": {
+        "Plane": 35,
+        "Cylinder": 4
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "30_marker_tower",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "marker plate on bed; turn over for assembly",
+      "native_path": "hardware/native/robot/30_marker_tower.FCStd",
+      "step_path": "hardware/step/robot/30_marker_tower.step",
+      "final_object": "FinalPart",
+      "feature_count": 34,
+      "stl_path": "hardware/prints/30_marker_tower.stl",
+      "mesh_volume_mm3": 21690.512,
+      "mesh_volume_relative_error": -1.0711080155738339e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -32.0,
+          -32.0,
+          0.0
+        ],
+        [
+          32.0,
+          32.0,
+          56.0
+        ]
+      ],
+      "volume_mm3": 21690.279673675814,
+      "solid_count": 1,
+      "face_count": 30,
+      "surface_types": {
+        "Plane": 26,
+        "Cylinder": 4
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "31_tether_mast",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "upright with brim; support inside eye or print on side with supports",
+      "native_path": "hardware/native/robot/31_tether_mast.FCStd",
+      "step_path": "hardware/step/robot/31_tether_mast.step",
+      "final_object": "FinalPart",
+      "feature_count": 25,
+      "stl_path": "hardware/prints/31_tether_mast.stl",
+      "mesh_volume_mm3": 13654.183,
+      "mesh_volume_relative_error": 5.059020744203523e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -12.0,
+          -12.0,
+          0.0
+        ],
+        [
+          12.0,
+          12.0,
+          120.0
+        ]
+      ],
+      "volume_mm3": 13654.873802898284,
+      "solid_count": 1,
+      "face_count": 19,
+      "surface_types": {
+        "Plane": 13,
+        "Cylinder": 6
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "32_overhead_tie_plate",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat plate; eye needs support",
+      "native_path": "hardware/native/robot/32_overhead_tie_plate.FCStd",
+      "step_path": "hardware/step/robot/32_overhead_tie_plate.step",
+      "final_object": "FinalPart",
+      "feature_count": 49,
+      "stl_path": "hardware/prints/32_overhead_tie_plate.stl",
+      "mesh_volume_mm3": 9575.988,
+      "mesh_volume_relative_error": 8.435418076136609e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -35.0,
+          -15.0,
+          0.0
+        ],
+        [
+          35.0,
+          15.0,
+          22.0
+        ]
+      ],
+      "volume_mm3": 9576.795842767635,
+      "solid_count": 1,
+      "face_count": 27,
+      "surface_types": {
+        "Plane": 17,
+        "Cylinder": 10
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "40_puck",
+      "quantity": 3,
+      "material": "PETG",
+      "print_orientation": "flat; vary color by object, keep shape unchanged",
+      "native_path": "hardware/native/robot/40_puck.FCStd",
+      "step_path": "hardware/step/robot/40_puck.step",
+      "final_object": "FinalPart",
+      "feature_count": 5,
+      "stl_path": "hardware/prints/40_puck.stl",
+      "mesh_volume_mm3": 22223.084,
+      "mesh_volume_relative_error": 0.0007137656390812596,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -19.0,
+          -19.0,
+          0.0
+        ],
+        [
+          19.0,
+          19.0,
+          20.0
+        ]
+      ],
+      "volume_mm3": 22238.95740364371,
+      "solid_count": 1,
+      "face_count": 5,
+      "surface_types": {
+        "Cylinder": 2,
+        "Plane": 3
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "41_object_marker_cap",
+      "quantity": 8,
+      "material": "PETG",
+      "print_orientation": "plate on bed, stem upward; invert and glue into puck, gate, or calibration socket",
+      "native_path": "hardware/native/robot/41_object_marker_cap.FCStd",
+      "step_path": "hardware/step/robot/41_object_marker_cap.step",
+      "final_object": "FinalPart",
+      "feature_count": 5,
+      "stl_path": "hardware/prints/41_object_marker_cap.stl",
+      "mesh_volume_mm3": 4581.776,
+      "mesh_volume_relative_error": 0.0004696729532426052,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -14.0,
+          -14.0,
+          0.0
+        ],
+        [
+          14.0,
+          14.0,
+          62.0
+        ]
+      ],
+      "volume_mm3": 4583.928947446201,
+      "solid_count": 1,
+      "face_count": 8,
+      "surface_types": {
+        "Plane": 7,
+        "Cylinder": 1
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "42_calibration_marker_base",
+      "quantity": 4,
+      "material": "PETG",
+      "print_orientation": "flat; same74 mm tagplane as robot and objects",
+      "native_path": "hardware/native/robot/42_calibration_marker_base.FCStd",
+      "step_path": "hardware/step/robot/42_calibration_marker_base.step",
+      "final_object": "FinalPart",
+      "feature_count": 8,
+      "stl_path": "hardware/prints/42_calibration_marker_base.stl",
+      "mesh_volume_mm3": 11369.573,
+      "mesh_volume_relative_error": 0.00022770724322378086,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -22.0,
+          -22.0,
+          0.0
+        ],
+        [
+          22.0,
+          22.0,
+          20.0
+        ]
+      ],
+      "volume_mm3": 11372.162523777783,
+      "solid_count": 1,
+      "face_count": 10,
+      "surface_types": {
+        "Plane": 8,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "50_gate_base",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "flat bottom; rail lips need support, remove support from channels",
+      "native_path": "hardware/native/robot/50_gate_base.FCStd",
+      "step_path": "hardware/step/robot/50_gate_base.step",
+      "final_object": "FinalPart",
+      "feature_count": 47,
+      "stl_path": "hardware/prints/50_gate_base.stl",
+      "mesh_volume_mm3": 59052.555,
+      "mesh_volume_relative_error": -4.1124090355457735e-06,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -90.0,
+          -58.0,
+          0.0
+        ],
+        [
+          90.0,
+          58.0,
+          13.0
+        ]
+      ],
+      "volume_mm3": 59052.31215273793,
+      "solid_count": 1,
+      "face_count": 40,
+      "surface_types": {
+        "Plane": 32,
+        "Cylinder": 8
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "51_gate_slider",
+      "quantity": 1,
+      "material": "PETG",
+      "print_orientation": "supports under runners and rear bridge; ensure all support is removable",
+      "native_path": "hardware/native/robot/51_gate_slider.FCStd",
+      "step_path": "hardware/step/robot/51_gate_slider.step",
+      "final_object": "FinalPart",
+      "feature_count": 23,
+      "stl_path": "hardware/prints/51_gate_slider.stl",
+      "mesh_volume_mm3": 29529.656,
+      "mesh_volume_relative_error": 0.0005232384033142858,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -30.0,
+          -45.0,
+          0.0
+        ],
+        [
+          30.0,
+          45.0,
+          20.0
+        ]
+      ],
+      "volume_mm3": 29545.115138871,
+      "solid_count": 1,
+      "face_count": 28,
+      "surface_types": {
+        "Plane": 26,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "52_gate_end_stop",
+      "quantity": 4,
+      "material": "PETG",
+      "print_orientation": "flat; one block per rail at each end, no supports",
+      "native_path": "hardware/native/robot/52_gate_end_stop.FCStd",
+      "step_path": "hardware/step/robot/52_gate_end_stop.step",
+      "final_object": "FinalPart",
+      "feature_count": 5,
+      "stl_path": "hardware/prints/52_gate_end_stop.stl",
+      "mesh_volume_mm3": 954.636,
+      "mesh_volume_relative_error": -3.353625674848366e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -5.0,
+          -10.0,
+          0.0
+        ],
+        [
+          5.0,
+          10.0,
+          5.0
+        ]
+      ],
+      "volume_mm3": 954.6039861556271,
+      "solid_count": 1,
+      "face_count": 7,
+      "surface_types": {
+        "Plane": 6,
+        "Cylinder": 1
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "60_arena_wall_200",
+      "quantity": 20,
+      "material": "PETG",
+      "print_orientation": "flat foot; inside face at localY=0, foot points outside",
+      "native_path": "hardware/native/robot/60_arena_wall_200.FCStd",
+      "step_path": "hardware/step/robot/60_arena_wall_200.step",
+      "final_object": "FinalPart",
+      "feature_count": 17,
+      "stl_path": "hardware/prints/60_arena_wall_200.stl",
+      "mesh_volume_mm3": 41830.277,
+      "mesh_volume_relative_error": -2.8908242851874694e-06,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -100.0,
+          0.0,
+          0.0
+        ],
+        [
+          100.0,
+          20.0,
+          30.0
+        ]
+      ],
+      "volume_mm3": 41830.15607636896,
+      "solid_count": 1,
+      "face_count": 14,
+      "surface_types": {
+        "Plane": 10,
+        "Cylinder": 4
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "61_wall_joiner",
+      "quantity": 16,
+      "material": "PETG",
+      "print_orientation": "flat; use on top of adjacent feet",
+      "native_path": "hardware/native/robot/61_wall_joiner.FCStd",
+      "step_path": "hardware/step/robot/61_wall_joiner.step",
+      "final_object": "FinalPart",
+      "feature_count": 8,
+      "stl_path": "hardware/prints/61_wall_joiner.stl",
+      "mesh_volume_mm3": 1385.564,
+      "mesh_volume_relative_error": -2.8304519498763447e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -20.0,
+          -6.0,
+          0.0
+        ],
+        [
+          20.0,
+          6.0,
+          3.0
+        ]
+      ],
+      "volume_mm3": 1385.5247833867527,
+      "solid_count": 1,
+      "face_count": 8,
+      "surface_types": {
+        "Plane": 6,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    },
+    {
+      "id": "62_arena_corner",
+      "quantity": 4,
+      "material": "PETG",
+      "print_orientation": "flat; use on top of feet at frame corners",
+      "native_path": "hardware/native/robot/62_arena_corner.FCStd",
+      "step_path": "hardware/step/robot/62_arena_corner.step",
+      "final_object": "FinalPart",
+      "feature_count": 11,
+      "stl_path": "hardware/prints/62_arena_corner.stl",
+      "mesh_volume_mm3": 3113.564,
+      "mesh_volume_relative_error": -1.2595568037639968e-05,
+      "mesh_bounds_max_error_mm": 0.0,
+      "bounds_mm": [
+        [
+          -25.0,
+          -25.0,
+          0.0
+        ],
+        [
+          25.0,
+          25.0,
+          3.0
+        ]
+      ],
+      "volume_mm3": 3113.524783386754,
+      "solid_count": 1,
+      "face_count": 16,
+      "surface_types": {
+        "Plane": 14,
+        "Cylinder": 2
+      },
+      "valid": true,
+      "closed": true
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "robot_playground_assembly",
+      "native_path": "hardware/native/robot/robot_playground_assembly.FCStd",
+      "step_path": "hardware/step/robot/robot_playground_assembly.step",
+      "final_object": "FinalAssembly",
+      "feature_count": 843,
+      "instance_count": 78,
+      "step_volume_mm3": 1389765.2145540072,
+      "step_volume_relative_error": 8.651836982219432e-07,
+      "bounds_mm": [
+        [
+          -25.0,
+          -25.000000000000007,
+          -7.105427357601002e-15
+        ],
+        [
+          1025.0,
+          1025.0,
+          138.0
+        ]
+      ],
+      "volume_mm3": 1389766.4169572555,
+      "solid_count": 108,
+      "face_count": 6097,
+      "surface_types": {
+        "Plane": 2340,
+        "Cylinder": 2304,
+        "Sphere": 28,
+        "Toroid": 84,
+        "Cone": 677,
+        "BSplineSurface": 406,
+        "SurfaceOfExtrusion": 258
+      },
+      "valid": true,
+      "closed": true
+    }
+  ]
+}

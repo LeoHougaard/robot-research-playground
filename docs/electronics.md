@@ -11,7 +11,7 @@ Spark runs the supervisor, model, sandbox and local browser UI. Its USB port con
 | Normally open motor relay and coil driver | 1 assembly | G5CA-1A DC12 plus AO3400A, per the [cutoff circuit](watchdog-circuit.md) |
 | Independent watchdog and enable logic | 1 assembly | CD74HC123E plus SN74HC08N and timing components, per the [exact BOM](../hardware/electronics/bill-of-materials.csv) |
 | Latching emergency-stop switch with NC contacts | 1 | Physically opens motor-enable circuit independently of software |
-| Momentary arm button | 1 | Physical authorization before host arming |
+| [Adafruit 1505](https://www.adafruit.com/product/1505) black normally-open momentary button | 1 | Physical authorization before host arming; 16 mm operator-panel opening, verify actual fit |
 | Inline fuse, wiring, terminal blocks | As needed | Select from measured current and the smallest wire/connector rating |
 | Level shifter | If required | Fit after confirming the adapter UART electrical levels |
 
@@ -30,7 +30,7 @@ Use 12.0 V for the adapter and servo rail. This is inside the adapter's stated 9
 | GPIO25 to watchdog reset and enable logic | Active high; external pulldown forces off at reset |
 | GPIO27 to NC E-stop sense loop to GND | Healthy is low; open or high trips firmware |
 | E-stop separate NC contact to relay-coil return | Independent power cut even if firmware hangs |
-| GPIO26 to momentary arm button to GND | `INPUT_PULLUP`, press required within 5 seconds before host arm |
+| GPIO26 to Adafruit 1505 normally-open arm button to GND | `INPUT_PULLUP`, fresh press required within 5 seconds before host arm; panel label PRESS TO AUTHORIZE |
 | GPIO32 to independent watchdog pulse input | MCU toggles every 20 ms only while powered and safety conditions hold |
 | GPIO33 to removable hardware authorization jumper to GND | Physical arm preparation interlock; absent jumper blocks arming |
 

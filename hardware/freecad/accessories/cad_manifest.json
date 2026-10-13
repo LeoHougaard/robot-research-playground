@@ -1,0 +1,1158 @@
+{
+  "schema_version": 1,
+  "freecad_version": "1.1.4",
+  "parts": [
+    {
+      "id": "electronics_box",
+      "native_path": "hardware/native/accessories/electronics_box.FCStd",
+      "step_path": "hardware/step/accessories/electronics_box.step",
+      "stl_path": "hardware/prints/accessories/electronics_box.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          200.0,
+          130.0,
+          65.0
+        ]
+      ],
+      "volume_mm3": 219083.5605908346,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Floor on bed; open box upward",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 3012,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "electronics_lid",
+      "native_path": "hardware/native/accessories/electronics_lid.FCStd",
+      "step_path": "hardware/step/accessories/electronics_lid.step",
+      "stl_path": "hardware/prints/accessories/electronics_lid.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        180,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        3.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          200.0,
+          130.0,
+          3.0
+        ]
+      ],
+      "volume_mm3": 82320.37902844582,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Outer flat face on bed; retaining lip upward",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1276,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "perfboard_carrier",
+      "native_path": "hardware/native/accessories/perfboard_carrier.FCStd",
+      "step_path": "hardware/step/accessories/perfboard_carrier.step",
+      "stl_path": "hardware/prints/accessories/perfboard_carrier.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          -1.3322676295501878e-15,
+          -3.552713678800501e-15,
+          0.0
+        ],
+        [
+          186.0,
+          116.0,
+          4.0
+        ]
+      ],
+      "volume_mm3": 71967.52618158374,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Largest flat face on bed",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 2964,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "camera_plate",
+      "native_path": "hardware/native/accessories/camera_plate.FCStd",
+      "step_path": "hardware/step/accessories/camera_plate.step",
+      "stl_path": "hardware/prints/accessories/camera_plate.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          140.0,
+          100.0,
+          8.0
+        ]
+      ],
+      "volume_mm3": 110137.00980167912,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Largest flat face on bed",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1304,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "beam_clamp_lower",
+      "native_path": "hardware/native/accessories/beam_clamp_lower.FCStd",
+      "step_path": "hardware/step/accessories/beam_clamp_lower.step",
+      "stl_path": "hardware/prints/accessories/beam_clamp_lower.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          54.0,
+          16.0
+        ]
+      ],
+      "volume_mm3": 50084.84985736507,
+      "quantity": 2,
+      "material": "PETG",
+      "orientation": "Flat outer back on bed; groove upward",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1564,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "beam_clamp_upper",
+      "native_path": "hardware/native/accessories/beam_clamp_upper.FCStd",
+      "step_path": "hardware/step/accessories/beam_clamp_upper.step",
+      "stl_path": "hardware/prints/accessories/beam_clamp_upper.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          54.0,
+          16.0
+        ]
+      ],
+      "volume_mm3": 50084.84985736507,
+      "quantity": 2,
+      "material": "PETG",
+      "orientation": "Flat outer back on bed; groove upward",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1564,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "tether_anchor_plate",
+      "native_path": "hardware/native/accessories/tether_anchor_plate.FCStd",
+      "step_path": "hardware/step/accessories/tether_anchor_plate.step",
+      "stl_path": "hardware/prints/accessories/tether_anchor_plate.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          30.0,
+          5.0
+        ]
+      ],
+      "volume_mm3": 11448.257790213289,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Flat plate on bed; cord is secondary restraint only",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 780,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "cable_clamp_lower",
+      "native_path": "hardware/native/accessories/cable_clamp_lower.FCStd",
+      "step_path": "hardware/step/accessories/cable_clamp_lower.step",
+      "stl_path": "hardware/prints/accessories/cable_clamp_lower.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          -6.439293542825908e-16,
+          0.0,
+          0.0
+        ],
+        [
+          50.0,
+          22.0,
+          8.000000000000014
+        ]
+      ],
+      "volume_mm3": 7848.945655978763,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Flat back on bed; groove upward",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1168,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "cable_clamp_upper",
+      "native_path": "hardware/native/accessories/cable_clamp_upper.FCStd",
+      "step_path": "hardware/step/accessories/cable_clamp_upper.step",
+      "stl_path": "hardware/prints/accessories/cable_clamp_upper.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          -6.439293542825908e-16,
+          0.0,
+          0.0
+        ],
+        [
+          50.0,
+          22.0,
+          8.000000000000014
+        ]
+      ],
+      "volume_mm3": 7848.945655978763,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Flat back on bed; groove upward",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1168,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "estop_panel",
+      "native_path": "hardware/native/accessories/estop_panel.FCStd",
+      "step_path": "hardware/step/accessories/estop_panel.step",
+      "stl_path": "hardware/prints/accessories/estop_panel.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          120.0,
+          160.0,
+          3.0
+        ]
+      ],
+      "volume_mm3": 55540.443181121016,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Flat rear on bed; use supplied Omron locking plate, no printed certification claim",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 2060,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "estop_clearance_ring",
+      "native_path": "hardware/native/accessories/estop_clearance_ring.FCStd",
+      "step_path": "hardware/step/accessories/estop_clearance_ring.step",
+      "stl_path": "hardware/prints/accessories/estop_clearance_ring.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          -47.0,
+          -40.0,
+          0.0
+        ],
+        [
+          47.0,
+          40.0,
+          5.000000000000001
+        ]
+      ],
+      "volume_mm3": 6267.545862932368,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Flat ring on bed; optional low ring, check palm access and twist-release",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1412,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "estop_panel_stand",
+      "native_path": "hardware/native/accessories/estop_panel_stand.FCStd",
+      "step_path": "hardware/step/accessories/estop_panel_stand.step",
+      "stl_path": "hardware/prints/accessories/estop_panel_stand.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          140.0,
+          180.0,
+          76.0
+        ]
+      ],
+      "volume_mm3": 186399.98937281215,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Floor on bed; secure to desk/support; open sides give rear terminal access",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 1612,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    },
+    {
+      "id": "terminal_guard",
+      "native_path": "hardware/native/accessories/terminal_guard.FCStd",
+      "step_path": "hardware/step/accessories/terminal_guard.step",
+      "stl_path": "hardware/prints/accessories/terminal_guard.stl",
+      "final_object": "Final",
+      "print_rotation_xyz_deg": [
+        0,
+        0,
+        0
+      ],
+      "print_translation_mm": [
+        0,
+        0,
+        -0.0
+      ],
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          90.0,
+          24.0,
+          22.0
+        ]
+      ],
+      "volume_mm3": 16685.524783386747,
+      "quantity": 1,
+      "material": "PETG",
+      "orientation": "Flat floor on bed; low-voltage terminal shielding only",
+      "solid_count": 1,
+      "closed": true,
+      "valid": true,
+      "mesh_manifold_watertight": true,
+      "mesh_facets": 540,
+      "surface_types": [
+        "Cylinder",
+        "Plane"
+      ],
+      "editable_native_object_types": [
+        "App::FeaturePython",
+        "Part::Box",
+        "Part::Cut",
+        "Part::Cylinder",
+        "Part::MultiFuse"
+      ],
+      "parameter_edit_rebuild_verified": true,
+      "step_roundtrip_verified": true
+    }
+  ],
+  "assemblies": [
+    {
+      "assembly": "electronics",
+      "parts": [
+        "electronics_box",
+        "electronics_lid",
+        "perfboard_carrier",
+        "terminal_guard"
+      ],
+      "unexpected_intersections": [],
+      "id": "electronics_assembly",
+      "final_object": "FinalAssembly",
+      "native_path": "hardware/native/accessories/electronics_assembly.FCStd",
+      "step_path": "hardware/step/accessories/electronics_assembly.step",
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          200.0,
+          130.0,
+          68.3
+        ]
+      ],
+      "volume_mm3": 390056.9905842534,
+      "solid_count": 4,
+      "valid": true,
+      "closed": true,
+      "native_model_kind": "Self-contained merged editable Part primitive/boolean trees; Part::Compound final",
+      "instances": [
+        {
+          "part": "electronics_box",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "electronics_lid",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            65.3,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "perfboard_carrier",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            7.0,
+            0.0,
+            1.0,
+            0.0,
+            7.0,
+            0.0,
+            0.0,
+            1.0,
+            11.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "terminal_guard",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            17.0,
+            0.0,
+            1.0,
+            0.0,
+            93.0,
+            0.0,
+            0.0,
+            1.0,
+            15.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "step_roundtrip_verified": true
+    },
+    {
+      "assembly": "camera",
+      "parts": [
+        "camera_plate",
+        "beam_clamp_lower",
+        "beam_clamp_upper"
+      ],
+      "unexpected_intersections": [],
+      "id": "camera_assembly",
+      "final_object": "FinalAssembly",
+      "native_path": "hardware/native/accessories/camera_assembly.FCStd",
+      "step_path": "hardware/step/accessories/camera_assembly.step",
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          140.0,
+          100.0,
+          41.0
+        ]
+      ],
+      "volume_mm3": 210306.70951640917,
+      "solid_count": 3,
+      "valid": true,
+      "closed": true,
+      "native_model_kind": "Self-contained merged editable Part primitive/boolean trees; Part::Compound final",
+      "instances": [
+        {
+          "part": "camera_plate",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "beam_clamp_lower",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            10.0,
+            0.0,
+            1.0,
+            0.0,
+            23.0,
+            0.0,
+            0.0,
+            1.0,
+            8.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "beam_clamp_upper",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            10.0,
+            0.0,
+            -1.0,
+            0.0,
+            77.0,
+            0.0,
+            0.0,
+            -1.0,
+            41.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "step_roundtrip_verified": true
+    },
+    {
+      "assembly": "tether",
+      "parts": [
+        "beam_clamp_lower",
+        "beam_clamp_upper",
+        "tether_anchor_plate"
+      ],
+      "unexpected_intersections": [],
+      "id": "tether_assembly",
+      "final_object": "FinalAssembly",
+      "native_path": "hardware/native/accessories/tether_assembly.FCStd",
+      "step_path": "hardware/step/accessories/tether_assembly.step",
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          80.0,
+          61.0,
+          38.0
+        ]
+      ],
+      "volume_mm3": 111617.95750494344,
+      "solid_count": 3,
+      "valid": true,
+      "closed": true,
+      "native_model_kind": "Self-contained merged editable Part primitive/boolean trees; Part::Compound final",
+      "instances": [
+        {
+          "part": "beam_clamp_lower",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "beam_clamp_upper",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            54.0,
+            0.0,
+            0.0,
+            -1.0,
+            33.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "tether_anchor_plate",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            31.0,
+            0.0,
+            0.0,
+            1.0,
+            33.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "step_roundtrip_verified": true
+    },
+    {
+      "assembly": "cable",
+      "parts": [
+        "cable_clamp_lower",
+        "cable_clamp_upper"
+      ],
+      "unexpected_intersections": [],
+      "id": "cable_assembly",
+      "final_object": "FinalAssembly",
+      "native_path": "hardware/native/accessories/cable_assembly.FCStd",
+      "step_path": "hardware/step/accessories/cable_assembly.step",
+      "bounds_mm": [
+        [
+          -6.380000000000001e-16,
+          0.0,
+          0.0
+        ],
+        [
+          50.0,
+          22.0,
+          16.0
+        ]
+      ],
+      "volume_mm3": 15697.891311957528,
+      "solid_count": 2,
+      "valid": true,
+      "closed": true,
+      "native_model_kind": "Self-contained merged editable Part primitive/boolean trees; Part::Compound final",
+      "instances": [
+        {
+          "part": "cable_clamp_lower",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "cable_clamp_upper",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            22.0,
+            0.0,
+            0.0,
+            -1.0,
+            16.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "step_roundtrip_verified": true
+    },
+    {
+      "assembly": "operator_panel",
+      "parts": [
+        "estop_panel_stand",
+        "estop_panel",
+        "estop_clearance_ring"
+      ],
+      "unexpected_intersections": [],
+      "id": "operator_panel_assembly",
+      "final_object": "FinalAssembly",
+      "native_path": "hardware/native/accessories/operator_panel_assembly.FCStd",
+      "step_path": "hardware/step/accessories/operator_panel_assembly.step",
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          140.0,
+          180.0,
+          84.0
+        ]
+      ],
+      "volume_mm3": 248207.97841686546,
+      "solid_count": 3,
+      "valid": true,
+      "closed": true,
+      "native_model_kind": "Self-contained merged editable Part primitive/boolean trees; Part::Compound final",
+      "instances": [
+        {
+          "part": "estop_panel_stand",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "estop_panel",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            10.0,
+            0.0,
+            1.0,
+            0.0,
+            10.0,
+            0.0,
+            0.0,
+            1.0,
+            76.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "part": "estop_clearance_ring",
+          "placement_matrix": [
+            1.0,
+            0.0,
+            0.0,
+            70.0,
+            0.0,
+            1.0,
+            0.0,
+            70.0,
+            0.0,
+            0.0,
+            1.0,
+            79.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "step_roundtrip_verified": true
+    }
+  ],
+  "generated_at": "2026-10-13T04:47:49.897906+00:00",
+  "source_sha256": "8dbca3522a1ad9a9b30bcf439ce3d370aef0456de33966724e89c2bcb613d4de",
+  "parameters_sha256": "e86f02cd17abda1220fecd2a740102e8e52d7e08962ad6cec9057729d2091ca6",
+  "actual_hardware_fit_tested": false,
+  "printed_load_rating_verified": false,
+  "parameters_source": "hardware/freecad/accessories/parameters.json",
+  "native_model_kind": "FreeCAD analytic native Part::Box/Cylinder/Cut/MultiFuse with live parameter expressions",
+  "vendor_reference": "Omron A22E-M 40mm head; panel hole22.3+0.4/0, 1-5mm panel; choose22.5mm and3mm; locking-ring keywidth3.2+0.2/0 and overall24.1+0.4/0 -> choose3.3mm and24.3mm. 70mm free ring opening is design clearance, not vendor-certified guard. Adafruit1505 NO momentary armbutton: maxshaft15.56mm,totalheight29.4mm; nominalcutout16mm requires real fit check."
+}

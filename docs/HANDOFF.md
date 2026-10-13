@@ -4,9 +4,16 @@ The project is in C:\Users\Leo\.t3\scratch\2026-10-13-i-have-been-thinking-that-
 
 Leo asked for implementation using parallel GPT-6.1-Sol agents at high reasoning effort. He does not know when the announced usage reset will occur. The work is saved here; regenerate the portable package with python scripts/package.py. Read README.md and docs/BUILD_PLAN.md first.
 
+Latest steering requires CAD for the complete build, ready to edit in Onshape or FreeCAD. The package now contains 40 printable part designs and six assemblies as native FreeCAD and analytic STEP, plus print-ready STLs. The robot/arena assembly contains 78 instances and 108 solids, including authentic servo and caster references. Five offboard assemblies cover electronics, camera, tether, cable clamp and operator panel. See docs/build-inventory.md, docs/onshape.md and docs/accessories.md for entrypoints, quantities and purchased items.
+
+FreeCAD 1.1.4 is available as a checksum-pinned task-local portable runtime in .tools/freecad-runtime.json. scripts/bootstrap_freecad.py downloads it on Windows; scripts/run_freecad.py runs trusted builder scripts with isolated settings. The runtime is excluded from the handoff package. Native trees use editable CSG primitives, rather than sketch/pad histories. STEP supports Onshape solid editing but does not transfer the native tree. After regeneration, apply scripts/cad_visibility.py to both CAD manifests to save clean display state; run scripts/verify_cad.py inside FreeCADCmd and review hardware/freecad/validation/kernel_report.json.
+
+Follow docs/cad-regeneration.md for the complete rebuild order. The arm-button mount is dedicated to Adafruit 1505 at a nominal 16 mm bore, with supplied PRESS TO AUTHORIZE labels. A fresh press opens the five-second MCU authorization window; holding does not renew it. The host must still arm separately. No physical operation was enabled.
+
 ## Implemented
 
-- Three-servo differential-drive robot and arena mechanical package, parametric CAD, 27 actual STL files, vendor dimensions, fit coupons, print manifest and inspected assembly renders.
+- Three-servo differential-drive robot and arena mechanical package, 27 printable designs, analytic CAD, vendor references, fit coupons, print manifest and inspected assembly renders.
+- Thirteen offboard accessory designs, editable dimensions, five self-contained assemblies, oriented STL exports, measured-interface guidance and inspected previews.
 - ESP32 firmware, compiled actuator-disabled binaries and build hashes. Firmware ships with HARDWARE_VERIFIED=0.
 - Bounded controller with single lease, operator arming, telemetry/tracking checks and host watchdog; external hardware cutoff is part of the electronics design.
 - Overhead ArUco tracker, printable markers and camera capture/calibration CLI. Calibration checks independent measured points, source hashes, marker height, tag offset and camera resolution.
@@ -25,6 +32,8 @@ The integrated software suite passed 83 tests in .build-venv with actual OpenCV 
 Local HTTP fixtures verified the structured tool loop, agent replacement, inherited programs, rejected fabricated evidence, camera/output quotas, response/header deadlines, prohibited redirects, corrupted artifacts and exclusive supervisor ownership. The fixture is not a qualified real model.
 
 ESP32 firmware compiled with the Xtensa toolchain. Binaries and evidence are in firmware/robot_controller/dist. HARDWARE_VERIFIED=0 is intentional. CAD topology, intersections, grasp poses and source/STL hashes are recorded in hardware/prints/build_evidence.json. All 27 meshes are watertight single solids and 1,633 nominal checks passed.
+
+Final independent FreeCAD/OpenCascade validation passed all 46 native/STEP pairs with 163 valid, closed, positive-volume solids across parts and layouts. Thirteen accessory STLs passed transformed geometry and print-bed checks. Fourteen native dimension edits recomputed and restored correctly. The keyed E-stop and 16 mm arm-button cutouts passed independent geometry checks; vendor references have no unintended printed-part overlap. All 46 documents also passed actual FreeCAD GUI opening and final-geometry visibility checks without changing source files. Reports and file hashes are in hardware/freecad/validation/. These checks do not establish manufacturing fit or strength.
 
 The local viewer was opened in the T3 browser and its rendered DOM/status checked without overflow. Preview screenshot capture failed at the client. CAD renders and marker sheets were inspected separately. No media auto-plays.
 
@@ -63,4 +72,4 @@ python scripts/package.py
 
 Physical operation uses the explicit hardware CLI only after bench acceptance. It requires a validated calibration companion report, serial port, human terminal confirmation and MCU physical authorization. See docs/robot-control.md and docs/acceptance.md.
 
-Do not ship .build-venv, .pio-core, nested .pio, hardware/cad/_deps, state or caches. The packager excludes them. Keep source, exported assets, compiled disabled firmware and verification reports.
+Do not ship .build-venv, .pio-core, nested .pio, hardware/cad/_deps, state, CAD backups, preview tessellation intermediates or caches. The packager excludes them. Keep source, native/STEP/print assets, compiled disabled firmware and verification reports.

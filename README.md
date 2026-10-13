@@ -6,6 +6,8 @@ The V1 robot has two powered wheels, a caster, and a floor-level gripper. An ove
 
 Start with [the build plan](docs/BUILD_PLAN.md). The [handoff](docs/HANDOFF.md) records what is verified and what the next agent must finish.
 
+The CAD package contains 40 printable part designs and six assemblies, each supplied as native FreeCAD and analytic STEP. FreeCAD retains editable primitives, dimensions and boolean construction; STEP supports Onshape direct editing. Print-ready STLs include the robot, arena, fixtures and offboard accessories. Start with [the editing guide](docs/onshape.md), [accessory guide](docs/accessories.md) and [build inventory](docs/build-inventory.md). The [independent CAD review](docs/cad-review.md) records what was checked.
+
 ## Run the software locally
 
 Python 3.11 or newer is sufficient for simulation. Core runtime has no external Python dependencies.
@@ -45,6 +47,7 @@ The host supervisor mediates robot tools. Generated shell/Python runs only in of
 ## Build the robot
 
 - [Mechanical package and print order](hardware/mechanical.md), including fit coupons, CAD source and actual STL files.
+- [Offboard accessories](docs/accessories.md): enclosure, camera mount, beam/tether clamps and operator panel.
 - [Electronics and wiring](docs/electronics.md).
 - [Concrete watchdog circuit and exact parts](docs/watchdog-circuit.md).
 - [Robot control and firmware](docs/robot-control.md), including compiled disabled-gate binaries.

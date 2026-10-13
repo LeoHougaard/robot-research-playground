@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-13T04:48:30.901415+00:00",
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "units": "mm",
+  "native_step_pairs": 46,
+  "custom_part_designs": 40,
+  "default_print_pieces": 97,
+  "assembly_layouts": 6,
+  "reopened_native_solids": 163,
+  "independent_edit_recompute_restore_checks": 14,
+  "transformed_accessory_stl_checks": 13,
+  "actual_gui_documents": 46,
+  "source_hashes_match": true,
+  "physical_fit_verified": false,
+  "strength_verified": false,
+  "onshape_account_import_verified": false
+}

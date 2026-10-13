@@ -1,0 +1,42 @@
+"""Read-only native visibility check, run using the FreeCAD GUI executable.
+
+Set CAD_PROJECT_ROOT to this project and use task-local -u/-s preferences.
+This macro deliberately exits the verification process after writing its report.
+It does not save documents or attempt OpenGL rendering.
+"""
+import hashlib
+import json
+import os
+from pathlib import Path
+import FreeCAD as App
+
+root = Path(os.environ["CAD_PROJECT_ROOT"]).resolve()
+destination = root / "hardware/freecad/validation/gui_report.json"
+report = {"freecad_version": App.Version()[:3], "passed": False,
+          "scope": "Actual GUI document opening and saved visibility; no OpenGL rendering", "files": []}
+try:
+    for name in ("robot", "accessories"):
+        manifest = json.loads((root / f"hardware/freecad/{name}/cad_manifest.json").read_text())
+        for item in manifest["parts"] + manifest["assemblies"]:
+            path = root / item["native_path"]
+            before = hashlib.sha256(path.read_bytes()).hexdigest()
+            document = App.openDocument(str(path))
+            visible = [obj.Name for obj in document.Objects
+                       if obj.ViewObject is not None and obj.ViewObject.Visibility]
+            # Dimension containers have no drawable shape and may retain their
+            # default visibility despite saved metadata. Inspect actual geometry.
+            geometry_visible = [obj.Name for obj in document.Objects if obj.Name in visible
+                                and hasattr(obj, "Shape") and not obj.Shape.isNull()]
+            passed = geometry_visible == [item["final_object"]]
+            App.closeDocument(document.Name)
+            unchanged = hashlib.sha256(path.read_bytes()).hexdigest() == before
+            report["files"].append({"path": item["native_path"], "sha256": before,
+                                    "visible": visible, "visible_geometry": geometry_visible,
+                                    "passed": passed and unchanged,
+                                    "source_unchanged": unchanged})
+    report["passed"] = len(report["files"]) == 46 and all(item["passed"] for item in report["files"])
+except BaseException as error:
+    report["error"] = str(error)
+destination.parent.mkdir(parents=True, exist_ok=True)
+destination.write_text(json.dumps(report, indent=2), encoding="utf-8")
+os._exit(0 if report["passed"] else 1)

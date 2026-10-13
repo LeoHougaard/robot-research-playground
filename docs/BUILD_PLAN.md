@@ -42,6 +42,8 @@ Keep physical and simulation evidence separate. Hold out a portion of physical m
 
 ## Implementation sequence
 
+The local implementation includes the research runtime, compiled disabled firmware, 40 printable designs, six native/STEP assemblies, wiring diagrams and operator instructions. The software suite passed 83 tests with no skips; the simulation demo recorded 112 trials over four generations. CAD validation and source hashes are recorded separately under `hardware/freecad/validation/`. Spark runtime qualification and all physical acceptance steps remain pending. See [build inventory](build-inventory.md) for the complete physical bill and [CAD regeneration](cad-regeneration.md) for source changes.
+
 1. Complete local simulation, evidence persistence, agent replacement and isolation tests.
 2. Resolve Spark disk capacity with Leo while preserving existing work. The read-only audit found the filesystem full; deployment is currently blocked.
 3. Deploy the pinned CPU sandbox and qualify the local LLM's tool use. Run a bounded simulation research session on Spark and inspect actual container limits.

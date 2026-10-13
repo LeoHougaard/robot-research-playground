@@ -1,0 +1,13 @@
+{
+  "enclosure": {"BoxLength":200,"BoxWidth":130,"BoxHeight":65,"Wall":3,"Floor":3,"BossRadius":6,"BossInset":8,"M3Clearance":3.4,"InsertDiameter":4.6,"InsertDepth":6,"LidThickness":3,"LipDepth":4,"LipWall":2,"LipClearance":0.3,"VentWidth":4,"VentHeight":23,"CableOpeningWidth":20,"CableOpeningHeight":12},
+  "carrier": {"CarrierLength":186,"CarrierWidth":116,"CarrierThickness":4,"M3Clearance":3.4,"SlotStart":12,"SlotEndInset":12,"SlotY1":12,"SlotY2":32,"SlotY3":52,"SlotY4":72,"SlotY5":92,"SlotY6":102},
+  "camera": {"CameraLength":140,"CameraWidth":100,"CameraThickness":8,"CameraSlotStart":108,"CameraSlotTravel":20,"CameraSlotY":50,"TripodClearance":6.7,"M4Clearance":4.5},
+  "beam": {"ClampLength":80,"ClampWidth":54,"ClampHeight":16,"MeasuredBeamWidth":20,"MeasuredBeamHeight":20,"BeamSideClearance":0.4,"MatingGap":1,"M4Clearance":4.5,"CordEyeDiameter":10},
+  "anchor": {"AnchorLength":80,"AnchorWidth":30,"AnchorThickness":5,"CordEyeDiameter":10,"M4Clearance":4.5},
+  "cable": {"CableClampLength":50,"CableClampWidth":22,"CableClampHeight":8,"MeasuredCableDiameter":6,"CableCompression":0.2,"M3Clearance":3.4},
+  "panel": {"PanelLength":120,"PanelWidth":160,"PanelThickness":3,"EstopHoleDiameter":22.5,"EstopKeyWidth":3.3,"EstopKeyOverallHeight":24.3,"EstopCentreX":60,"EstopCentreY":60,"ArmHoleDiameter":16,"ArmCentreX":60,"ArmCentreY":130,"M4Clearance":4.5,"M3Clearance":3.4},
+  "guard": {"GuardInnerDiameter":70,"GuardOuterDiameter":80,"GuardHeight":5,"GuardEarRadius":4,"GuardEarOffset":43,"M3Clearance":3.4},
+  "stand": {"StandLength":140,"StandWidth":180,"StandFloor":6,"RearClearance":70,"PillarWidth":12,"M4Clearance":4.5,"M5Clearance":5.5},
+  "terminal_guard": {"TerminalLength":90,"TerminalWidth":24,"TerminalHeight":22,"TerminalWall":3,"M3Clearance":3.4},
+  "notes": "MeasuredBeamWidth/Height and MeasuredCableDiameter are nominal commissioning inputs. Measure actual purchased beam and cable before printing. Board mounts use configurable slot rows, brass standoffs and actual measured hole locations. Heat-set insert OD4.6 is a candidate and needs a printed coupon. No mains inside enclosure."
+}
