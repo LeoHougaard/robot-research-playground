@@ -1,5 +1,7 @@
 # Robot playground
 
+[Portable build bundle](https://github.com/LeoHougaard/robot-research-playground/releases/tag/v0.1.0) · [Dot assignment](DOT_TASK.txt)
+
 A small physical research lab running entirely on Leo's DGX Spark. Disposable agents choose experiments, predict outcomes, use a robot through bounded commands, and leave measurements and programs for successors. Model training is an optional tool.
 
 The V1 robot has two powered wheels, a caster, and a floor-level gripper. An overhead camera observes the enclosed arena. Compute, power supply, and controller electronics remain offboard. A separate microcontroller and hardware watchdog cut motor power if Spark or control software fails.
