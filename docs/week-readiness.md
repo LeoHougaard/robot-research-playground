@@ -29,3 +29,15 @@ Read the [endurance review](verification-endurance.md), [isolation review](verif
 4. Implement and prove trusted task resets and starting-state checks. Demonstrate runs without rescues at 15 minutes, one hour, 24 hours, 72 hours, then a week. A manual reset or tether stop means unattended acceptance has not passed.
 
 Keep automatic physical restart and arbitrary generated GPU workloads disabled. Passing software fixtures does not replace these gates.
+
+## 2026-10-13 continuation ledger
+
+Cloud-only reliability work has addressed the software portions of priorities
+1 and 2 and prepared qualification/reset evidence tooling. The detailed change
+list, verification status and remaining gates are in
+[cloud reliability continuation](cloud-reliability-20261013.md).
+
+The historical reports above are preserved. Successful local fixtures do not
+close actual Spark Docker/model qualification, large-scale/off-host recovery,
+physical commissioning, trusted reset implementation, camera exposure freshness
+or rescue-free staged endurance. **The system remains not week-ready.**

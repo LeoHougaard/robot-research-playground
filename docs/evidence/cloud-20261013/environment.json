@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-13T05:48:47.680319+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "docker_cli": null,
+  "nvidia_smi": null,
+  "configured_local_model_tcp_connect_errno": 111,
+  "physical_hardware_verified": false,
+  "spark_runtime_verified": false,
+  "github_cli_authenticated": false,
+  "notes": [
+    "GitHub gh auth status reported no authenticated host; plugin setup requested.",
+    "No remote host, image pull, model download or physical action performed."
+  ]
+}

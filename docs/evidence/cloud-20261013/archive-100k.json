@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_archive_benchmark",
+  "time_utc": "2026-10-13T06:05:48.947643+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "physical_hardware_verified": false,
+  "spark_runtime_verified": false,
+  "source_sha256": {
+    "src/playground/archive.py": "5287121c8162587377f5a18c176903856c6cdf43dfbd683d70dc444bea4efc00",
+    "scripts/benchmark_archive.py": "f4b28350809cc1ec5d7a761ce5a65acffa98a84eb7b7810ff0f3e4166e966ff7"
+  },
+  "trials": 100000,
+  "repeats": 20,
+  "population_seconds": 1.2672975089999454,
+  "reference": {
+    "median_ms": 8.764960999769755,
+    "p95_ms": 11.868363000303361
+  },
+  "cached": {
+    "median_ms": 0.036595499977920554,
+    "p95_ms": 0.21443500008899719
+  },
+  "parity_passed": true,
+  "sqlite_integrity": "ok"
+}

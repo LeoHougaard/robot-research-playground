@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-10-13T06:06:37.969014+00:00",
+  "kind": "stopped_snapshot_restore_continuation",
+  "before_trials": 6300,
+  "after_trials": 6328,
+  "integrity_check": "ok",
+  "pending_trials": 0,
+  "physical_hardware_verified": false,
+  "week_ready": false
+}
