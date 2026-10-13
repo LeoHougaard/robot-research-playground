@@ -1,0 +1,45 @@
+{
+  "time_utc": "2026-10-13T05:03:42.602056+00:00",
+  "scope": "Accelerated built-in simulation, no LLM/Docker/physical endurance qualification",
+  "wall_seconds": 120.43841649999376,
+  "result": {
+    "run_id": "d22abd39b60f499fa0ee83078aabf8d6",
+    "status": "stopped",
+    "runs": 1,
+    "generations": 562,
+    "experiments": 15736,
+    "findings": 1,
+    "evaluations": 562,
+    "artifacts": 0,
+    "recent_findings": [
+      {
+        "id": "aa3cc3c7f6124cee87858e19a66142f4",
+        "claim": "Fitted motion model reduced matched prediction error by 100.0% on 16 held-out simulation trials.",
+        "status": "verified_prediction_test",
+        "conditions": "short differential-drive movement in this configuration; excludes contact and gripper dynamics"
+      }
+    ],
+    "recent_runs": [
+      {
+        "id": "d22abd39b60f499fa0ee83078aabf8d6",
+        "mode": "simulation",
+        "status": "stopped",
+        "started": 1791867702.1640325,
+        "ended": 1791867822.281255
+      }
+    ],
+    "prediction_error": {
+      "mean": 6.697234867619148e-06,
+      "min": 0.0,
+      "max": 0.01272727272727515
+    }
+  },
+  "sqlite_integrity": "ok",
+  "pending_trials": 0,
+  "state_bytes": 68404983,
+  "passed": false,
+  "requested_generations": 1000,
+  "wall_budget_seconds": 120,
+  "generation_target_met": false,
+  "bounded_stop_integrity_passed": true
+}

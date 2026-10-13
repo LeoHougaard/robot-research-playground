@@ -32,7 +32,7 @@ std::atomic<uint32_t> lastHeartbeat{0}, lastTelemetry{0}, actionUntil{0}, prepUn
 std::atomic<const char *> fault{"startup"};
 float temperatures[3] = {}, currents[3] = {}, voltage = 0;
 uint32_t lastArmPress = 0, lastSequence = 0;
-bool haveArmPress = false;
+std::atomic<bool> haveArmPress{false}, armReleaseRequired{true};
 char line[769];
 size_t lineLength = 0;
 bool discardingLine = false;
@@ -47,6 +47,8 @@ void cutPower(const char *reason) {
     armed.store(false);
     powered.store(false);
     telemetryValid.store(false);
+    haveArmPress.store(false);
+    armReleaseRequired.store(true);
     actionUntil.store(0);
     prepUntil.store(0);
     fault.store(reason);
@@ -276,7 +278,8 @@ void loop() {
     static bool armWasDown = false;
     static uint32_t polledAt = 0;
     bool armDown = digitalRead(ARM_PIN) == LOW;
-    if (armDown && !armWasDown && HARDWARE_VERIFIED && digitalRead(ESTOP_PIN) == LOW &&
+    if (!armDown) armReleaseRequired.store(false);
+    if (armDown && !armWasDown && !armReleaseRequired.load() && HARDWARE_VERIFIED && digitalRead(ESTOP_PIN) == LOW &&
         digitalRead(SERVICE_PIN) == LOW && !armed.load()) {
         lastArmPress = millis();
         haveArmPress = true;

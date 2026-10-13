@@ -25,6 +25,7 @@ class SafetyLimits:
     min_voltage_v: float = 9.0
     max_voltage_v: float = 12.6
     max_lease_s: float = 30.0
+    wheel_base_m: float = 0.154
 
     def __post_init__(self):
         if any(not math.isfinite(v) or v <= 0 for v in asdict(self).values()):
@@ -62,12 +63,23 @@ class RobotController:
     action deadline and watchdog. Workers must never receive the operator arm API.
     """
     def __init__(self, backend: Backend, limits: SafetyLimits | None = None,
-                 clock: Callable[[], float] = time.monotonic, *, start_watchdog=True):
+                 clock: Callable[[], float] = time.monotonic, *, start_watchdog=True,
+                 tether_limit_rad: float | None = None):
         self.backend = backend
         self.limits = limits or SafetyLimits()
         self.clock = clock
         self.state = "DISARMED"
         self.reason = "startup"
+        # Physical sessions never assume that a restarted process means an
+        # unwound cable. Simulation can opt into this same guard for testing.
+        self._tether_limit = math.pi if tether_limit_rad is None and backend.is_real else tether_limit_rad
+        if self._tether_limit is not None:
+            self._tether_limit = finite(self._tether_limit, "tether_limit_rad")
+            if self._tether_limit <= 0:
+                raise ValueError("tether limit must be positive")
+        self._tether_yaw = 0.0
+        self._tether_reference = None
+        self._tether_fault = None
         self._lease = None
         self._heartbeat_at = 0.0
         self._action_until = 0.0
@@ -141,9 +153,53 @@ class RobotController:
                 finite(pose[key], key)
             if track.get("in_bounds") is not True:
                 return "robot outside calibrated arena"
+            issue = self._track_tether(track)
+            if issue:
+                return issue
         except (KeyError, TypeError, RobotError):
             return "missing or invalid safety data"
         return None
+
+    def _yaw_rate_limit(self):
+        return 2 * min(self.limits.max_wheel_mps, 0.1) / self.limits.wheel_base_m
+
+    def _track_tether(self, track: dict) -> str | None:
+        if self._tether_limit is None:
+            return None
+        if self._tether_fault:
+            return self._tether_fault
+        if self._tether_reference is None:
+            return "operator tether inspection and reset required"
+        timestamp, heading = finite(track["timestamp"], "timestamp"), finite(track["pose"]["theta"], "theta")
+        previous_at, previous_heading = self._tether_reference
+        dt = timestamp - previous_at
+        delta = (heading - previous_heading + math.pi) % (2 * math.pi) - math.pi
+        possible = self._yaw_rate_limit() * dt + 0.1
+        if dt < 0 or dt > self.limits.tracking_s or possible >= math.pi or abs(delta) > possible or (dt == 0 and delta != 0):
+            self._tether_fault = "tether yaw ambiguous; operator inspection and reset required"
+            return self._tether_fault
+        if dt > 0:
+            self._tether_yaw += delta
+            self._tether_reference = (timestamp, heading)
+        if abs(self._tether_yaw) + 0.1 >= self._tether_limit:
+            self._tether_fault = "tether turn limit reached; operator unwind and reset required"
+            return self._tether_fault
+        return None
+
+    def reset_tether(self, *, human_confirmed: bool = False) -> None:
+        """Trusted operator only, after physically inspecting and unwinding cable."""
+        with self._lock:
+            if self.state != "DISARMED" or human_confirmed is not True:
+                raise RobotError("disarmed operator confirmation required for tether reset")
+            if self._tether_limit is None:
+                return
+            track = self._sample()["tracking"]
+            timestamp = finite(track["timestamp"], "timestamp")
+            if track.get("valid") is not True or track.get("in_bounds") is not True or not 0 <= self.clock() - timestamp <= self.limits.tracking_s:
+                raise RobotError("fresh in-bounds tracking required for tether reset")
+            heading = finite(track["pose"]["theta"], "theta")
+            self._tether_reference = (timestamp, heading)
+            self._tether_yaw, self._tether_fault = 0.0, None
 
     def _sample(self) -> dict:
         try:
@@ -192,6 +248,13 @@ class RobotController:
                     raise RobotError(issue)
                 # Normalized API values map to at most 0.1m/s in both backends.
                 scale = min(self.limits.max_wheel_mps, 0.1) / 0.1
+                if self._tether_limit is not None:
+                    # Allow either measured direction to differ from expectation.
+                    # Maximum speed and requested duration bound the next turn.
+                    turn = (abs(right) + abs(left)) * min(self.limits.max_wheel_mps, 0.1) * duration_s / self.limits.wheel_base_m
+                    if abs(self._tether_yaw) + turn + 0.1 >= self._tether_limit:
+                        self._tether_fault = "predicted tether turn limit; operator unwind and reset required"
+                        raise RobotError(self._tether_fault)
                 self.backend.drive(left * scale, right * scale, duration_s, gripper)
                 self._action_until = self.clock() + duration_s
             except Exception:
@@ -251,7 +314,10 @@ class RobotController:
             sample = self._sample()
             lease = None if self._lease is None else {k: v for k, v in self._lease.items() if k != "lease_id"}
             return {"state": self.state, "reason": self.reason, "real": self.backend.is_real,
-                    "lease": lease, "limits": asdict(self.limits), **sample}
+                    "lease": lease, "limits": asdict(self.limits),
+                    "tether": {"enabled": self._tether_limit is not None, "limit_rad": self._tether_limit,
+                               "measured_yaw_rad": self._tether_yaw,
+                               "operator_reset_required": self._tether_reference is None or self._tether_fault is not None}, **sample}
 
     def _watchdog(self):
         while not self._closed.wait(0.025):

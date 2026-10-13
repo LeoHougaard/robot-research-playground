@@ -1,4 +1,4 @@
-﻿{
+{
     "target":  "esp32dev",
     "platform":  "espressif32@6.12.0",
     "framework":  "framework-arduinoespressif32@3.20017.241212+sha.dcc1105b",
@@ -7,9 +7,9 @@
     "hardware_verified":  false,
     "physical_devices_tested":  false,
     "ram_bytes":  22376,
-    "flash_bytes":  279493,
-    "source_sha256":  "ae0c3be5f16201011d6e64098b79c14666377a8c798433ac16748fed2717f9a9",
-    "firmware_sha256":  "5a1a85d99a8045148c6ec4f510bfade0087d6758061721a3301bb9c4477e3436",
+    "flash_bytes":  279589,
+    "source_sha256":  "b5d111533f7087c35d7e8ee3e3cf1e38c1724a60d06c422d065acc4ad17e351f",
+    "firmware_sha256":  "0713aa0696867e02129483e1adc223ea81e802507d86cc912846907a202e0184",
     "verified_checks":  [
                             "ESP32 compilation and link",
                             "Host safety and simulation unit tests",

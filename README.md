@@ -6,6 +6,8 @@ The V1 robot has two powered wheels, a caster, and a floor-level gripper. An ove
 
 Start with [the build plan](docs/BUILD_PLAN.md). The [handoff](docs/HANDOFF.md) records what is verified and what the next agent must finish.
 
+The latest [week-long readiness review](docs/week-readiness.md) records eight repaired failure categories, 96 passing tests and the remaining deployment and physical gates. Unattended physical weeks are still unqualified.
+
 The CAD package contains 40 printable part designs and six assemblies, each supplied as native FreeCAD and analytic STEP. FreeCAD retains editable primitives, dimensions and boolean construction; STEP supports Onshape direct editing. Print-ready STLs include the robot, arena, fixtures and offboard accessories. Start with [the editing guide](docs/onshape.md), [accessory guide](docs/accessories.md) and [build inventory](docs/build-inventory.md). The [independent CAD review](docs/cad-review.md) records what was checked.
 
 ## Run the software locally

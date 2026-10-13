@@ -4,6 +4,8 @@ The project is in C:\Users\Leo\.t3\scratch\2026-10-13-i-have-been-thinking-that-
 
 Leo asked for implementation using parallel GPT-6.1-Sol agents at high reasoning effort. He does not know when the announced usage reset will occur. The work is saved here; regenerate the portable package with python scripts/package.py. Read README.md and docs/BUILD_PLAN.md first.
 
+Latest request: three independent verification agents reviewed readiness for weeks and implemented fixes from concrete failures. Leo then asked to stop relatively soon. The final checkpoint preserves those fixes and the open gates in docs/week-readiness.md. Continue from that priority list; do not describe the project as qualified for unattended physical weeks.
+
 Latest steering requires CAD for the complete build, ready to edit in Onshape or FreeCAD. The package now contains 40 printable part designs and six assemblies as native FreeCAD and analytic STEP, plus print-ready STLs. The robot/arena assembly contains 78 instances and 108 solids, including authentic servo and caster references. Five offboard assemblies cover electronics, camera, tether, cable clamp and operator panel. See docs/build-inventory.md, docs/onshape.md and docs/accessories.md for entrypoints, quantities and purchased items.
 
 FreeCAD 1.1.4 is available as a checksum-pinned task-local portable runtime in .tools/freecad-runtime.json. scripts/bootstrap_freecad.py downloads it on Windows; scripts/run_freecad.py runs trusted builder scripts with isolated settings. The runtime is excluded from the handoff package. Native trees use editable CSG primitives, rather than sketch/pad histories. STEP supports Onshape solid editing but does not transfer the native tree. After regeneration, apply scripts/cad_visibility.py to both CAD manifests to save clean display state; run scripts/verify_cad.py inside FreeCADCmd and review hardware/freecad/validation/kernel_report.json.
@@ -27,7 +29,11 @@ Follow docs/cad-regeneration.md for the complete rebuild order. The arm-button m
 
 ## Verification
 
-The integrated software suite passed 83 tests in .build-venv with actual OpenCV installed and no skips. The machine-readable report is docs/verification.json. Re-run python scripts/verify.py for the current count. The four-generation demo passed 112 recorded trials and four matched prediction evaluations. These describe the simple simulator, not physical learning.
+The revised integrated software suite passed 96 tests in .build-venv with actual OpenCV installed and no skips. The machine-readable report is docs/verification.json; docs/verification-baseline.json preserves the original 83-test baseline. The four-generation demo passed 112 recorded trials and four matched prediction evaluations. These describe the simple simulator, not physical learning.
+
+An accelerated 120-second simulation completed 562 generations, 15,736 trials and 562 evaluations before a clean budget stop. Database integrity passed and no pending trials remained. It did not reach the attempted 1,000-generation target. See docs/stress-simulation.json; it is not a week-long qualification.
+
+Endurance fixes preserve interrupted programs, paginate older artifacts, stop no-progress loops, and commit evaluated findings atomically with archive-authoritative checkpoint recovery. Isolation fixes prevent workspace imports into the fixed GPU recipe and latch job cleanup failures. Physical fixes add operator-only tether reset/turn guards and require button release before fresh MCU authorization. The disabled firmware was rebuilt with updated hashes. Reports are docs/verification-{endurance,isolation,physical}.md.
 
 Local HTTP fixtures verified the structured tool loop, agent replacement, inherited programs, rejected fabricated evidence, camera/output quotas, response/header deadlines, prohibited redirects, corrupted artifacts and exclusive supervisor ownership. The fixture is not a qualified real model.
 
@@ -46,6 +52,8 @@ Additional read-only inventory found /mnt/gb10-ssd1 with 683 GiB free and /mnt/g
 The robot is unbuilt. Physical fit, strength, servo shaft loading, wiring, register units, camera calibration, grasp behavior, continuous duty and unattended endurance remain untested. The vendor STEP and drawing disagree on servo height. Physical activation requires measured acceptance with Leo present.
 
 Real Docker execution, the selected local model, GPU recipes and ARM64 hardware dependencies require Spark qualification after disk admission passes. Mocked isolation checks do not establish actual enforcement.
+
+Additional review blockers: stale Spark session cleanup identity, worker-survival checks, aggregate state quotas, configuration/evidence fingerprints, tested backups, exact camera freshness and trusted physical task resets. The provisional tether guard stops for operator intervention; it does not prove autonomous untwisting. See docs/week-readiness.md for the ordered follow-up.
 
 ## Next steps for the dot agent
 

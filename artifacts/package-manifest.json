@@ -1,8 +1,8 @@
 {
   "archive": "robot-playground-v1.zip",
-  "sha256": "bf2dfbd1130d7daf2645a53cf5c3a4398e3ee99bcf7e64413317799d3e06f1b0",
-  "bytes": 17813083,
-  "files": 277,
+  "sha256": "d30d9c962c7b3992317c9d53e6354cef606a2ed4eed00cbbad1ecc2e6ce75149",
+  "bytes": 17834764,
+  "files": 285,
   "excluded": [
     ".build-venv",
     ".git",

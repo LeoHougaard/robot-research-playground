@@ -213,6 +213,7 @@ class SerialGatewayTests(unittest.TestCase):
             with self.assertRaises(RobotError): controller.arm(lease, human_confirmed=True)
             self.assertNotIn("arm", [c["op"] for c in transport.commands])
             transport.ready = True
+            controller.reset_tether(human_confirmed=True)
             controller.arm(lease, human_confirmed=True)
             self.assertEqual(controller.observe()["robot"]["heading"], 0.3)
             self.assertEqual(controller.observe()["objects"], camera["objects"])
@@ -221,3 +222,77 @@ class SerialGatewayTests(unittest.TestCase):
             controller.tick()
             self.assertEqual(controller.state, "DISARMED")
         finally: controller.close()
+
+
+class TetherSafetyTests(unittest.TestCase):
+    def setUp(self):
+        self.clock = FakeClock()
+        self.backend = SimulationBackend(clock=self.clock)
+        self.controller = RobotController(self.backend, clock=self.clock, start_watchdog=False, tether_limit_rad=math.pi)
+        self.lease = self.controller.acquire("tether-test")["lease_id"]
+
+    def tearDown(self): self.controller.close()
+
+    def arm(self):
+        self.controller.reset_tether(human_confirmed=True)
+        self.controller.arm(self.lease, human_confirmed=True)
+
+    def test_initial_and_armed_reset_require_operator(self):
+        with self.assertRaises(RobotError): self.controller.arm(self.lease, human_confirmed=True)
+        with self.assertRaises(RobotError): self.controller.reset_tether()
+        self.arm()
+        with self.assertRaises(RobotError): self.controller.reset_tether(human_confirmed=True)
+
+    def test_modulo_crossing_uses_measured_small_rotation(self):
+        self.backend.theta = math.pi - 0.05
+        self.arm()
+        self.controller.action(self.lease, -0.2, 0.2, 0.5)
+        self.clock.advance(0.2)
+        observation = self.controller.heartbeat(self.lease)
+        self.assertLess(observation["robot"]["heading"], 0)
+        self.assertAlmostEqual(observation["tether"]["measured_yaw_rad"], 0.4 * 0.1 / 0.154 * 0.2)
+        self.assertEqual(observation["state"], "ARMED")
+
+    def test_repeated_bounded_turns_stop_before_full_winding(self):
+        self.arm()
+        for _ in range(30):
+            try:
+                self.controller.action(self.lease, -1, 1, 0.2)
+            except RobotError:
+                break
+            self.clock.advance(0.2)
+            self.controller.heartbeat(self.lease)
+        else:
+            self.fail("bounded actions accumulated unbounded cable turns")
+        self.assertEqual(self.controller.state, "DISARMED")
+        self.assertEqual(self.backend.sample()["scene"]["wheel_mps"], [0, 0])
+        self.assertLess(abs(self.controller._tether_yaw), math.pi)
+        with self.assertRaises(RobotError): self.controller.arm(self.lease, human_confirmed=True)
+        self.arm()
+        self.assertEqual(self.controller._tether_yaw, 0)
+
+    def test_tracking_gap_or_implausible_jump_requires_reset(self):
+        self.arm()
+        self.clock.advance(0.31)
+        self.controller.tick()
+        self.assertEqual(self.controller.state, "DISARMED")
+        self.assertIn("ambiguous", self.controller.reason)
+        self.arm()
+        self.clock.advance(0.05)
+        self.backend.theta += 1
+        self.controller.tick()
+        self.assertEqual(self.controller.state, "DISARMED")
+        self.assertIn("ambiguous", self.controller.reason)
+
+    def test_identical_timestamp_with_changed_heading_is_rejected(self):
+        self.arm()
+        self.backend.theta = 0.01
+        self.controller.tick()
+        self.assertEqual(self.controller.state, "DISARMED")
+
+    def test_command_is_guarded_before_backend_drive(self):
+        self.arm()
+        self.controller._tether_yaw = math.pi - 0.2
+        with self.assertRaises(RobotError): self.controller.action(self.lease, 1, 1, 0.5)
+        self.assertEqual(self.backend.left, 0)
+        self.assertEqual(self.controller.state, "DISARMED")

@@ -94,9 +94,11 @@ def main(argv=None):
                 controller = RobotController(backend)
                 supervisor = ResearchSupervisor(state_dir, controller, config=config)
                 supervisor.camera = tracker
-                print("Physical operation requires your presence. Inspect the arena, release E-stop, and use the MCU arm button.")
+                print("Physical operation requires your presence. Inspect the arena and fully unwind the tether with motor power off.")
                 if input("Type ARM ROBOT to authorize this run: ").strip() != "ARM ROBOT":
                     raise ValueError("Physical arming cancelled")
+                input("Release E-stop, press the MCU authorization button, then press Enter within five seconds: ")
+                controller.reset_tether(human_confirmed=True)
                 supervisor.start_robot(operator_confirmed=True)
                 llm = config.get("llm", {})
                 model = LocalModel(llm.get("base_url", "http://127.0.0.1:18080/v1"), llm.get("model", ""),

@@ -51,6 +51,16 @@ class Archive:
         CREATE TABLE IF NOT EXISTS artifacts (
           id TEXT PRIMARY KEY, generation_id TEXT NOT NULL, created REAL NOT NULL,
           path TEXT NOT NULL, sha256 TEXT NOT NULL, bytes INTEGER NOT NULL);
+        CREATE INDEX IF NOT EXISTS experiments_recent ON experiments(status,phase,started DESC);
+        CREATE INDEX IF NOT EXISTS experiments_generation ON experiments(generation_id,status);
+        CREATE INDEX IF NOT EXISTS artifacts_recent ON artifacts(created DESC,id DESC);
+        CREATE INDEX IF NOT EXISTS artifacts_content ON artifacts(sha256);
+        CREATE INDEX IF NOT EXISTS artifacts_generation_path ON artifacts(generation_id,path);
+        CREATE INDEX IF NOT EXISTS findings_recent ON findings(created DESC);
+        CREATE INDEX IF NOT EXISTS findings_generation ON findings(generation_id);
+        CREATE INDEX IF NOT EXISTS evaluations_recent ON evaluations(created DESC);
+        CREATE INDEX IF NOT EXISTS evaluations_generation ON evaluations(generation_id);
+        CREATE INDEX IF NOT EXISTS runs_recent ON runs(started DESC);
         """)
         self.db.commit()
 
@@ -114,7 +124,7 @@ class Archive:
             result.append(item)
         return list(reversed(result))
 
-    def submit_finding(self, generation_id, claim, conditions, evidence_ids, *, verified=False):
+    def submit_finding(self, generation_id, claim, conditions, evidence_ids, *, verified=False, commit=True):
         if not isinstance(claim, str) or not 1 <= len(claim) <= 2000:
             raise ValueError("Claim must contain 1..2000 characters")
         if not isinstance(conditions, str) or len(conditions) > 4000:
@@ -133,24 +143,41 @@ class Archive:
         self.db.execute("INSERT INTO findings VALUES(?,?,?,?,?,?,?)", (
             finding_id, generation_id, time.time(), claim,
             "verified_prediction_test" if verified else "hypothesis", conditions, canonical(evidence_ids)))
-        self.db.commit()
+        if commit:
+            self.db.commit()
         return finding_id
 
-    def add_evaluation(self, generation_id, model, results):
+    def add_evaluation(self, generation_id, model, results, *, commit=True):
         evaluation_id = uuid.uuid4().hex
         self.db.execute("INSERT INTO evaluations VALUES(?,?,?,?,?)", (
             evaluation_id, generation_id, time.time(), canonical(model), canonical(results)))
-        self.db.commit()
+        if commit:
+            self.db.commit()
         return evaluation_id
 
     def record_artifact(self, generation_id, path, sha256, size):
+        existing = self.db.execute("SELECT id,sha256,bytes FROM artifacts WHERE generation_id=? AND path=?", (generation_id, str(path))).fetchone()
+        if existing:
+            if existing["sha256"] != sha256 or existing["bytes"] != size:
+                raise ValueError("Previously archived artifact changed")
+            return existing["id"]
         artifact_id = uuid.uuid4().hex
         self.db.execute("INSERT INTO artifacts VALUES(?,?,?,?,?,?)", (artifact_id, generation_id, time.time(), str(path), sha256, size))
         self.db.commit()
         return artifact_id
 
-    def artifacts(self, limit=30):
-        return [dict(x) for x in self.db.execute("SELECT id,generation_id,path,sha256,bytes FROM artifacts ORDER BY created DESC LIMIT ?", (max(1, min(100, int(limit))),))]
+    def artifacts(self, limit=30, *, before=None):
+        query = "SELECT id,generation_id,path,sha256,bytes FROM artifacts"
+        args = []
+        if before is not None:
+            row = self.db.execute("SELECT created,id FROM artifacts WHERE id=?", (before,)).fetchone()
+            if row is None:
+                raise ValueError("Unknown artifact pagination cursor")
+            query += " WHERE (created,id)<(?,?)"
+            args.extend((row["created"], row["id"]))
+        query += " ORDER BY created DESC,id DESC LIMIT ?"
+        args.append(max(1, min(100, int(limit))))
+        return [dict(x) for x in self.db.execute(query, args)]
 
     def summary(self):
         result = {}

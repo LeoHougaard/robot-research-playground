@@ -269,7 +269,7 @@ class AgentIntegrationTests(unittest.TestCase):
                 padding = "x" * (4096 - len(canonical(base_record).encode()))
                 with contextlib.redirect_stdout(io.StringIO()):
                     result = supervisor.run(generations=1, steps=66, model=LocalModel(url), max_seconds=20)
-                self.assertEqual(result["status"], "completed")
+                self.assertEqual(result["status"], "no_progress")
                 transcript = next((Path(directory) / "workspaces").rglob("transcript.json"))
                 self.assertLessEqual(transcript.stat().st_size, 256 * 1024)
             finally:
@@ -315,7 +315,7 @@ class AgentIntegrationTests(unittest.TestCase):
                 try:
                     with contextlib.redirect_stdout(io.StringIO()):
                         result = successor.run(generations=1, steps=3, model=LocalModel(url), max_seconds=10)
-                    self.assertEqual(result["status"], "completed")
+                    self.assertEqual(result["status"], "no_progress")
                     transcript = json.loads((successor.current_workspace / "transcript.json").read_text())
                     self.assertIn("integrity", transcript[0]["result"]["error"])
                     self.assertEqual(list(successor.current_workspace.glob("*helper.py")), [])

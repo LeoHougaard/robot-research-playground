@@ -10,7 +10,7 @@ import time
 import uuid
 from typing import Callable
 
-from .sandbox import DockerSandbox, SandboxError, validate_workspace
+from .sandbox import DockerSandbox, SandboxError, SandboxCleanupError, validate_workspace
 
 
 @dataclass
@@ -50,6 +50,7 @@ class JobQueue:
         self.memory_available = memory_available or available_ram
         self.docker_runner = docker_runner
         self._lock = threading.Lock()
+        self.cleanup_error: SandboxCleanupError | None = None
 
     def submit(self, recipe: str, workspace: Path, parameters: dict | None = None) -> Job:
         parameters = parameters or {}
@@ -69,6 +70,8 @@ class JobQueue:
         validate_workspace(workspace, 64 * 1024**2)
         job = Job(uuid.uuid4().hex, recipe, workspace.resolve(), {"samples": samples})
         with self._lock:
+            if self.cleanup_error is not None:
+                raise self.cleanup_error
             if sum(j.state in {"queued", "running"} for j in self.jobs.values()) >= 32:
                 raise ValueError("fixed job queue is full")
             self.jobs[job.id] = job
@@ -76,6 +79,8 @@ class JobQueue:
 
     def run_next(self) -> Job | None:
         with self._lock:
+            if self.cleanup_error is not None:
+                raise self.cleanup_error
             job = next((j for j in self.jobs.values() if j.state == "queued"), None)
             if job is None:
                 return None
@@ -86,17 +91,22 @@ class JobQueue:
                 if job.recipe == "linear_prediction":
                     job.result = linear_prediction(job.parameters["samples"])
                 else:
-                    if self.memory_available() < self.reserved_ram_bytes + 4 * 1024**3:
-                        raise SandboxError("GPU job would consume reserved unified RAM")
                     with self.inference_gate:
+                        if self.memory_available() < self.reserved_ram_bytes + 4 * 1024**3:
+                            raise SandboxError("GPU job would consume reserved unified RAM")
                         kwargs = {"runner": self.docker_runner} if self.docker_runner else {}
-                        sandbox = _GpuRecipeSandbox(self.gpu_image, memory="4096m", **kwargs)
+                        sandbox = _GpuRecipeSandbox(self.gpu_image, memory="4096m",
+                                                   min_free_disk_bytes=self.min_free_disk_bytes, **kwargs)
                         result = sandbox.execute(job.workspace, GPU_SMOKE_COMMAND, timeout_s=60)
                         job.result = result.to_dict()
                         if result.exit_code:
                             raise SandboxError(result.stderr or "GPU recipe failed")
                 (job.workspace / "job-result.json").write_text(json.dumps(job.result, indent=2), encoding="utf-8")
                 job.state = "completed"
+            except SandboxCleanupError as exc:
+                job.state, job.error = "failed", str(exc)
+                self.cleanup_error = exc
+                raise
             except Exception as exc:
                 job.state, job.error = "failed", str(exc)
             return job
@@ -134,7 +144,7 @@ class _GpuRecipeSandbox(DockerSandbox):
 
 
 # Fixed source, never interpolate generated text or request parameters.
-GPU_SMOKE_COMMAND = """python - <<'PY'
+GPU_SMOKE_COMMAND = """python -I - <<'PY'
 import json, torch
 torch.manual_seed(0)
 torch.set_num_threads(1)

@@ -61,7 +61,7 @@ camera_frame {}: overhead JPEG and paired observation for vision-capable local m
 experiment {"action":{"left":-1..1,"right":-1..1,"duration_s":0.01..0.5,"gripper":0..1 optional},"prediction":{"x":meters,"y":meters,"heading":radians,"uncertainty_m":0..2}}: commit prediction, execute bounded action, record measured result.
 Predictions may also include objects:[{"id":"tracked-id","x":meters,"y":meters}]. Missing object measurements make that trial inconclusive rather than inventing an outcome.
 archive_query {"limit":1..30}: predecessor measurements and findings.
-artifact_list {}: inherited program and data filenames, hashes, and identifiers.
+artifact_list {"limit":1..30 optional,"before":"previous next_before cursor" optional}: inherited program and data filenames, hashes, identifiers and pagination cursor. Page backward to find older programs.
 artifact_import {"id":"artifact identifier"}: copy a predecessor artifact into your private workspace without changing the original.
 run_code {"command":"shell command inside offline CPU sandbox","timeout_s":1..30}: Python and shell in your private workspace. No internet, GPU, devices, secrets, host files, or Docker authority. Write useful files in /workspace; they survive this tool call and are archived at generation end.
 export_trials {"limit":1..500}: write exploration measurements to trials.jsonl in your private workspace for analysis and your own CPU model training.
@@ -94,15 +94,19 @@ class ResearchSupervisor:
         self.current_workspace = None
         self.camera = None
         self.deadline = float("inf")
-        checkpoint = self.state_dir / "best-model.json"
         self.best_model = None
-        if checkpoint.exists():
+        # The committed evaluation archive is authoritative after crashes. The
+        # JSON file is a convenience cache and can be absent or stale.
+        for row in self.archive.db.execute("SELECT model_json,results_json FROM evaluations ORDER BY created DESC"):
             try:
-                data = json.loads(checkpoint.read_text(encoding="utf-8"))
+                if json.loads(row["results_json"]).get("passed") is not True:
+                    continue
+                data = json.loads(row["model_json"])
                 self.best_model = MotionModel(data["linear_mps"], data["angular_rps"], data["uncertainty_m"])
                 self.model = self.best_model
-            except (ValueError, KeyError, OSError, TypeError):
-                pass
+                break
+            except (ValueError, KeyError, TypeError):
+                continue
 
     def start_robot(self, *, operator_confirmed=False):
         lease = self.controller.acquire("trusted-research-supervisor", ttl_s=30)
@@ -144,15 +148,29 @@ class ResearchSupervisor:
             self.controller.stop("disk reserve reached")
             raise RuntimeError("Stopped before exhausting the disk reserve")
 
-    def archive_workspace(self):
+    def archive_workspace(self, workspace=None, generation=None):
         from .sandbox import validate_workspace
-        validate_workspace(self.current_workspace, 65 * 1024**2)
-        for path in sorted(self.current_workspace.rglob("*")):
+        workspace = self.current_workspace if workspace is None else workspace
+        generation = self.active_generation if generation is None else generation
+        validate_workspace(workspace, 65 * 1024**2)
+        novel_program_data = False
+        for path in sorted(workspace.rglob("*")):
             if not path.is_file() or path.name == "transcript.json":
                 continue
             relative = path.relative_to(self.state_dir)
             content = path.read_bytes()
-            self.archive.record_artifact(self.active_generation, relative.as_posix(), hashlib.sha256(content).hexdigest(), len(content))
+            digest = hashlib.sha256(content).hexdigest()
+            supervisor_file = path.name in {"observation.json", "trials.jsonl"} or path.name.startswith("camera-")
+            if not supervisor_file and not self.archive.db.execute("SELECT 1 FROM artifacts WHERE sha256=? LIMIT 1", (digest,)).fetchone():
+                novel_program_data = True
+            self.archive.record_artifact(generation, relative.as_posix(), digest, len(content))
+        return novel_program_data
+
+    def recover_workspaces(self):
+        for row in self.archive.db.execute("SELECT id FROM generations WHERE status='running'").fetchall():
+            workspace = self.state_dir / "workspaces" / row["id"]
+            if workspace.exists():
+                self.archive_workspace(workspace, row["id"])
 
     def admit_workspace_write(self, size):
         from .sandbox import validate_workspace
@@ -265,7 +283,7 @@ class ResearchSupervisor:
         baseline = MotionModel()
         baseline_errors, candidate_errors, best_errors, evidence = [], [], [], []
         if self.controller.backend.is_real:
-            rows = [x for x in self.archive.experiments(limit=2000, phase="holdout") if x["source"] == "physical"]
+            rows = [x for x in self.archive.experiments(limit=2000, phase="holdout") if x["source"] == "physical"][-100:]
             if len(rows) < 8:
                 raise ValueError("Physical evaluation needs at least 8 independently recorded holdout trials")
             for row in rows:
@@ -314,16 +332,21 @@ class ResearchSupervisor:
                   "relative_improvement": improvement, "passed": passed, "evidence_ids": evidence,
                   "prior_best_mean_error": best_mean,
                   "scope": "short differential-drive movement in this configuration; excludes contact and gripper dynamics"}
-        self.archive.add_evaluation(self.active_generation, self.model.to_dict(), result)
+        with self.archive.db:
+            self.archive.add_evaluation(self.active_generation, self.model.to_dict(), result, commit=False)
+            if passed:
+                self.archive.submit_finding(self.active_generation,
+                    f"Fitted motion model reduced matched prediction error by {improvement:.1%} on {len(evidence)} held-out {result['source']} trials.",
+                    result["scope"], evidence, verified=True, commit=False)
         if passed:
             self.best_model = self.model
             target = self.state_dir / "best-model.json"
             temporary = target.with_suffix(".tmp")
-            temporary.write_text(json.dumps(self.model.to_dict(), indent=2), encoding="utf-8")
-            temporary.replace(target)
-            self.archive.submit_finding(self.active_generation,
-                f"Fitted motion model reduced matched prediction error by {improvement:.1%} on {len(evidence)} held-out {result['source']} trials.",
-                result["scope"], evidence, verified=True)
+            try:
+                temporary.write_text(json.dumps(self.model.to_dict(), indent=2), encoding="utf-8")
+                temporary.replace(target)
+            except OSError as exc:
+                result["checkpoint_cache_warning"] = str(exc)
         return result
 
     def tool(self, name, arguments):
@@ -338,7 +361,12 @@ class ResearchSupervisor:
         if name == "archive_query":
             return {"summary": self.archive.summary(), "trials": self.archive.experiments(min(30, max(1, int(arguments.get("limit", 10)))), phase="exploration")}
         if name == "artifact_list":
-            return {"artifacts": self.archive.artifacts()}
+            limit = arguments.get("limit", 30)
+            before = arguments.get("before")
+            if type(limit) is not int or not 1 <= limit <= 30 or (before is not None and (not isinstance(before, str) or len(before) != 32)):
+                raise ValueError("Artifact list needs limit 1..30 and an optional artifact cursor")
+            rows = self.archive.artifacts(limit, before=before)
+            return {"artifacts": rows, "next_before": rows[-1]["id"] if len(rows) == limit else None}
         if name == "artifact_import":
             return self.import_artifact(arguments["id"])
         if name == "export_trials":
@@ -415,12 +443,15 @@ class ResearchSupervisor:
             raise ValueError("Invalid run budgets")
         if self.controller.backend.is_real and demo:
             raise ValueError("Demo cannot operate real hardware")
+        self.recover_workspaces()
         self.archive.recover_interrupted()
         run_id = self.archive.start_run("physical" if self.controller.backend.is_real else "simulation", self.config)
         deadline = time.monotonic() + max_seconds
         self.deadline = deadline
         status = "completed"
         consecutive_failures = 0
+        consecutive_no_progress = 0
+        any_progress = False
         try:
             for generation_index in range(generations):
                 self.check_storage()
@@ -480,18 +511,30 @@ class ResearchSupervisor:
                     generation_status, summary = "failed", str(exc)
                     consecutive_failures += 1
                 finally:
-                    self.archive.end_generation(self.active_generation, generation_status, summary)
                     (self.current_workspace / "transcript.json").write_text(canonical(transcript), encoding="utf-8")
-                    self.archive_workspace()
+                    novel_files = self.archive_workspace()
+                    measured = self.archive.db.execute("SELECT 1 FROM experiments WHERE generation_id=? AND status IN ('completed','inconclusive') LIMIT 1", (self.active_generation,)).fetchone()
+                    research_record = any(self.archive.db.execute(f"SELECT 1 FROM {table} WHERE generation_id=? LIMIT 1", (self.active_generation,)).fetchone() for table in ("findings", "evaluations"))
+                    progress = bool(novel_files or measured or research_record)
+                    any_progress = any_progress or progress
+                    consecutive_no_progress = 0 if progress else consecutive_no_progress + 1
+                    if generation_status == "completed" and not progress:
+                        generation_status = "no_progress"
+                    self.archive.end_generation(self.active_generation, generation_status, summary)
                     self.archive.export_digest()
                 print(json.dumps({"generation": generation_index + 1, "status": generation_status, "summary": summary}), flush=True)
                 if consecutive_failures >= 3:
                     status = "failed"
                     break
+                if consecutive_no_progress >= 3:
+                    status = "no_progress"
+                    break
             if self.stopping.is_set():
                 status = "stopped"
             elif status == "completed" and consecutive_failures:
                 status = "failed"
+            elif status == "completed" and not any_progress:
+                status = "no_progress"
         except BaseException:
             status = "interrupted"
             raise

@@ -145,7 +145,7 @@ short checkout. No Windows setting change is needed.
 
 The checked disabled-gate build is included in `firmware/robot_controller/dist`
 with its bootloader, partition table and source/binary hashes in
-`build-evidence.json`. Its firmware uses 22,376 bytes of RAM and 279,493 bytes of
+`build-evidence.json`. Its firmware uses 22,376 bytes of RAM and 279,589 bytes of
 flash. These binaries cannot arm motors because the verification gate is zero.
 
 USB messages are bounded JSON lines, maximum 768 bytes, with a positive ascending
@@ -165,6 +165,18 @@ missing servo acknowledgements and failed reads cut power. `status` reports
 feedback age in MCU milliseconds; the host converts it into a conservative
 monotonic timestamp. A new host process must restart/reset a stopped MCU session
 before using sequence numbers from one again, then obtain another physical arm.
+
+After startup or any cutoff, the MCU must observe the arm button released before
+accepting a fresh press. Holding it during reboot cannot authorize bus power.
+
+The physical controller also requires `reset_tether(human_confirmed=True)` while
+disarmed, after the operator inspects and unwinds the cable. The default turn
+budget is a provisional pi radians, measured by unwrapping camera headings.
+The next action is checked against maximum wheel speed, both wheel magnitudes,
+duration and a 0.1-radian margin. Tracking gaps or implausible heading jumps latch
+a stop requiring inspection/reset. Measure the 154 mm wheel track, actual speed
+bound, cable allowance and tracking error before relying on these candidates.
+The guard cannot detect wraps around arena fixtures or certify unattended use.
 
 With verified hardware and authorization interlock closed, a fresh physical arm
 press energizes the bus for a five-second preparation window. The MCU immediately
