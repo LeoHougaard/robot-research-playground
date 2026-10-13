@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "attempt_id": null,
+  "recorded_at": null,
+  "operator": null,
+  "provenance": {
+    "manifest": null,
+    "fingerprint": null,
+    "input_files": {
+      "geometry": null,
+      "firmware": null,
+      "calibration": null,
+      "calibration_validation": null
+    }
+  },
+  "boundary": {
+    "max_total_supply_current_a": 2.0,
+    "motor_branch_fuse_a": 2.0
+  },
+  "planned_measurements": [
+    {
+      "id": "hardware_identity",
+      "kind": "planned",
+      "method": "Record actual hardware revisions, flashed image identification method, camera/backend/settings and instrument calibration/uncertainty. A firmware file hash is not device attestation."
+    },
+    {
+      "id": "cutoff",
+      "kind": "planned",
+      "method": "Retain synchronized pulse, enable, timer, coil, switched rail and motion traces; distinguish pulse-loss cutoff from host/camera failure latency."
+    },
+    {
+      "id": "exposure_freshness",
+      "kind": "planned",
+      "method": "Measure exposure-to-decision age plus uncertainty, frozen/replayed frames and complete fault-to-motion-stop latency; read completion is insufficient."
+    },
+    {
+      "id": "task_state",
+      "kind": "planned",
+      "method": "Define measured pose boxes, exact object set, fixture endpoints, no unknown grasp/contact, settling duration, freshness, full-reset bounds and cable margins."
+    },
+    {
+      "id": "endurance",
+      "kind": "planned",
+      "method": "Log continuous elapsed time, resets, current/temperature, exposure age, missed feedback, cable behavior and every intervention. Missing counts are unknown, not zero."
+    }
+  ],
+  "instruments": [],
+  "records": [],
+  "start_state_contract": {
+    "implementation": "not_implemented",
+    "artifact": null
+  },
+  "reset_routine": {
+    "implementation": "not_implemented",
+    "artifact": null,
+    "automatic_rearm": false,
+    "autonomous_tether_unwind": false
+  },
+  "gates": [
+    {
+      "id": "mechanical_fit",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Measure actual printed fit, horn/screw engagement, shaft loads, retention and tether clearance."
+    },
+    {
+      "id": "electrical_cutoff",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Scope complete cutoff chain under actual load and temperature; total supply <=2 A and motor fuse 2 A."
+    },
+    {
+      "id": "servo_motion",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Measure units, signs, startup, endpoints, speed, current, temperature, stop distance and torque-off behavior."
+    },
+    {
+      "id": "camera_calibration",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Independent measured held-out points, heading, tag plane, resolution and mounting checks."
+    },
+    {
+      "id": "camera_freshness",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Prove actual exposure age with changing physical reference, retained timing and stale/frozen-source fault tests."
+    },
+    {
+      "id": "start_state",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Implement and physically qualify trusted starting-state checks; no current implementation."
+    },
+    {
+      "id": "trusted_reset",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Implement and physically qualify bounded task-specific resets; no autonomous unwind or rearm."
+    },
+    {
+      "id": "endurance_15m",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Continuous 900 seconds with full logs, qualified resets and no rescue/rearm/restart."
+    },
+    {
+      "id": "endurance_1h",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Continuous 3600 seconds with full logs, qualified resets and no rescue/rearm/restart."
+    },
+    {
+      "id": "endurance_24h",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Continuous 86400 seconds with full logs, qualified resets and no rescue/rearm/restart."
+    },
+    {
+      "id": "endurance_72h",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Continuous 259200 seconds with full logs, qualified resets and no rescue/rearm/restart."
+    },
+    {
+      "id": "endurance_1w",
+      "status": "unqualified",
+      "record_ids": [],
+      "reviewer": null,
+      "reviewed_at": null,
+      "notes": "Continuous 604800 seconds with full logs, qualified resets and no rescue/rearm/restart."
+    }
+  ],
+  "endurance_attempts": [],
+  "notes": [
+    "Planning template only. Every gate is unqualified. No physical hardware was tested.",
+    "No actuation, arm, reset or firmware gate change is implemented by this record or its validator. HARDWARE_VERIFIED remains 0.",
+    "See docs/commissioning-plan.md for required records, invalidation and operator-present procedure."
+  ]
+}
