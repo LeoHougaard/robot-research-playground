@@ -21,11 +21,30 @@ def pose(observation):
     return result
 
 
+def read_summary(db):
+    """Read cached statistics without opening or migrating a writable archive."""
+    counters = dict(db.execute("SELECT name,value FROM summary_counters"))
+    result = {table: counters[table] for table in
+              ("runs", "generations", "experiments", "findings", "evaluations", "artifacts")}
+    result["recent_findings"] = [dict(x) for x in db.execute("SELECT id,claim,status,conditions FROM findings ORDER BY created DESC LIMIT 10")]
+    result["recent_runs"] = [dict(x) for x in db.execute("SELECT id,mode,status,started,ended FROM runs ORDER BY started DESC LIMIT 5")]
+    bounds = []
+    for order in ("ASC", "DESC"):
+        row = db.execute("SELECT error FROM experiments WHERE status='completed' AND error IS NOT NULL "
+                              f"ORDER BY error {order} LIMIT 1").fetchone()
+        bounds.append(row[0] if row else None)
+    result["prediction_error"] = {
+        "mean": counters["error_sum"] / counters["error_count"] if counters["error_count"] else None,
+        "min": bounds[0], "max": bounds[1]}
+    return result
+
+
 class Archive:
-    def __init__(self, directory: str | Path):
+    def __init__(self, directory: str | Path, *, storage=None, provenance=None):
         self.directory = Path(directory).resolve()
         self.directory.mkdir(parents=True, exist_ok=True)
-        self.db = sqlite3.connect(self.directory / "evidence.sqlite3", timeout=10)
+        self.db = (storage.connect(self.directory / "evidence.sqlite3") if storage is not None
+                   else sqlite3.connect(self.directory / "evidence.sqlite3", timeout=10))
         self.db.row_factory = sqlite3.Row
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.executescript("""
@@ -63,6 +82,49 @@ class Archive:
         CREATE INDEX IF NOT EXISTS runs_recent ON runs(started DESC);
         """)
         self.db.commit()
+        self._initialize_summary_cache()
+        if provenance is not None:
+            from .provenance import bind_archive
+            bind_archive(self.db, provenance)
+
+    def _initialize_summary_cache(self):
+        """One-time indexed migration; counters change with the evidence transaction.
+
+        Triggers also cover trusted SQL fixtures/imports, rollback and recovery.
+        A cache never replaces raw experiments or findings.
+        """
+        tables = ("runs", "generations", "experiments", "findings", "evaluations", "artifacts")
+        self.db.execute("CREATE INDEX IF NOT EXISTS experiments_error ON experiments(status,error)")
+        self.db.execute("CREATE TABLE IF NOT EXISTS summary_counters (name TEXT PRIMARY KEY, value NOT NULL)")
+        if self.db.execute("SELECT value FROM summary_counters WHERE name='schema_version'").fetchone():
+            return
+        # Initialization and triggers must publish together or a crash could leave
+        # populated counters that are no longer maintained. DDL is transactional.
+        with self.db:
+            for table in tables:
+                self.db.execute(f"INSERT INTO summary_counters VALUES(?,(SELECT COUNT(*) FROM {table}))", (table,))
+                self.db.execute(f"CREATE TRIGGER summary_{table}_insert AFTER INSERT ON {table} BEGIN "
+                                f"UPDATE summary_counters SET value=value+1 WHERE name='{table}'; END")
+                self.db.execute(f"CREATE TRIGGER summary_{table}_delete AFTER DELETE ON {table} BEGIN "
+                                f"UPDATE summary_counters SET value=value-1 WHERE name='{table}'; END")
+            self.db.execute("INSERT INTO summary_counters SELECT 'error_count',COUNT(error) FROM experiments WHERE status='completed'")
+            self.db.execute("INSERT INTO summary_counters SELECT 'error_sum',COALESCE(SUM(error),0.0) FROM experiments WHERE status='completed'")
+            for event, reference, sign in (("INSERT", "NEW", "+"), ("DELETE", "OLD", "-")):
+                self.db.execute(f"CREATE TRIGGER summary_error_{event.lower()} AFTER {event} ON experiments "
+                                f"WHEN {reference}.status='completed' AND {reference}.error IS NOT NULL BEGIN "
+                                f"UPDATE summary_counters SET value=value{sign}1 WHERE name='error_count'; "
+                                f"UPDATE summary_counters SET value=value{sign}{reference}.error WHERE name='error_sum'; END")
+            self.db.execute("""CREATE TRIGGER summary_error_update AFTER UPDATE OF status,error ON experiments BEGIN
+                UPDATE summary_counters SET value=value
+                    - CASE WHEN OLD.status='completed' AND OLD.error IS NOT NULL THEN 1 ELSE 0 END
+                    + CASE WHEN NEW.status='completed' AND NEW.error IS NOT NULL THEN 1 ELSE 0 END
+                    WHERE name='error_count';
+                UPDATE summary_counters SET value=value
+                    - CASE WHEN OLD.status='completed' AND OLD.error IS NOT NULL THEN OLD.error ELSE 0 END
+                    + CASE WHEN NEW.status='completed' AND NEW.error IS NOT NULL THEN NEW.error ELSE 0 END
+                    WHERE name='error_sum';
+                END""")
+            self.db.execute("INSERT INTO summary_counters VALUES('schema_version',1)")
 
     def close(self):
         self.db.close()
@@ -180,14 +242,7 @@ class Archive:
         return [dict(x) for x in self.db.execute(query, args)]
 
     def summary(self):
-        result = {}
-        for table in ("runs", "generations", "experiments", "findings", "evaluations", "artifacts"):
-            result[table] = self.db.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
-        result["recent_findings"] = [dict(x) for x in self.db.execute("SELECT id,claim,status,conditions FROM findings ORDER BY created DESC LIMIT 10")]
-        result["recent_runs"] = [dict(x) for x in self.db.execute("SELECT id,mode,status,started,ended FROM runs ORDER BY started DESC LIMIT 5")]
-        row = self.db.execute("SELECT AVG(error),MIN(error),MAX(error) FROM experiments WHERE status='completed'").fetchone()
-        result["prediction_error"] = {"mean": row[0], "min": row[1], "max": row[2]}
-        return result
+        return read_summary(self.db)
 
     def recover_interrupted(self):
         """A restart cannot silently turn incomplete trials into successful evidence."""

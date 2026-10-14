@@ -20,5 +20,7 @@
     "bounding_radius_m": 0.16,
     "arena_width_m": 1.0,
     "arena_height_m": 1.0
-  }
+  },
+  "state_limit_bytes": 17179869184,
+  "generation_database_limit_bytes": 33554432
 }

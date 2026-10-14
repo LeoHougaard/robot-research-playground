@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import sqlite3
 
+from .archive import read_summary
+
 
 PAGE = """<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Robot playground</title>
 <style>body{font:16px system-ui;margin:40px auto;max-width:920px;padding:0 20px;background:#111820;color:#e6edf3}h1{font-size:28px}small{color:#a3b1bd}section{margin:22px 0;padding:20px;background:#1b2531;border-radius:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere}li{margin:12px 0}a{color:#9bc7fa}.metrics{display:flex;gap:30px;flex-wrap:wrap}.metric strong{display:block;font-size:32px;margin-bottom:4px}.mode{color:#d6ba83}</style>
@@ -20,6 +22,10 @@ def read_status(state_dir):
     db = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True, timeout=2)
     db.row_factory = sqlite3.Row
     try:
+        db.execute("BEGIN")  # One read snapshot while the supervisor commits.
+        if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='summary_counters'").fetchone():
+            return read_summary(db)
+        # Legacy evidence remains readable; the viewer never migrates it.
         result = {name: db.execute(f"SELECT COUNT(*) FROM {name}").fetchone()[0] for name in ("runs", "generations", "experiments", "findings", "evaluations")}
         result["recent_findings"] = [dict(x) for x in db.execute("SELECT id,claim,status,conditions FROM findings ORDER BY created DESC LIMIT 10")]
         result["recent_runs"] = [dict(x) for x in db.execute("SELECT id,mode,status,started,ended FROM runs ORDER BY started DESC LIMIT 5")]

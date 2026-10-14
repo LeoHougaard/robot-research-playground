@@ -16,7 +16,7 @@ from playground.sandbox import ExecutionResult
 def supervisor_fixture():
     with tempfile.TemporaryDirectory() as directory:
         controller, clock = simulation_controller()
-        supervisor = ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 0})
+        supervisor = ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 1})
         supervisor.start_robot(operator_confirmed=True)
         run = supervisor.archive.start_run("simulation", {})
         supervisor.active_generation = supervisor.archive.start_generation(run)

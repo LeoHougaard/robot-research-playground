@@ -81,3 +81,17 @@ python scripts/package.py
 Physical operation uses the explicit hardware CLI only after bench acceptance. It requires a validated calibration companion report, serial port, human terminal confirmation and MCU physical authorization. See docs/robot-control.md and docs/acceptance.md.
 
 Do not ship .build-venv, .pio-core, nested .pio, hardware/cad/_deps, state, CAD backups, preview tessellation intermediates or caches. The packager excludes them. Keep source, native/STEP/print assets, compiled disabled firmware and verification reports.
+
+## 2026-10-13 cloud-only continuation
+
+The current cloud continuation starts from `857fbfa`. Read
+[cloud reliability continuation](cloud-reliability-20261013.md),
+[provenance and recovery](provenance-backup.md),
+[runtime qualification](runtime-qualification.md), and
+[commissioning preparation](commissioning-plan.md) before resuming.
+Earlier verification numbers above remain historical and their evidence files
+have not been replaced. The unmodified 96-test/112-trial baseline was reproduced
+in the cloud with no skips. Final changed-source acceptance passed 229 tests with
+zero skips and independent review closed the reproduced findings; actual
+Docker/model/Spark and all physical/endurance gates remain open. No firmware,
+hardware assets or unrelated workload has been changed.

@@ -11,5 +11,8 @@
     "model": "",
     "timeout_seconds": 120,
     "max_tokens": 1024
-  }
+  },
+  "state_limit_bytes": 17179869184,
+  "generation_database_limit_bytes": 33554432,
+  "workspace_limit_bytes": 67108864
 }

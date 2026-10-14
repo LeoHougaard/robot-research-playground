@@ -22,7 +22,7 @@ class FixedModel:
 class EnduranceTests(unittest.TestCase):
     def make_supervisor(self, directory):
         controller, clock = simulation_controller()
-        value = ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 0})
+        value = ResearchSupervisor(directory, controller, clock=clock, config={"disk_reserve_bytes": 1})
         value.start_robot(operator_confirmed=True)
         return value
 
